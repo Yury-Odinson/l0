@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    line-height: 24px;
 }
 
 html {
@@ -19,4 +20,22 @@ li {
 button {
     cursor: pointer;
     border: none;
+    background-color: #00000000;
+    color: #fff;
+}
+
+input {
+    border: none;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 16px;
+    font-weight: 200;
+    color: #FFFFFF33;
+}
+
+input::-moz-placeholder {
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--var-TranslucentWhite);
 }
