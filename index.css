@@ -34,16 +34,17 @@ header {
 
 .header-button__menu {
     display: flex;
-    padding: 12px 10px;
+    padding: 11px 9px;
     border-radius: 10px;
-    border: 1px solid var(--var-TranslucentWhite);
+    border: 1px solid #ffffff8e;
 }
 
 .header__title {
     width: 106px;
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 600;
     color: #fff;
+    letter-spacing: 2px;
 }
 
 .header__search {
@@ -62,21 +63,42 @@ header {
 }
 
 .header-navbar {
-    margin-top: 10px;
-    padding: 5px;
+    margin-right: -6px;
+    padding: 5px 8px;
+    padding-left: 0;
     display: flex;
     gap: 40px;
 }
 
-.header-navbar__item {
+.header-navbar__Profile,
+.header-navbar__Basket {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 12px;
-    font-weight: 400;
     line-height: 16px;
 }
 
-.header-navbar__itemSpan {
-    padding: 10px 0 0;
+.header-navbar__Profile {
+    margin-top: 8px;
+    margin-right: 4px;
+}
+
+.header-navbar__Basket {
+    margin-top: 6px;
+    margin-right: 5px;
+}
+
+.header-navbar__ProfileSpan,
+.header-navbar__BasketSpan {
+    padding-top: 8px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.header-navbar__ProfileSpan {
+    margin-right: 2px;
+}
+
+.header-navbar__BasketSpan {
+    margin-right: -3px;
 }
