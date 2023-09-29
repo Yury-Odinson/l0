@@ -4,6 +4,7 @@
     --var-TranslucentWhite: #FFFFFF33;
     --var-GrayColor: #9797AF;
     --var-Background: #F6F6FA;
+    --var-Separator: #0000001A;
 }
 
 .wrapper {
@@ -142,7 +143,7 @@ header {
     display: flex;
     padding-bottom: 19px;
     justify-content: space-between;
-    border-bottom: 1px solid #0000001A;
+    border-bottom: 1px solid var(--var-Separator);
 }
 
 .body-checkbox-area__hideAll {
@@ -164,13 +165,11 @@ header {
     margin-left: 10px;
 }
 
-.body-checkbox__button {
+.body-checkbox__button,
+.missing__button {
+    margin-top: 35px;
     width: 20px;
     height: 20px;
-}
-
-.body-checkbox__button {
-    margin-top: 35px;
     background-image: url(/images/body-hideAll.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -331,12 +330,68 @@ header {
     border-bottom: 1px dashed var(--var-GrayColor);
 }
 
+.missing-header {
+    display: flex;
+    margin-top: 19px;
+    justify-content: space-between;
+    height: 45px;
+    border-bottom: 1px solid var(--var-Separator);
+}
+
+.missing__title {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.missing__button {
+    margin-top: 5px;
+}
+
+.missing__item {
+    margin-top: 10px;
+    margin-bottom: 22px ;
+    
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.missing-good-info {
+    display: flex;
+}
+
+.missingCard__image {
+    padding: 0;
+    filter: grayscale(1);
+}
 
 
+.missing-description {
+    width: 300px;
+    margin-left: 15px;
+}
 
+.missing__name {
+    font-size: 16px;
+    color: var(--var-GrayColor);
+}
 
+.missing__color,
+.missing__size {
+    font-size: 13px;
+    color: var(--var-GrayColor);
+}
 
+.missing__size {
+    margin-left: 14px;
+}
 
+.missing-options {
+    display: flex;
+    gap: 15px;
+    margin-right: 125px;
+}
 
 
 
