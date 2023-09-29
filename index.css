@@ -2,6 +2,8 @@
     --var-PrimaryColor: #6725A8;
     --var-ButtonsColor: #CB11AB;
     --var-TranslucentWhite: #FFFFFF33;
+    --var-GrayColor: #9797AF;
+    --var-Background: #F6F6FA;
 }
 
 .wrapper {
@@ -116,7 +118,7 @@ header {
 .body {
     margin: -24px auto 0;
     border-radius: 24px;
-    background-color: #fff;
+    background-color: var(--var-Background);
 }
 
 .body-container {
@@ -174,6 +176,157 @@ header {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.body-main-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.card-main {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card__image {
+    padding: 0 10px;
+}
+
+.card-description {
+    padding: 0 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__name {
+    padding-bottom: 3px;
+}
+
+
+.card__color,
+.card__size {
+    padding-right: 13px;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.card-tm {
+    margin-top: -2px;
+    display: flex;
+    gap: 5px;
+}
+
+.card__importer,
+.card-tm__item {
+    font-size: 13px;
+    color: var(--var-GrayColor);
+}
+
+
+.card-tm__image {
+    background-image: url(/images/body-card-importerInfo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+}
+
+.card-nav {
+    display: flex;
+}
+
+.card-nav-counter {
+    display: flex;
+    height: 44px;
+}
+
+.card-settings {
+    margin-right: 27px;
+}
+
+.counter__decrement,
+.counter__increment {
+    width: 28px;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+    font-size: 20px;
+    background-color: #fff;
+    color: #000;
+}
+
+.counter__value {
+    width: 44px;
+    height: 100%;
+}
+
+.counter__increment {
+    border-radius: 0 8px 8px 0;
+}
+
+.card-nav__reminder {
+    color: #FF3B30;
+    font-size: 13px;
+}
+
+.card-nav-options {
+    margin-top: 8px;
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+}
+
+.card-nav__favorite,
+.card-nav__trash {
+    width: 20px;
+    height: 20px;
+}
+
+.card-nav__favorite {
+    background-image: url(/images/body-card-favorites.svg);
+}
+
+.card-nav__trash {
+    background-image: url(/images/body-card-trash.svg);
+}
+
+.card-price {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-price__discountPrice {
+    letter-spacing: -1.7px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.card-price__price {
+    margin-top: 3px;
+    text-align: right;
+    font-size: 13px;
+    color: var(--var-GrayColor);
+    text-decoration: line-through;
+    border-bottom: 1px dashed var(--var-GrayColor);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
