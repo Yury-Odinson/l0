@@ -142,7 +142,6 @@ header {
     display: flex;
     padding-bottom: 19px;
     justify-content: space-between;
-
     border-bottom: 1px solid #0000001A;
 }
 
@@ -177,17 +176,32 @@ header {
     background-position: center;
 }
 
-.body-main-card {
+.body-main-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0;
+    align-items: start;
 }
 
 .card-main {
     margin: 10px 0;
     display: flex;
+}
+
+.card-main-good {
+    display: flex;
     align-items: center;
+    height: fit-content;
+}
+
+.card-checkbox-label {
+
+    display: flex;
 }
 
 .card__image {
@@ -198,10 +212,12 @@ header {
     padding: 0 6px;
     display: flex;
     flex-direction: column;
+    max-width: 250px;
 }
 
 .card__name {
     padding-bottom: 3px;
+    width: 250px;
 }
 
 
@@ -234,6 +250,7 @@ header {
 }
 
 .card-nav {
+    margin: 9px 0;
     display: flex;
 }
 
@@ -243,7 +260,7 @@ header {
 }
 
 .card-settings {
-    margin-right: 27px;
+    margin-right: 7px;
 }
 
 .counter__decrement,
@@ -251,7 +268,7 @@ header {
     width: 28px;
     height: 100%;
     border-radius: 8px 0 0 8px;
-    font-size: 20px;
+    font-size: 22px;
     background-color: #fff;
     color: #000;
 }
@@ -292,9 +309,10 @@ header {
 }
 
 .card-price {
-    padding-left: 30px;
     display: flex;
     flex-direction: column;
+    align-items: end;
+    width: 120px;
 }
 
 .card-price__discountPrice {
@@ -306,12 +324,14 @@ header {
 
 .card-price__price {
     margin-top: 3px;
-    text-align: right;
+    width: fit-content;
     font-size: 13px;
     color: var(--var-GrayColor);
     text-decoration: line-through;
     border-bottom: 1px dashed var(--var-GrayColor);
 }
+
+
 
 
 
