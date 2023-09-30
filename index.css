@@ -274,6 +274,7 @@ header {
 .counter__value {
     width: 44px;
     height: 100%;
+    text-align: center;
 }
 
 .counter__increment {
@@ -393,14 +394,16 @@ header {
 }
 
 .container-main-delivery,
-.container-main-pay {
+.container-main-pay,
+.container-main-recipient {
     margin-top: 30px;
     background-color: #fff;
     border-radius: 16px;
 }
 
 .delivery-header,
-.pay-header {
+.pay-header,
+.recipient-header {
     padding: 20px 24px 15px;
     display: flex;
     justify-content: space-between;
@@ -456,7 +459,7 @@ header {
 
 .delivery-footer {
     margin-top: 30px;
-    padding: 0 24px 30px;
+    padding: 0 24px 20px;
     display: flex;
 }
 
@@ -469,8 +472,9 @@ header {
     color: var(--var-GreenColor);
 }
 
-.container-main-pay {
-    margin-top: 10px;
+.container-main-pay,
+.container-main-recipient {
+    margin-top: 17px;
     padding: 0 24px;
 }
 
@@ -478,16 +482,72 @@ header {
     padding: 20px 0 15px;
 }
 
-.pay-data{
+.pay-data {
     display: flex;
     gap: 10px;
 }
 
 .pay-footer {
-    padding: 4px 0 30px;
+    padding: 4px 0 20px;
     font-size: 13px;
     color: var(--var-GrayColor);
 }
+
+.recipient-header {
+    padding: 20px 0;
+}
+
+.recipient-info {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 20px;
+}
+
+.recipient__data {
+    padding-top: 20px;
+    font-size: 16px;
+    border-bottom: 1px solid var(--var-GrayColor);
+}
+
+.recipient__label {
+    position: relative;
+    display: flex;
+}
+
+.recipient__dataClue {
+    display: none;
+    position: absolute;
+    font-size: 13px;
+    color: var(--var-GrayColor);
+}
+
+.recipient__dataInn {
+    position: absolute;
+    bottom: -23px;
+    font-size: 12px;
+}
+
+.recipient__data::placeholder {
+    font-size: 16px;
+    color: var(--var-GrayColor);
+}
+
+.recipient__firstName,
+.recipient__lastName {
+    width: 340px;
+}
+
+.recipient__email,
+.recipient__phone,
+.recipient__inn {
+    width: 220px;
+}
+
+
+
 
 
 
