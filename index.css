@@ -392,20 +392,23 @@ header {
     margin-right: 125px;
 }
 
-.container-main-delivery {
+.container-main-delivery,
+.container-main-pay {
     margin-top: 30px;
     background-color: #fff;
     border-radius: 16px;
 }
 
-.delivery-header {
+.delivery-header,
+.pay-header {
     padding: 20px 24px 15px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
 
-.delivery-header__change {
+.delivery-header__change,
+.pay-header__change {
     font-size: 16px;
     font-weight: 700;
     color: var(--var-ButtonsColor);
@@ -466,10 +469,25 @@ header {
     color: var(--var-GreenColor);
 }
 
+.container-main-pay {
+    margin-top: 10px;
+    padding: 0 24px;
+}
 
+.pay-header {
+    padding: 20px 0 15px;
+}
 
+.pay-data{
+    display: flex;
+    gap: 10px;
+}
 
-
+.pay-footer {
+    padding: 4px 0 30px;
+    font-size: 13px;
+    color: var(--var-GrayColor);
+}
 
 
 
