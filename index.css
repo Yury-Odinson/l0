@@ -673,6 +673,7 @@ header {
 .basket-footer-label {
     display: flex;
 }
+
 .checkbox-offer {
     margin-top: -15px;
 }
@@ -733,7 +734,35 @@ footer {
     .header-navbar {
         margin-right: -8px;
     }
+
+    .container-main {
+        width: 100%;
+    }
+
+    .recipient__firstName,
+    .recipient__lastName {
+        width: 280px;
+    }
+
+    .recipient__email,
+    .recipient__phone,
+    .recipient__inn {
+        width: 180px;
+    }
+
+    .basket-info-delivery-info,
+    .basket-info-delivery-info__data {
+        line-height: 16px;
+    }
+
+    .basket-info-delivery-notification__text,
+    .basket-payNow__descripton {
+        letter-spacing: -0.7px;
+    }
 }
+
+
+
 
 @media only screen and (max-width: 500px) {
 
