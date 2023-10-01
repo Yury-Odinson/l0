@@ -50,7 +50,7 @@ header {
 
 .header__title {
     width: 106px;
-    font-size: 21px;
+    font-size: clamp(19px, 2.5vw, 21px);
     font-weight: 600;
     color: #fff;
     letter-spacing: 2px;
@@ -162,6 +162,7 @@ header {
 .container-checkbox__span {
     margin-top: -2px;
     margin-left: 10px;
+    font-size: clamp(14px, 2.5vw, 16px);
 }
 
 .container-checkbox__button,
@@ -216,6 +217,7 @@ header {
 
 .card__name {
     padding-bottom: 3px;
+    font-size: clamp(13px, 2.5vw, 16px);
 }
 
 .card__color,
@@ -315,7 +317,8 @@ header {
 
 .card-price__discountPrice {
     letter-spacing: -1.7px;
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: clamp(17px, 2.5vw, 20px);
     font-weight: 700;
     text-align: right;
 }
@@ -430,6 +433,8 @@ header {
 
 .delivery-firstColl {
     width: 170px;
+
+    font-size: clamp(13px, 2.5vw, 16px);
     font-weight: 600;
 }
 
@@ -437,6 +442,7 @@ header {
     padding: 0 16px;
     display: flex;
     flex-direction: column;
+    font-size: clamp(13px, 2.5vw, 16px);
 }
 
 .delivery-string-address__info {
@@ -519,9 +525,17 @@ header {
     row-gap: 20px;
 }
 
+.recipient-info-string {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    /* border: 1px solid red; */
+}
 .recipient__data {
     padding-top: 20px;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: clamp(13px, 2.5vw, 16px);
     border-bottom: 1px solid var(--var-GrayColor);
 }
 
@@ -544,19 +558,20 @@ header {
 }
 
 .recipient__data::placeholder {
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: clamp(13px, 2.5vw, 16px);
     color: var(--var-GrayColor);
 }
 
 .recipient__firstName,
 .recipient__lastName {
-    width: 340px;
+    width: clamp(180px, 22.5vw, 340px);
 }
 
 .recipient__email,
 .recipient__phone,
 .recipient__inn {
-    width: 220px;
+    width: clamp(100px, 22.5vw, 220px);
 }
 
 .container-basket {
@@ -761,7 +776,30 @@ footer {
     }
 }
 
+@media only screen and (max-width: 900px) {
+    .header-container,
+    .header-nav-element,
+    .header-navbar {
+        gap: 10px;
+    }
 
+    .header-button__menu {
+        padding: 5px;
+    }
+
+    .container-wrapper {
+        flex-direction: column;
+    }
+
+    .container-basket {
+        margin-bottom: 55px;
+        width: 100%;
+    }
+
+    .checkbox-offer {
+        margin: 0;
+    }
+}
 
 
 @media only screen and (max-width: 500px) {
