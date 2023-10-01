@@ -525,10 +525,6 @@ header {
     color: var(--var-GrayColor);
 }
 
-.container-main-recipient {
-    /* margin-bottom: 5px; */
-}
-
 .recipient-header {
     padding: 20px 0;
 }
