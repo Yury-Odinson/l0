@@ -118,6 +118,8 @@ header {
 }
 
 .container {
+    position: relative;
+    z-index: 2;
     margin: -24px auto 0;
     padding-top: 42px;
     border-radius: 24px;
@@ -489,10 +491,22 @@ header {
     gap: 10px;
 }
 
+.basket-info__edit {
+    width: 32px;
+    height: 24px;
+    background-image: url(/images/basket-edit.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .pay-footer {
     padding: 4px 0 20px;
     font-size: 13px;
     color: var(--var-GrayColor);
+}
+
+.container-main-recipient {
+    margin-bottom: 55px;
 }
 
 .recipient-header {
@@ -682,8 +696,23 @@ header {
     text-decoration: underline #0000001A;
 }
 
+footer {
+    position: relative;
+    z-index: 1;
+    margin-top: -24px;
+    display: flex;
+    width: 100vw;
+    height: 88px;
+    background-color: var(--var-PrimaryColor);
+}
 
-
+.footer-container {
+    margin: 0 auto;
+    padding: 40px 0;
+    color: #FFFFFFB2;
+    font-size: 13px;
+    height: 100%;
+}
 
 
 
