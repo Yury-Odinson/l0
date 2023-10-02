@@ -88,10 +88,25 @@
                 <h2 class="container__title">Корзина</h2>
                 <div class="container-main-header">
                     <div class="checkbox-area container-checkbox-area__hideAll">
-                        <label class="container-checkbox-label">
+
+
+
+
+                        <!-- <label class="container-checkbox-label">
                             <input class="checkbox-item container-checkbox__hideAll" type="checkbox">
                             <span class="container-checkbox__span">Выбрать все</span>
+                        </label> -->
+
+
+                        <label class="container-checkbox-label" name="checkAll">
+                            <input class="default__checkbox" type="checkbox">
+                            <span class="custom__checkbox"></span>
+                            <span class="container-checkbox__span">Выбрать все</span>
                         </label>
+
+
+
+
                     </div>
                     <button class="container-checkbox__button"></button>
                 </div>
@@ -103,9 +118,23 @@
                     <div class="card-item">
                         <div class="card-main">
                             <div class="card-main-good">
-                                <label class="card-main-good-label">
-                                    <input class="checkbox-item card-main-good__checkbox" type="checkbox">
+
+
+
+                                <label class="container-checkbox-label" name="checkGood">
+                                    <input class="default__checkbox" type="checkbox">
+                                    <span class="custom__checkbox"></span>
                                 </label>
+
+
+                                <!-- <label class="card-main-good-label">
+                                    <input class="checkbox-item card-main-good__checkbox" type="checkbox">
+                                </label> -->
+
+
+
+
+
                                 <img class="card__image" src="/images/body-card1.png" alt="какой-то всплывающий текст"
                                     width="72" height="96">
                             </div>
@@ -181,9 +210,17 @@
                     <div class="card-item">
                         <div class="card-main">
                             <div class="card-main-good">
-                                <label class="card-main-good-label">
-                                    <input class="checkbox-item card-main-good__checkbox" type="checkbox">
+
+
+
+
+                                <label class="container-checkbox-label" name="checkGood">
+                                    <input class="default__checkbox" type="checkbox">
+                                    <span class="custom__checkbox"></span>
                                 </label>
+
+
+
                                 <img class="card__image" src="/images/body-card2.png" alt="какой-то всплывающий текст"
                                     width="72" height="96">
                             </div>
@@ -257,9 +294,15 @@
                     <div class="card-item">
                         <div class="card-main">
                             <div class="card-main-good">
-                                <label class="card-main-good-label">
-                                    <input class="checkbox-item card-main-good__checkbox" type="checkbox">
+
+
+
+                                <label class="container-checkbox-label" name="checkGood">
+                                    <input class="default__checkbox" type="checkbox">
+                                    <span class="custom__checkbox"></span>
                                 </label>
+
+
                                 <img class="card__image" src="/images/body-card3.png" alt="какой-то всплывающий текст"
                                     width="72" height="96">
                             </div>
@@ -547,17 +590,46 @@
                         <span>1234 12•• •••• 1234</span>
                     </div>
                     <div class="basket-payNow">
-                        <label class="basket-payNow__label">
-                            <input class="checkbox-item" type="checkbox">
+
+
+                        <label class="container-checkbox-label basket-payNow__label" name="payNow">
+                            <input class="default__checkbox" type="checkbox">
+                            <span class="custom__checkbox"></span>
                             <span>Списать оплату сразу</span>
                         </label>
+
+
+
+
+
+
+
                         <span class="basket-payNow__descripton">Спишем оплату с карты при получении</span>
                     </div>
 
                     <button class="basket__buttonOrder">Заказать</button>
 
                     <div class="basket-footer">
-                        <label class="basket-footer-label">
+
+
+
+                        <label class="container-checkboxSmall-label basket-footer-label" name="payNow">
+                            <input class="default__checkboxSmall" type="checkbox">
+                            <span class="custom__checkboxSmall"></span>
+                            <div class="basket-footer-label-text">
+                                <span class="basket-footer-label-text__item">Соглашаюсь</span>
+                                <span class="basket-footer-label-text__itemUnderline">c правилами пользования
+                                    торговой
+                                    площадкой</span>
+                                <span class="basket-footer-label-text__item">и</span>
+                                <span class="basket-footer-label-text__itemUnderline">возврата</span>
+                            </div>
+
+
+                        </label>
+
+
+                        <!-- <label class="basket-footer-label">
                             <input class="checkbox-offer" type="checkbox">
                             <div class="basket-footer-label-text">
                                 <span class="basket-footer-label-text__item">Соглашаюсь</span>
@@ -567,7 +639,11 @@
                                 <span class="basket-footer-label-text__item">и</span>
                                 <span class="basket-footer-label-text__itemUnderline">возврата</span>
                             </div>
-                        </label>
+                        </label> -->
+
+
+
+                        
                     </div>
                 </div>
             </div>

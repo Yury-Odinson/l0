@@ -151,7 +151,8 @@ header {
     margin-top: 33px;
 }
 
-.container-checkbox-label {
+.container-checkbox-label,
+.container-checkboxSmall-label {
     display: flex;
 }
 
@@ -1147,7 +1148,7 @@ footer {
     .recipient__data {
         width: 100%;
     }
-    
+
     .recipient__inn {
         margin-bottom: 25px;
     }
