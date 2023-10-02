@@ -159,7 +159,12 @@ header {
 .container-checkbox-label,
 .container-checkboxCard-label,
 .container-checkboxSmall-label {
+    cursor: pointer;
     display: flex;
+}
+
+.custom__checkboxCard {
+    margin: auto 0;
 }
 
 .checkbox-item {
