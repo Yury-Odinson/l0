@@ -15,6 +15,11 @@
     line-height: 24px;
 }
 
+h2 {
+    font-size: clamp(19px, 2.5vw, 24px);
+
+}
+
 html {
     font-family: 'Segoe UI', 'Roboto', sans-serif;
     scroll-behavior: smooth;
@@ -35,6 +40,7 @@ button {
 }
 
 input {
+    outline: none;
     border: none;
 }
 
@@ -48,4 +54,59 @@ input::-moz-placeholder {
     font-size: 16px;
     font-weight: 200;
     color: var(--var-TranslucentWhite);
+}
+
+.default__checkbox,
+.default__checkboxSmall,
+.default__checkboxCard {
+    display: none;
+}
+
+.custom__checkbox,
+.custom__checkboxSmall,
+.custom__checkboxCard {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #00000033;
+    border-radius: 6px;
+}
+
+.custom__checkbox::before,
+.custom__checkboxSmall::before,
+.custom__checkboxCard::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.1s ease-in;
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-color: var(--var-ButtonsColor);
+    border-radius: 6px;
+    background-image: url(/images/check-mark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+}
+
+.default__checkbox:checked+.custom__checkbox::before,
+.default__checkboxSmall:checked+.custom__checkboxSmall::before,
+.default__checkboxCard:checked+.custom__checkboxCard::before {
+    opacity: 1;
+}
+
+.custom__checkboxSmall {
+    width: 16px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.custom__checkboxSmall::before {
+    width: 16px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 4px;
+    background-image: url(/images/check-mark-small.svg);
 }
