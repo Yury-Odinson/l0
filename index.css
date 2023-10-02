@@ -114,6 +114,10 @@ header {
     margin-right: -3px;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 .container {
     position: relative;
     z-index: 2;
@@ -124,6 +128,7 @@ header {
 }
 
 .container-wrapper {
+    position: relative;
     display: flex;
     margin: 0 auto;
     padding: 0 24px;
@@ -190,17 +195,9 @@ header {
     align-items: start;
 }
 
-.card-info-mobile {
-    display: none;
-}
-
 .card-main {
     margin: 10px 0;
     display: flex;
-}
-
-.card-mobile {
-    display: none;
 }
 
 .card-main-good {
@@ -230,7 +227,6 @@ header {
 
 .card__name {
     padding-bottom: 3px;
-    /* border: 1px solid red; */
     font-size: clamp(13px, 2.5vw, 16px);
 }
 
@@ -332,7 +328,6 @@ header {
 
 .card-price__discountPrice {
     letter-spacing: -1.7px;
-    /* font-size: 20px; */
     font-size: clamp(17px, 2.5vw, 20px);
     font-weight: 700;
     text-align: right;
@@ -390,7 +385,6 @@ header {
 }
 
 .missing__name {
-    /* font-size: 16px; */
     font-size: clamp(14px, 2.5vw, 16px);
     color: var(--var-GrayColor);
 }
@@ -399,10 +393,6 @@ header {
 .missing__size {
     font-size: 13px;
     color: var(--var-GrayColor);
-}
-
-.card-mobile-good__size {
-    display: none;
 }
 
 .missing__size {
@@ -546,12 +536,10 @@ header {
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
-    /* border: 1px solid red; */
 }
 
 .recipient__data {
     padding-top: 20px;
-    /* font-size: 16px; */
     font-size: clamp(13px, 2.5vw, 16px);
     border-bottom: 1px solid var(--var-GrayColor);
 }
@@ -886,6 +874,7 @@ footer {
 
         padding-bottom: 50px;
     }
+
     .card-item:last-child {
         border: none;
         padding-bottom: 52px;
@@ -925,8 +914,8 @@ footer {
 
     .card-price {
         position: absolute;
+        width: 70%;
         padding-left: 10px;
-        width: 100%;
         flex-direction: row;
         align-items: center;
         gap: 10px;
@@ -1042,12 +1031,6 @@ footer {
 
     .missing__size {
         display: none;
-    }
-
-    .card-mobile-good__size {
-        display: block;
-        position: absolute;
-        bottom: 3px;
     }
 
     .missing-options {
@@ -1195,6 +1178,30 @@ footer {
 
     .basket-footer {
         margin-bottom: 40px;
+    }
+
+    .footer-container {
+        padding-top: 20px;
+        display: flex;
+        height: 142px;
+    }
+
+    .footer__copyright {
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 56px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #fff;
+        z-index: 9999;
     }
 
 }
