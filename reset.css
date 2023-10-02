@@ -57,11 +57,14 @@ input::-moz-placeholder {
 }
 
 .default__checkbox,
-.default__checkboxSmall {
+.default__checkboxSmall,
+.default__checkboxCard {
     display: none;
 }
 
-.custom__checkbox {
+.custom__checkbox,
+.custom__checkboxSmall,
+.custom__checkboxCard {
     position: relative;
     width: 22px;
     height: 22px;
@@ -69,7 +72,9 @@ input::-moz-placeholder {
     border-radius: 6px;
 }
 
-.custom__checkbox::before {
+.custom__checkbox::before,
+.custom__checkboxSmall::before,
+.custom__checkboxCard::before {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -86,35 +91,22 @@ input::-moz-placeholder {
     opacity: 0;
 }
 
-.default__checkbox:checked+.custom__checkbox::before {
+.default__checkbox:checked+.custom__checkbox::before,
+.default__checkboxSmall:checked+.custom__checkboxSmall::before,
+.default__checkboxCard:checked+.custom__checkboxCard::before {
     opacity: 1;
 }
 
 .custom__checkboxSmall {
-    position: relative;
     width: 16px;
     height: 14px;
-    border: 1px solid #00000033;
     border-radius: 4px;
 }
 
 .custom__checkboxSmall::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.1s ease-in;
-    content: "";
     width: 16px;
     height: 14px;
     background-color: #fff;
     border-radius: 4px;
     background-image: url(/images/check-mark-small.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0;
-}
-
-.default__checkboxSmall:checked+.custom__checkboxSmall::before {
-    opacity: 1;
 }

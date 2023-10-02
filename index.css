@@ -152,6 +152,7 @@ header {
 }
 
 .container-checkbox-label,
+.container-checkboxCard-label,
 .container-checkboxSmall-label {
     display: flex;
 }
@@ -234,7 +235,8 @@ header {
 }
 
 .card__color,
-.card__size {
+.card__size,
+.card__sizeNumber {
     padding-right: 13px;
     font-size: 13px;
     line-height: 16px;
@@ -868,67 +870,29 @@ footer {
         margin: 0;
     }
 
-    .card-main,
-    .card-main-good,
-    .card-description,
-    .card-nav,
-    .card-tm__item,
-    .card-tm__image {
+    .card__size,
+    .card-tm {
         display: none;
     }
 
     .card-item {
-        display: block;
-        padding-bottom: 20px;
+        position: relative;
+        padding-bottom: 45px;
+        justify-content: normal;
         border-bottom: 1px solid #0000001A;
     }
 
-    .card-item:first-child {
-        margin-top: 10px;
-    }
-
     .card-item:last-child {
-        border-bottom: none;
-        margin-bottom: 15px;
+
+        padding-bottom: 50px;
+    }
+    .card-item:last-child {
+        border: none;
+        padding-bottom: 52px;
     }
 
-    .card-mobile {
-        display: block;
-    }
-
-    .card-mobile-good-label {
+    .card-main-good {
         position: relative;
-    }
-
-    .card-mobile-good {
-        margin-bottom: 5px;
-        display: flex;
-        gap: 16px;
-    }
-
-    .card-mobile-price {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .card-mobile-good__size {
-        padding: 3px;
-        position: absolute;
-        bottom: 10px;
-        left: 5px;
-        width: 22px;
-        height: 22px;
-        font-size: 14px;
-        border-radius: 6px;
-        line-height: 15px;
-        background-color: #fff;
-    }
-
-    .card-mobile-good-description {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
     }
 
     .card__image {
@@ -937,14 +901,42 @@ footer {
         height: 106px;
     }
 
-    .card-mobile-good__checkbox {
+    .custom__checkboxCard {
         position: absolute;
         top: 5px;
         left: 5px;
     }
 
-    .card-mobile-good__name {
+    .card__sizeNumber {
+        padding: 0;
+        position: absolute;
+        top: 90px;
+        left: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        background-color: #fff;
+        border-radius: 6px;
         font-size: 14px;
+        font-weight: 400;
+    }
+
+    .card-price {
+        position: absolute;
+        padding-left: 10px;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card__name {
+        position: absolute;
+        top: 35px;
+        left: 98px;
+        letter-spacing: 0.5px;
         line-height: 20px;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -952,56 +944,50 @@ footer {
         overflow: hidden;
     }
 
-    .card-mobile-nav {
+    .card__color {
+        position: absolute;
+        top: 85px;
+        left: 98px;
+    }
+
+    .card__importer {
+        position: absolute;
+        top: 105px;
+        left: 98px;
+    }
+
+    .card-settings {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: absolute;
+        top: 130px;
+        left: 0;
+        right: 0;
+    }
+
+    .card-nav-counter {
+        height: 32px;
+    }
+
+    .counter__decrement,
+    .counter__increment {
+        width: 24px;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .counter__value {
+        width: 32px;
+    }
+
+    .counter__increment {
+        border-radius: 0 8px 8px 0;
     }
 
     .card-nav-options {
-        margin: 0;
-        padding: 0;
-    }
-
-    .card-mobile-nav-counter {
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
-
-    .counter-mobile__decrement,
-    .counter-mobile__value,
-    .counter-mobile__increment {
-        margin: 0;
-        padding: 0;
-        height: 32px;
-        font-size: 20px;
-        color: #000;
-        background-color: #fff;
-    }
-
-    .counter-mobile__decrement {
-        width: 24px;
-        height: 32px;
-        border-radius: 4px 0 0 4px;
-    }
-
-    .counter-mobile__value {
-        width: 32px;
-        font-size: 14px;
-        text-align: center;
-    }
-
-    .counter-mobile__increment {
-        width: 24px;
-        height: 32px;
-        border-radius: 0 4px 4px 0;
-    }
-
-    .card-mobile-nav-options {
-        padding: 0 10px;
-        display: flex;
-        gap: 20px;
+        margin: auto 0;
+        margin-right: 5px;
+        gap: 25px;
     }
 
     .container-main-missing {
@@ -1009,8 +995,9 @@ footer {
     }
 
     .missing-header {
-        height: fit-content;
+        padding-top: 10px;
         padding-bottom: 15px;
+        height: fit-content;
     }
 
     .missing__item {
