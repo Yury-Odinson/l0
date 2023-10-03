@@ -602,6 +602,17 @@ header {
     letter-spacing: -1px;
 }
 
+.basket-header-total {
+    display: flex;
+    gap: 5px;
+
+}
+
+.backet-header__totalCurrency {
+    font-size: 24px;
+    font-weight: 700;
+}
+
 .basket-info-price {
     margin: 12px 0;
 }
