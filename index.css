@@ -191,7 +191,7 @@ header {
 .container-main-cards {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .card-item {
@@ -233,6 +233,7 @@ header {
 .card__name {
     padding-bottom: 3px;
     font-size: clamp(13px, 2.5vw, 16px);
+    line-height: 20px;
 }
 
 .card__color,
@@ -274,10 +275,6 @@ header {
     height: 44px;
 }
 
-.card-settings {
-    margin-right: 7px;
-}
-
 .counter__decrement,
 .counter__increment {
     width: 28px;
@@ -305,23 +302,26 @@ header {
 
 .card-nav-options {
     margin-top: 8px;
+    margin-right: 2px;
     display: flex;
-    gap: 15px;
+    gap: 18px;
     justify-content: end;
 }
 
-.card-nav__favorite,
-.card-nav__trash {
+.card-nav__item {
+    padding: 0;
+    display: flex;
+    align-items: center;
     width: 20px;
     height: 20px;
 }
 
-.card-nav__favorite {
-    background-image: url(/images/body-card-favorites.svg);
+.card-nav__itemFavorites:hover svg path {
+    fill: var(--var-ButtonsColor);
 }
 
-.card-nav__trash {
-    background-image: url(/images/body-card-trash.svg);
+.card-nav__itemTrash:hover svg path {
+    fill: #F55123;
 }
 
 .card-price {
@@ -405,7 +405,9 @@ header {
 }
 
 .missing-options {
+    padding: 0;
     display: flex;
+    align-items: baseline;
     gap: 15px;
     margin-right: 125px;
 }
@@ -414,7 +416,7 @@ header {
 .container-main-pay,
 .container-main-recipient {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 25px;
     background-color: #fff;
     border-radius: 16px;
 }
@@ -528,7 +530,7 @@ header {
 }
 
 .recipient-info {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     padding-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -870,14 +872,14 @@ footer {
 
     .card-item {
         position: relative;
-        padding-bottom: 45px;
+        padding: 10px 0;
+        padding-bottom: 61px;
         justify-content: normal;
         border-bottom: 1px solid #0000001A;
     }
 
-    .card-item:last-child {
-
-        padding-bottom: 50px;
+    .card-main {
+        margin: 0;
     }
 
     .card-item:last-child {
@@ -919,6 +921,7 @@ footer {
 
     .card-price {
         position: absolute;
+        top: 7px;
         width: 70%;
         padding-left: 10px;
         flex-direction: row;
@@ -940,17 +943,18 @@ footer {
 
     .card__color {
         position: absolute;
-        top: 85px;
+        top: 75px;
         left: 98px;
     }
 
     .card__importer {
         position: absolute;
-        top: 105px;
+        top: 95px;
         left: 98px;
     }
 
     .card-settings {
+        padding-right: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -981,7 +985,7 @@ footer {
     .card-nav-options {
         margin: auto 0;
         margin-right: 5px;
-        gap: 25px;
+        gap: 22px;
     }
 
     .container-main-missing {
