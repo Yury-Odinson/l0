@@ -10,7 +10,8 @@ const incrSumCard1 = document.getElementById("card1__incr")
 // декрементирую 
 decrSumCard1.addEventListener("click", () => {
     if (sumCard1.value > 1) {
-        sumCard1.value = Number(sumCard1.value) - 1
+        sumCard1.value = Number(sumCard1.value) - 1;
+        priceCard1.textContent = Number(priceCard1.textContent) - 522;
     } else {
         card1.style.display = "none"
     }
