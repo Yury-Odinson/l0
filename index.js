@@ -1,25 +1,31 @@
 // присваиваю DOM элементы в константы
+// card 1
 const card1 = document.getElementById("card1__item")
 let priceCard1 = document.getElementById("card1__price")
 let amountCard1 = document.getElementById("card1__value")
 const decrSumCard1 = document.getElementById("card1__decr")
 const incrSumCard1 = document.getElementById("card1__incr")
 const reminderCard1 = document.getElementById("card1__reminder").textContent
-
+// card 2
 const card2 = document.getElementById("card2__item")
 let priceCard2 = document.getElementById("card2__price")
 let amountCard2 = document.getElementById("card2__value")
 const decrSumCard2 = document.getElementById("card2__decr")
 const incrSumCard2 = document.getElementById("card2__incr")
-
+// card3
 const card3 = document.getElementById("card3__item")
 let priceCard3 = document.getElementById("card3__price")
 let amountCard3 = document.getElementById("card3__value")
 const decrSumCard3 = document.getElementById("card3__decr")
 const incrSumCard3 = document.getElementById("card3__incr")
 const reminderCard3 = document.getElementById("card3__reminder").textContent
-
-
+// inputs
+const userFirstName = document.getElementById("data__firstName")
+const userLastName = document.getElementById("data__lastName")
+const userEmail = document.getElementById("data__email")
+const userPhone = document.getElementById("data__phone")
+const userINN = document.getElementById("data__inn")
+// checkbox
 const checkboxBasketPaynow = document.getElementById("basket-checkbox-payNow")
 const totalPrice = document.getElementById("basket-header__totalPrice").textContent
 const buttonBasketBuy = document.getElementById("basket__buttonOrder")
@@ -83,10 +89,6 @@ incrSumCard3.addEventListener("click", () => {
     priceCard3.textContent = Number(amountCard3.value) * priceForOne.card3;
 })
 
-
-
-
-
 // Проверяю, нажат ли чекбокс для оплаты сразу
 function checkPaynow() {
     if (checkboxBasketPaynow.checked) {
@@ -98,3 +100,51 @@ function checkPaynow() {
 
 // меняю значение чебокса оплаты сразу
 checkboxBasketPaynow.addEventListener("change", () => checkPaynow())
+
+// функция-обработчик ошибок на не заполенные поля в разделе "Получатель"
+function checkInput(input) {
+    const element = document.getElementById(input)
+    const elementHelp = document.getElementById(`${input}Help`)
+    const innDescription = document.getElementById("data__innDescription")
+    if (element.value === "") {
+        element.classList.add("recipient__dataError")
+        elementHelp.style.display = "block"
+        input === "data__inn" ? innDescription.style.display = "none" : innDescription.style.display = "block" // если ошибочное поле является ИНН, то скрываем строку "Для таможенного оформления"
+        scrollTo(0, 1000) // в случае, если есть пустое поле, то страница прокручивается вниз до блока с данными, где есть пустые поля
+    } else {
+        element.classList.remove("recipient__dataError")
+        elementHelp.style.display = "none"
+    }
+}
+
+// Проверяю наличие заполнений полей в разделе "Получатель"
+function checkUserData() {
+    checkInput("data__firstName")
+    checkInput("data__lastName")
+    checkInput("data__email")
+    checkInput("data__phone")
+    checkInput("data__inn")
+}
+
+// события на изменение полей данных
+userFirstName.addEventListener("change", () => {
+    document.getElementById("data__firstNameClue").style.display = "block"
+})
+
+userLastName.addEventListener("change", () => {
+    document.getElementById("data__lastNameClue").style.display = "block"
+})
+
+userEmail.addEventListener("change", () => {
+    document.getElementById("data__EmailClue").style.display = "block"
+})
+
+userPhone.addEventListener("change", () => {
+    document.getElementById("data__phoneClue").style.display = "block"
+})
+
+userINN.addEventListener("change", () => {
+    document.getElementById("data__innClue").style.display = "block"
+})
+
+buttonBasketBuy.addEventListener("click", () => checkUserData())
