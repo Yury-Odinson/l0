@@ -322,7 +322,7 @@ header {
 }
 
 .card-nav__itemTrash:hover svg path {
-    fill: #F55123;
+    fill: var(--var-Orange);
 }
 
 .card-price {
