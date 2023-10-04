@@ -25,10 +25,19 @@ const userLastName = document.getElementById("data__lastName")
 const userEmail = document.getElementById("data__email")
 const userPhone = document.getElementById("data__phone")
 const userINN = document.getElementById("data__inn")
-// checkbox
+// checkboxes
+const basketCheckAll = document.getElementById("basket__checkAll")
 const checkboxBasketPaynow = document.getElementById("basket-checkbox-payNow")
 const totalPrice = document.getElementById("basket-header__totalPrice").textContent
 const buttonBasketBuy = document.getElementById("basket__buttonOrder")
+
+// функция выделения/снятия галочек на всех позициях товара
+function checkAllGoods() {
+    const element = document.querySelectorAll(".checkbox__card")
+    element.forEach((e) => e.checked = !e.checked)
+}
+
+basketCheckAll.addEventListener("change", () => checkAllGoods())
 
 // фиксирую цену за 1шт. для каждого из товаров
 const priceForOne = {

@@ -100,7 +100,7 @@
                 <h2 class="container__title">Корзина</h2>
                 <div class="container-main-header">
                     <div class="checkbox-area container-checkbox-area__hideAll">
-                        <label class="container-checkbox-label" name="checkAll">
+                        <label class="container-checkbox-label" id="basket__checkAll" name="checkAll">
                             <input class="default__checkbox" type="checkbox">
                             <span class="custom__checkbox"></span>
                             <span class="container-checkbox__span">Выбрать все</span>
@@ -118,7 +118,7 @@
                         <div class="card-main">
                             <div class="card-main-good">
                                 <label class="container-checkboxCard-label" name="checkGood">
-                                    <input class="default__checkboxCard" type="checkbox">
+                                    <input class="default__checkboxCard checkbox__card" type="checkbox">
                                     <span class="custom__checkboxCard"></span>
                                     <img class="card__image" src="/images/body-card1.png"
                                         alt="какой-то всплывающий текст" width="72" height="96">
@@ -190,7 +190,7 @@
                         <div class="card-main">
                             <div class="card-main-good">
                                 <label class="container-checkboxCard-label" name="checkGood">
-                                    <input class="default__checkboxCard" type="checkbox">
+                                    <input class="default__checkboxCard checkbox__card" type="checkbox">
                                     <span class="custom__checkboxCard"></span>
                                     <img class="card__image" src="/images/body-card2.png"
                                         alt="какой-то всплывающий текст" width="72" height="96">
@@ -265,7 +265,7 @@
                         <div class="card-main">
                             <div class="card-main-good">
                                 <label class="container-checkboxCard-label" name="checkGood">
-                                    <input class="default__checkboxCard" type="checkbox">
+                                    <input class="default__checkboxCard checkbox__card" type="checkbox">
                                     <span class="custom__checkboxCard"></span>
                                     <img class="card__image" src="/images/body-card3.png"
                                         alt="какой-то всплывающий текст" width="72" height="96">
@@ -547,31 +547,37 @@
                         <div class="recipient-info-string">
                             <label class="recipient__label">
                                 <span class="recipient__dataClue" id="data__firstNameClue">Имя</span>
-                                <input class="recipient__data recipient__firstName" id="data__firstName" type="text" placeholder="Имя">
+                                <input class="recipient__data recipient__firstName" id="data__firstName" type="text"
+                                    placeholder="Имя">
                                 <span class="recipient__firstNameHelp" id="data__firstNameHelp">Укажите имя</span>
                             </label>
                             <label class="recipient__label">
                                 <span class="recipient__dataClue" id="data__lastNameClue">Фамилия</span>
-                                <input class="recipient__data recipient__lastName" id="data__lastName" type="text" placeholder="Фамилия">
+                                <input class="recipient__data recipient__lastName" id="data__lastName" type="text"
+                                    placeholder="Фамилия">
                                 <span class="recipient__lastNameHelp" id="data__lastNameHelp">Укажите Фамилию</span>
                             </label>
                         </div>
                         <div class="recipient-info-string">
                             <label class="recipient__label">
                                 <span class="recipient__dataClue" id="data__EmailClue">Почта</span>
-                                <input class="recipient__data recipient__email" id="data__email" type="email" placeholder="Почта">
+                                <input class="recipient__data recipient__email" id="data__email" type="email"
+                                    placeholder="Почта">
                                 <span class="recipient__emailHelp" id="data__emailHelp">Укажите электронную почту</span>
                             </label>
                             <label class="recipient__label">
                                 <span class="recipient__dataClue" id="data__phoneClue">Телефон</span>
-                                <input class="recipient__data recipient__phone" id="data__phone" type="tel" placeholder="Телефон">
+                                <input class="recipient__data recipient__phone" id="data__phone" type="tel"
+                                    placeholder="Телефон">
                                 <span class="recipient__phoneHelp" id="data__phoneHelp">Укажите телефон</span>
                             </label>
                             <label class="recipient__label">
                                 <span class="recipient__dataClue" id="data__innClue">ИНН</span>
-                                <input class="recipient__data recipient__inn" id="data__inn" type="text" placeholder="ИНН">
+                                <input class="recipient__data recipient__inn" id="data__inn" type="text"
+                                    placeholder="ИНН">
                                 <span class="recipient__innHelp" id="data__innHelp">Укажите ИНН</span>
-                                <span class="recipient__dataInn" id="data__innDescription">Для таможенного оформления</span>
+                                <span class="recipient__dataInn" id="data__innDescription">Для таможенного
+                                    оформления</span>
                             </label>
                         </div>
                     </div>
@@ -668,7 +674,7 @@
         </div>
     </footer>
     <script type="module" src="/index.js"></script>
-    <script type="module" src="/data.js"></script>
+    <script type="module" src="/test.js"></script>
 </body>
 
 </html>
