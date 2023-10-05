@@ -194,7 +194,7 @@ function getFullAmount() {
 // Проверяю, нажат ли чекбокс для оплаты сразу
 function checkPaynow() {
     if (checkboxBasketPaynow.checked) {
-        buttonBasketBuy.textContent = `Оплатить ${totalPrice.textContent}`
+        buttonBasketBuy.textContent = `Оплатить ${totalPrice.textContent} com`
     } else {
         buttonBasketBuy.textContent = "Заказать"
     }
@@ -291,7 +291,7 @@ function getTotalPrice() {
     totalPrice.textContent = addSpaces(resultTotalPrice)
     totalFprice.textContent = addSpaces(resultTotalFprice)
     totalDiscount.textContent = `- ${addSpaces(resultTotalFprice - resultTotalPrice)}`
-    buttonBasketBuy.textContent = totalPrice.textContent
+    buttonBasketBuy.textContent = `Оплатить ${totalPrice.textContent} com`
 }
 
 getTotalPrice()
