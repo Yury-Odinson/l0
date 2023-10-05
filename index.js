@@ -2,6 +2,7 @@
 // card 1
 const card1 = document.getElementById("card1__item")
 let priceCard1 = document.getElementById("card1__price")
+let fpriceCard1 = document.getElementById("card1__fprice")
 let amountCard1 = document.getElementById("card1__value")
 const decrSumCard1 = document.getElementById("card1__decr")
 const incrSumCard1 = document.getElementById("card1__incr")
@@ -9,12 +10,14 @@ const reminderCard1 = document.getElementById("card1__reminder").textContent
 // card 2
 const card2 = document.getElementById("card2__item")
 let priceCard2 = document.getElementById("card2__price")
+let fpriceCard2 = document.getElementById("card2__fprice")
 let amountCard2 = document.getElementById("card2__value")
 const decrSumCard2 = document.getElementById("card2__decr")
 const incrSumCard2 = document.getElementById("card2__incr")
 // card3
 const card3 = document.getElementById("card3__item")
 let priceCard3 = document.getElementById("card3__price")
+let fpriceCard3 = document.getElementById("card3__fprice")
 let amountCard3 = document.getElementById("card3__value")
 const decrSumCard3 = document.getElementById("card3__decr")
 const incrSumCard3 = document.getElementById("card3__incr")
@@ -25,10 +28,14 @@ const userLastName = document.getElementById("data__lastName")
 const userEmail = document.getElementById("data__email")
 const userPhone = document.getElementById("data__phone")
 const userINN = document.getElementById("data__inn")
-// checkboxes
+
+
 const basketCheckAll = document.getElementById("basket__checkAll")
-const checkboxBasketPaynow = document.getElementById("basket-checkbox-payNow")
+// baskets 
 let totalPrice = document.getElementById("basket-header__totalPrice")
+let totalFprice = document.getElementById("basket__fprice")
+let totalDiscount = document.getElementById("basket__discount")
+const checkboxBasketPaynow = document.getElementById("basket-checkbox-payNow")
 const buttonBasketBuy = document.getElementById("basket__buttonOrder")
 
 // функция выделения/снятия галочек на всех позициях товара
@@ -40,17 +47,31 @@ function checkAllGoods() {
 basketCheckAll.addEventListener("change", () => checkAllGoods())
 
 // фиксирую цену за 1шт. для каждого из товаров
-const priceForOne = {
+const onePrice = {
     card1: 522,
     card2: 10500,
     card3: 494
 }
 
+// фикцирую цену за 1шт. для каждого из товаров без скидки
+const fullOnePrice = {
+    card1: 1051,
+    card2: 11450,
+    card3: 950
+}
+
 // Присваиваю общую стоимость за позиции исходя из общего количества шт. за товар и его стоимость за 1 шт.
-priceCard1.textContent = Number(amountCard1.value) * priceForOne.card1
-priceCard2.textContent = Number(amountCard2.value) * priceForOne.card2
-priceCard3.textContent = Number(amountCard3.value) * priceForOne.card3
+priceCard1.textContent = amountCard1.value * onePrice.card1
+priceCard2.textContent = amountCard2.value * onePrice.card2
+priceCard3.textContent = amountCard3.value * onePrice.card3
+
+fpriceCard1.textContent = amountCard1.value * fullOnePrice.card1
+fpriceCard2.textContent = amountCard2.value * fullOnePrice.card2
+fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
+
 totalPrice.textContent = Number(priceCard1.textContent) + Number(priceCard2.textContent) + Number(priceCard3.textContent)
+totalFprice.textContent = Number(fpriceCard1.textContent) + Number(fpriceCard2.textContent) + Number(fpriceCard3.textContent)
+totalDiscount.textContent = `- ${Number(totalFprice.textContent) - Number(totalPrice.textContent)}`
 // функция декрементации. передаю в функцию количество шт
 function decrementGoodValue(amount) {
     if (amount.value > 1) {
@@ -72,53 +93,78 @@ function incrementGoodValue(amount, remind) {
 // декрементирую/инкрементирую количество каждой позиции товара
 decrSumCard1.addEventListener("click", () => {
     decrementGoodValue(amountCard1);
-    priceCard1.textContent = Number(amountCard1.value) * priceForOne.card1;
-    getTotalPrice();
+    priceCard1.textContent = amountCard1.value * onePrice.card1
+    fpriceCard1.textContent = amountCard1.value * fullOnePrice.card1
+    getTotalPrice()
+    getFullAmount()
 })
 
 incrSumCard1.addEventListener("click", () => {
     incrementGoodValue(amountCard1, reminderCard1);
-    priceCard1.textContent = Number(amountCard1.value) * priceForOne.card1;
-    getTotalPrice();
+    priceCard1.textContent = amountCard1.value * onePrice.card1
+    fpriceCard1.textContent = amountCard1.value * fullOnePrice.card1
+    getTotalPrice()
+    getFullAmount()
 })
 
 decrSumCard2.addEventListener("click", () => {
     decrementGoodValue(amountCard2);
-    priceCard2.textContent = Number(amountCard2.value) * priceForOne.card2;
-    getTotalPrice();
+    priceCard2.textContent = amountCard2.value * onePrice.card2
+    fpriceCard2.textContent = amountCard2.value * fullOnePrice.card2
+    getTotalPrice()
+    getFullAmount()
 })
 
 incrSumCard2.addEventListener("click", () => {
     incrementGoodValue(amountCard2, Infinity);
-    priceCard2.textContent = Number(amountCard2.value) * priceForOne.card2;
-    getTotalPrice();
+    priceCard2.textContent = amountCard2.value * onePrice.card2
+    fpriceCard2.textContent = amountCard2.value * fullOnePrice.card2
+    getTotalPrice()
+    getFullAmount()
 })
 
 decrSumCard3.addEventListener("click", () => {
     decrementGoodValue(amountCard3);
-    priceCard3.textContent = Number(amountCard3.value) * priceForOne.card3;
-    getTotalPrice();
+    priceCard3.textContent = amountCard3.value * onePrice.card3
+    fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
+    getTotalPrice()
+    getFullAmount()
 })
 
 incrSumCard3.addEventListener("click", () => {
     incrementGoodValue(amountCard3, reminderCard1);
-    priceCard3.textContent = Number(amountCard3.value) * priceForOne.card3;
-    getTotalPrice();
+    priceCard3.textContent = amountCard3.value * onePrice.card3
+    fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
+    getTotalPrice()
+    getFullAmount()
 })
 
 // пересчитываю стоимость за позицию товара при изменении значения количества руками (не через кнопки +-)
 amountCard1.addEventListener("change", () => {
-    console.log(priceCard1.textContent = amountCard1.value * priceForOne.card1)
+    priceCard1.textContent = amountCard1.value * onePrice.card1
+    fpriceCard1.textContent = amountCard1.value * fullOnePrice.card1
+    getFullAmount()
     getTotalPrice()
 })
 amountCard2.addEventListener("change", () => {
-    priceCard2.textContent = amountCard2.value * priceForOne.card2
+    priceCard2.textContent = amountCard2.value * onePrice.card2
+    fpriceCard2.textContent = amountCard2.value * fullOnePrice.card2
+    getFullAmount()
     getTotalPrice()
 })
 amountCard3.addEventListener("change", () => {
-    priceCard3.textContent = amountCard3.value * priceForOne.card3
+    priceCard3.textContent = amountCard3.value * onePrice.card3
+    fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
+    getFullAmount()
     getTotalPrice()
+
 })
+
+// обновляю общее количество товаров в корзине
+function getFullAmount() {
+    const fullAmount = document.getElementById("basket__fullAmount")
+    fullAmount.textContent = Number(amountCard1.value) + Number(amountCard2.value) + Number(amountCard3.value)
+}
 
 // Проверяю, нажат ли чекбокс для оплаты сразу
 function checkPaynow() {
@@ -184,4 +230,6 @@ buttonBasketBuy.addEventListener("click", () => checkUserData())
 // функция подсчёта итоговой суммы на покупку
 function getTotalPrice() {
     totalPrice.textContent = Number(priceCard1.textContent) + Number(priceCard2.textContent) + Number(priceCard3.textContent)
+    totalFprice.textContent = Number(fpriceCard1.textContent) + Number(fpriceCard2.textContent) + Number(fpriceCard3.textContent)
+    totalDiscount.textContent = `- ${Number(totalFprice.textContent) - Number(totalPrice.textContent)}`
 }
