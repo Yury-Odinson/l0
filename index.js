@@ -28,7 +28,7 @@ const userINN = document.getElementById("data__inn")
 // checkboxes
 const basketCheckAll = document.getElementById("basket__checkAll")
 const checkboxBasketPaynow = document.getElementById("basket-checkbox-payNow")
-const totalPrice = document.getElementById("basket-header__totalPrice").textContent
+let totalPrice = document.getElementById("basket-header__totalPrice")
 const buttonBasketBuy = document.getElementById("basket__buttonOrder")
 
 // функция выделения/снятия галочек на всех позициях товара
@@ -36,7 +36,7 @@ function checkAllGoods() {
     const element = document.querySelectorAll(".checkbox__card")
     element.forEach((e) => e.checked = !e.checked)
 }
-
+// getTotalPrice()
 basketCheckAll.addEventListener("change", () => checkAllGoods())
 
 // фиксирую цену за 1шт. для каждого из товаров
@@ -50,11 +50,12 @@ const priceForOne = {
 priceCard1.textContent = Number(amountCard1.value) * priceForOne.card1
 priceCard2.textContent = Number(amountCard2.value) * priceForOne.card2
 priceCard3.textContent = Number(amountCard3.value) * priceForOne.card3
-
+totalPrice.textContent = Number(priceCard1.textContent) + Number(priceCard2.textContent) + Number(priceCard3.textContent)
 // функция декрементации. передаю в функцию количество шт
 function decrementGoodValue(amount) {
     if (amount.value > 1) {
         amount.value = Number(amount.value) - 1;
+        getTotalPrice()
     } else return
 }
 
@@ -62,6 +63,7 @@ function decrementGoodValue(amount) {
 function incrementGoodValue(amount, remind) {
     if (amount.value < remind) {
         amount.value = Number(amount.value) + 1;
+        getTotalPrice()
     } else {
         alert(`Ошибка. Осталось ${remind} шт.`)
     }
@@ -71,37 +73,57 @@ function incrementGoodValue(amount, remind) {
 decrSumCard1.addEventListener("click", () => {
     decrementGoodValue(amountCard1);
     priceCard1.textContent = Number(amountCard1.value) * priceForOne.card1;
+    getTotalPrice();
 })
 
 incrSumCard1.addEventListener("click", () => {
     incrementGoodValue(amountCard1, reminderCard1);
     priceCard1.textContent = Number(amountCard1.value) * priceForOne.card1;
+    getTotalPrice();
 })
 
 decrSumCard2.addEventListener("click", () => {
     decrementGoodValue(amountCard2);
     priceCard2.textContent = Number(amountCard2.value) * priceForOne.card2;
+    getTotalPrice();
 })
 
 incrSumCard2.addEventListener("click", () => {
     incrementGoodValue(amountCard2, Infinity);
     priceCard2.textContent = Number(amountCard2.value) * priceForOne.card2;
+    getTotalPrice();
 })
 
 decrSumCard3.addEventListener("click", () => {
     decrementGoodValue(amountCard3);
     priceCard3.textContent = Number(amountCard3.value) * priceForOne.card3;
+    getTotalPrice();
 })
 
 incrSumCard3.addEventListener("click", () => {
     incrementGoodValue(amountCard3, reminderCard1);
     priceCard3.textContent = Number(amountCard3.value) * priceForOne.card3;
+    getTotalPrice();
+})
+
+// пересчитываю стоимость за позицию товара при изменении значения количества руками (не через кнопки +-)
+amountCard1.addEventListener("change", () => {
+    console.log(priceCard1.textContent = amountCard1.value * priceForOne.card1)
+    getTotalPrice()
+})
+amountCard2.addEventListener("change", () => {
+    priceCard2.textContent = amountCard2.value * priceForOne.card2
+    getTotalPrice()
+})
+amountCard3.addEventListener("change", () => {
+    priceCard3.textContent = amountCard3.value * priceForOne.card3
+    getTotalPrice()
 })
 
 // Проверяю, нажат ли чекбокс для оплаты сразу
 function checkPaynow() {
     if (checkboxBasketPaynow.checked) {
-        buttonBasketBuy.textContent = `Оплатить ${totalPrice}`
+        buttonBasketBuy.textContent = `Оплатить ${totalPrice.textContent}`
     } else {
         buttonBasketBuy.textContent = "Заказать"
     }
@@ -157,3 +179,9 @@ userINN.addEventListener("change", () => {
 })
 
 buttonBasketBuy.addEventListener("click", () => checkUserData())
+
+
+// функция подсчёта итоговой суммы на покупку
+function getTotalPrice() {
+    totalPrice.textContent = Number(priceCard1.textContent) + Number(priceCard2.textContent) + Number(priceCard3.textContent)
+}
