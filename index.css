@@ -257,13 +257,44 @@ header {
     color: var(--var-GrayColor);
 }
 
-
 .card-tm__image {
     background-image: url(/images/body-card-importerInfo.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 20px;
     height: 20px;
+}
+
+
+.tooltip__importer {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip__importerText {
+    display: none;
+    position: absolute;
+    margin-top: 20px;
+    padding: 10px 15px;
+    pointer-events: none;
+    max-width: 280px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px 0px #0000004D;
+    box-shadow: 0px 2px 10px 0px #00000026;
+
+}
+
+.tooltip__importer:hover+.tooltip__importerText,
+.tooltip__importer:focus+.tooltip__importerText {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tooltip__text {
+    font-size: 13px;
+    line-height: 16px;
 }
 
 .card-nav {
