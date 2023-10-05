@@ -56,6 +56,12 @@ input::-moz-placeholder {
     color: var(--var-TranslucentWhite);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .default__checkbox,
 .default__checkboxSmall,
 .default__checkboxCard {

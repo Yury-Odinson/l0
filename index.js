@@ -32,6 +32,7 @@ const userINN = document.getElementById("data__inn")
 
 const basketCheckAll = document.getElementById("basket__checkAll")
 // baskets 
+
 let totalPrice = document.getElementById("basket-header__totalPrice")
 let totalFprice = document.getElementById("basket__fprice")
 let totalDiscount = document.getElementById("basket__discount")
@@ -72,6 +73,8 @@ fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
 totalPrice.textContent = Number(priceCard1.textContent) + Number(priceCard2.textContent) + Number(priceCard3.textContent)
 totalFprice.textContent = Number(fpriceCard1.textContent) + Number(fpriceCard2.textContent) + Number(fpriceCard3.textContent)
 totalDiscount.textContent = `- ${Number(totalFprice.textContent) - Number(totalPrice.textContent)}`
+
+
 // функция декрементации. передаю в функцию количество шт
 function decrementGoodValue(amount) {
     if (amount.value > 1) {
@@ -141,24 +144,47 @@ incrSumCard3.addEventListener("click", () => {
 
 // пересчитываю стоимость за позицию товара при изменении значения количества руками (не через кнопки +-)
 amountCard1.addEventListener("change", () => {
-    priceCard1.textContent = amountCard1.value * onePrice.card1
-    fpriceCard1.textContent = amountCard1.value * fullOnePrice.card1
-    getFullAmount()
-    getTotalPrice()
+    if (amountCard1.value >= 1) {
+        priceCard1.textContent = amountCard1.value * onePrice.card1
+        fpriceCard1.textContent = amountCard1.value * fullOnePrice.card1
+        getFullAmount()
+        getTotalPrice()
+    } else {
+        priceCard1.textContent = onePrice.card1
+        fpriceCard1.textContent = fullOnePrice.card1
+        getFullAmount()
+        getTotalPrice()
+    }
 })
 amountCard2.addEventListener("change", () => {
-    priceCard2.textContent = amountCard2.value * onePrice.card2
-    fpriceCard2.textContent = amountCard2.value * fullOnePrice.card2
-    getFullAmount()
-    getTotalPrice()
+    if (amountCard2.value >= 1) {
+        priceCard2.textContent = amountCard2.value * onePrice.card2
+        fpriceCard2.textContent = amountCard2.value * fullOnePrice.card2
+        getFullAmount()
+        getTotalPrice()
+    } else {
+        amountCard2.value = 1
+        priceCard2.textContent = onePrice.card2
+        fpriceCard2.textContent = fullOnePrice.card2
+        getFullAmount()
+        getTotalPrice()
+    }
 })
 amountCard3.addEventListener("change", () => {
-    priceCard3.textContent = amountCard3.value * onePrice.card3
-    fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
-    getFullAmount()
-    getTotalPrice()
-
+    if (amountCard3.value >= 1) {
+        priceCard3.textContent = amountCard3.value * onePrice.card3
+        fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
+        getFullAmount()
+        getTotalPrice()
+    } else {
+        amountCard3.value = 1
+        priceCard3.textContent = onePrice.card3
+        fpriceCard3.textContent = fullOnePrice.card3
+        getFullAmount()
+        getTotalPrice()
+    }
 })
+
 
 // обновляю общее количество товаров в корзине
 function getFullAmount() {
@@ -226,6 +252,11 @@ userINN.addEventListener("change", () => {
 
 buttonBasketBuy.addEventListener("click", () => checkUserData())
 
+
+// функция добавления пробелом между числами
+function addSpaces(price) {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+}
 
 // функция подсчёта итоговой суммы на покупку
 function getTotalPrice() {
