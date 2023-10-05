@@ -266,12 +266,15 @@ header {
 }
 
 
-.tooltip__importer {
-    position: relative;
+.tooltip__importer,
+.tooltip__shipping {
     display: inline-block;
+    cursor: pointer;
 }
 
-.tooltip__importerText {
+.tooltip__importerText,
+.tooltip__shippingText,
+.tooltip__basketShippingText {
     display: none;
     position: absolute;
     margin-top: 20px;
@@ -286,13 +289,35 @@ header {
 }
 
 .tooltip__importer:hover+.tooltip__importerText,
-.tooltip__importer:focus+.tooltip__importerText {
+.tooltip__importer:focus+.tooltip__importerText,
+.tooltip__shipping:hover+.tooltip__shippingText,
+.tooltip__shipping:focus+.tooltip__shippingText,
+.tooltip__shipping:hover+.tooltip__basketShippingText,
+.tooltip__shipping:focus+.tooltip__basketShippingText
+ {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.tooltip__text {
+.tooltip__basketShippingText {
+    max-width: 290px;
+    margin: 0;
+}
+
+.delivery-footer__text {
+    position: relative;
+}
+
+.tooltip__shippingText {
+    margin-top: 5px;
+    max-width: 290px;
+    right: -30%;
+}
+
+
+.tooltip__text,
+.tooltip__shippingText {
     font-size: 13px;
     line-height: 16px;
 }
@@ -474,6 +499,7 @@ header {
     flex-direction: column;
     gap: 12px;
     padding: 0 24px;
+    position: relative;
 }
 
 .delivery-string {
@@ -694,6 +720,7 @@ header {
 }
 
 .basket-info-delivery-notification {
+    position: relative;
     margin-top: 10px;
     padding: 5px 8px;
     display: flex;
