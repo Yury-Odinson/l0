@@ -291,6 +291,7 @@ function getTotalPrice() {
     totalPrice.textContent = addSpaces(resultTotalPrice)
     totalFprice.textContent = addSpaces(resultTotalFprice)
     totalDiscount.textContent = `- ${addSpaces(resultTotalFprice - resultTotalPrice)}`
+    buttonBasketBuy.textContent = totalPrice.textContent
 }
 
 getTotalPrice()
