@@ -32,7 +32,6 @@ const userINN = document.getElementById("data__inn")
 
 const basketCheckAll = document.getElementById("basket__checkAll")
 // baskets 
-
 let totalPrice = document.getElementById("basket-header__totalPrice")
 let totalFprice = document.getElementById("basket__fprice")
 let totalDiscount = document.getElementById("basket__discount")
@@ -73,7 +72,6 @@ fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
 totalPrice.textContent = Number(priceCard1.textContent) + Number(priceCard2.textContent) + Number(priceCard3.textContent)
 totalFprice.textContent = Number(fpriceCard1.textContent) + Number(fpriceCard2.textContent) + Number(fpriceCard3.textContent)
 totalDiscount.textContent = `- ${Number(totalFprice.textContent) - Number(totalPrice.textContent)}`
-
 
 // функция декрементации. передаю в функцию количество шт
 function decrementGoodValue(amount) {
@@ -150,6 +148,7 @@ amountCard1.addEventListener("change", () => {
         getFullAmount()
         getTotalPrice()
     } else {
+        amountCard1.value = 1
         priceCard1.textContent = onePrice.card1
         fpriceCard1.textContent = fullOnePrice.card1
         getFullAmount()
@@ -258,9 +257,40 @@ function addSpaces(price) {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
 }
 
+const priceCards = [
+    {
+        "discountPrice": priceCard1.textContent,
+        "normalPrice": fpriceCard1.textContent
+    }, {
+        "discountPrice": priceCard2.textContent,
+        "normalPrice": fpriceCard2.textContent
+    }, {
+        "discountPrice": priceCard3.textContent,
+        "normalPrice": fpriceCard3.textContent
+    }
+]
+
+
 // функция подсчёта итоговой суммы на покупку
 function getTotalPrice() {
-    totalPrice.textContent = Number(priceCard1.textContent) + Number(priceCard2.textContent) + Number(priceCard3.textContent)
-    totalFprice.textContent = Number(fpriceCard1.textContent) + Number(fpriceCard2.textContent) + Number(fpriceCard3.textContent)
-    totalDiscount.textContent = `- ${Number(totalFprice.textContent) - Number(totalPrice.textContent)}`
+    // константы для математических операций
+    const resultPriceCard1 = Number(priceCard1.textContent.replace(/\s/g, '')) // убираем пробелы в числе для дальнейших мат. операций
+    const resultPriceCard2 = Number(priceCard2.textContent.replace(/\s/g, ''))
+    const resultPriceCard3 = Number(priceCard3.textContent.replace(/\s/g, ''))
+    const resultFpriceCard1 = Number(fpriceCard1.textContent.replace(/\s/g, ''))
+    const resultFpriceCard2 = Number(fpriceCard2.textContent.replace(/\s/g, ''))
+    const resultFpriceCard3 = Number(fpriceCard3.textContent.replace(/\s/g, ''))
+    const resultTotalPrice = resultPriceCard1 + resultPriceCard2 + resultPriceCard3 // суммируем итоговую цену
+    const resultTotalFprice = resultFpriceCard1 + resultFpriceCard2 + resultFpriceCard3 // суммируем итоговую цену (без скидки)
+    priceCard1.textContent = addSpaces(resultPriceCard1) // отображаем суммы на экран (с пробелами)
+    priceCard2.textContent = addSpaces(resultPriceCard2)
+    priceCard3.textContent = addSpaces(resultPriceCard3)
+    fpriceCard1.textContent = addSpaces(resultFpriceCard1)
+    fpriceCard2.textContent = addSpaces(resultFpriceCard2)
+    fpriceCard3.textContent = addSpaces(resultFpriceCard3)
+    totalPrice.textContent = addSpaces(resultTotalPrice)
+    totalFprice.textContent = addSpaces(resultTotalFprice)
+    totalDiscount.textContent = `- ${addSpaces(resultTotalFprice - resultTotalPrice)}`
 }
+
+getTotalPrice()
