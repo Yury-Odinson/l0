@@ -38,6 +38,12 @@ let totalDiscount = document.getElementById("basket__discount")
 const checkboxBasketPaynow = document.getElementById("basket-checkbox-payNow")
 const buttonBasketBuy = document.getElementById("basket__buttonOrder")
 
+// модалки
+const modalBackground = document.getElementById("modal-background")
+const modalPayOpen = document.querySelectorAll(".openModal-pay")
+const modalPayClose = document.getElementById("modal-pay__close")
+
+
 // функция выделения/снятия галочек на всех позициях товара
 function checkAllGoods() {
     const element = document.querySelectorAll(".checkbox__card")
@@ -294,3 +300,26 @@ function getTotalPrice() {
 }
 
 getTotalPrice()
+
+// открываем модальное окно выбора оплаты
+modalPayOpen.forEach((element) => {
+    element.addEventListener("click", () => {
+        const window = document.getElementById("modal-pay")
+        modalBackground.style.display = "block"
+        window.style.display = "block"
+    })
+})
+
+// закрываем модальное окно выбора оплаты
+modalPayClose.addEventListener("click", () => {
+    const window = document.getElementById("modal-pay")
+    modalBackground.style.display = "none"
+    window.style.display = "none"
+})
+
+// делаем возможность закрытия модальных окон по клику на фон
+modalBackground.addEventListener("click", () => {
+    const windows = document.querySelectorAll(".modal")
+    windows.forEach((window) => window.style.display = "none")
+    modalBackground.style.display = "none"
+})

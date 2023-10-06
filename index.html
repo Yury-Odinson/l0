@@ -84,7 +84,7 @@
     </header>
 
 
-
+    
     <div class="mobile-menu" id="mobile-menu">
         <img src="/images/mobile-menu-home.svg" alt="home">
         <img src="/images/mobile-menu-search.svg" alt="search">
@@ -93,45 +93,45 @@
         <img src="/images/mobile-menu-profile.svg" alt="profile">
     </div>
 
+
     <div class="container">
         <div class="container-wrapper">
 
+            <div id="modal-background">
 
-
-            <div class="modal-pay-method">
-
-                <div class="modal-pay-header">
-                    <h2>Способ оплаты</h2>
-                    <button class="modal-pay-header__button"></button>
+            </div>
+            <div class="modal modal-pay-method" id="modal-pay">
+                <div class="modal-pay-container">
+                    <div class="modal-pay-header">
+                        <h2>Способ оплаты</h2>
+                        <button class="modal-pay-header__button" id="modal-pay__close"></button>
+                    </div>
+                    <div class="modal-pay-body">
+                        <label class="modal-pay-body__label">
+                            <input type="radio" name="pay-method">
+                            <img src="/images/modal-system1.png" width="32" height="24" alt="pay system">
+                            <span>1234 56•• •••• 1234</span>
+                        </label>
+                        <label class="modal-pay-body__label">
+                            <input type="radio" name="pay-method">
+                            <img src="/images/modal-system2.png" width="32" height="24" alt="pay system">
+                            <span>1234 56•• •••• 1234</span>
+                        </label>
+                        <label class="modal-pay-body__label">
+                            <input type="radio" name="pay-method">
+                            <img src="/images/modal-system3.png" width="32" height="24" alt="pay system">
+                            <span>1234 56•• •••• 1234</span>
+                        </label>
+                        <label class="modal-pay-body__label">
+                            <input type="radio" name="pay-method">
+                            <img src="/images/modal-system4.png" width="32" height="24" alt="pay system">
+                            <span>1234 56•• •••• 1234</span>
+                        </label>
+                    </div>
+                    <div class="modal-pay-footer">
+                        <button class="modal-pay__button">Выбрать</button>
+                    </div>
                 </div>
-
-                <div class="modal-pay-body">
-                    <label class="modal-pay-body__label">
-                        <input type="radio" name="pay-method">
-                        <img src="/images/modal-system1.png" width="32" height="24" alt="pay system">
-                        <span>1234 56•• •••• 1234</span>
-                    </label>
-                    <label class="modal-pay-body__label">
-                        <input type="radio" name="pay-method">
-                        <img src="/images/modal-system2.png" width="32" height="24" alt="pay system">
-                        <span>1234 56•• •••• 1234</span>
-                    </label>
-                    <label class="modal-pay-body__label">
-                        <input type="radio" name="pay-method">
-                        <img src="/images/modal-system3.png" width="32" height="24" alt="pay system">
-                        <span>1234 56•• •••• 1234</span>
-                    </label>
-                    <label class="modal-pay-body__label">
-                        <input type="radio" name="pay-method">
-                        <img src="/images/modal-system4.png" width="32" height="24" alt="pay system">
-                        <span>1234 56•• •••• 1234</span>
-                    </label>
-
-                </div>
-
-
-
-
 
             </div>
 
@@ -525,7 +525,7 @@
                 <div class="container-main-delivery">
                     <div class="delivery-header">
                         <h2>Способ доставки</h2>
-                        <button class="delivery-header__change">Изменить</button>
+                        <button class="delivery-header__change" id="openModal-delivery">Изменить</button>
                     </div>
                     <div class="delivery-settings">
                         <div class="delivery-string">
@@ -586,7 +586,7 @@
                 <div class="container-main-pay">
                     <div class="pay-header">
                         <h2>Способ оплаты</h2>
-                        <button class="pay-header__change">Изменить</button>
+                        <button class="pay-header__change openModal-pay">Изменить</button>
                     </div>
                     <div class="pay-data">
                         <img src="/images/pay-system.png" width="32" height="24" alt="pay system">
@@ -702,7 +702,7 @@
                 <div class="basket-info-pay">
                     <div class="basket-info-pay-header">
                         <h4>Оплата картой</h4>
-                        <button class="basket-info__edit"></button>
+                        <button class="basket-info__edit openModal-pay"></button>
                     </div>
 
                     <div class="basket-info-pay-data">
