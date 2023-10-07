@@ -64,7 +64,8 @@ input::-webkit-inner-spin-button {
 
 .default__checkbox,
 .default__checkboxSmall,
-.default__checkboxCard {
+.default__checkbox,
+.default__radio {
     display: none;
 }
 
@@ -115,4 +116,31 @@ input::-webkit-inner-spin-button {
     background-color: #fff;
     border-radius: 4px;
     background-image: url(/images/check-mark-small.svg);
+}
+
+.custom__radio {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #00000033;
+    border-radius: 50%;
+}
+
+.custom__radio::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.1s ease-in;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    outline: 5px solid var(--var-ButtonsColor);
+    outline-offset: -5px;
+    opacity: 0;
+}
+
+.default__radio:checked+.custom__radio::before {
+    opacity: 1;
 }

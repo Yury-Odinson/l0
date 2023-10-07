@@ -1315,7 +1315,8 @@ footer {
     background-color: #000;
     opacity: 0.3;
     z-index: 3;
-    display: none;
+    cursor: pointer;
+    /* display: none; */
 }
 
 .modal-pay-method {
@@ -1329,7 +1330,7 @@ footer {
     background-color: #fff;
     border-radius: 16px;
     z-index: 203;
-    display: none;
+    /* display: none; */
 }
 
 .modal-pay-method::before{
@@ -1351,7 +1352,7 @@ footer {
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
 }
 
 
@@ -1363,8 +1364,11 @@ footer {
     background-position: center;
 
 }
-
 .modal-pay-body__label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    vertical-align: center;
     width: fit-content;
     cursor: pointer;
 }
@@ -1380,4 +1384,6 @@ footer {
     height: 44px;
     background-color: var(--var-ButtonsColor);
     border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
 }
