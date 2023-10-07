@@ -107,34 +107,41 @@
                         <button class="modal-pay-header__button" id="modal-pay__close"></button>
                     </div>
                     <div class="modal-pay-body">
-                        <label class="modal-pay-body__label">
+                        <label class="modal-pay-body__label" id="pay__label1">
                             <input class="default__radio" type="radio" name="pay-method">
                             <span class="custom__radio"></span>
-                            <img src="/images/modal-system1.png" width="32" height="24" alt="pay system">
-                            <span>1234 56•• •••• 1234</span>
+                            <div class="pay-info-data" id="pay__method1">
+                                <img src="/images/modal-system1.png" width="32" height="24" alt="pay system">
+                                <span>1234 56•• •••• 1234</span>
+                            </div>
                         </label>
-                        <label class="modal-pay-body__label">
+                        <label class="modal-pay-body__label" id="pay__label2">
                             <input class="default__radio" type="radio" name="pay-method">
                             <span class="custom__radio"></span>
-                            <img src="/images/modal-system2.png" width="32" height="24" alt="pay system">
-                            <span>1234 56•• •••• 1234</span>
+                            <div class="pay-info-data" id="pay__method2">
+                                <img src="/images/modal-system2.png" width="32" height="24" alt="pay system">
+                                <span>1435 56•• •••• 9934</span>
+                            </div>
                         </label>
-                        <label class="modal-pay-body__label">
-
+                        <label class="modal-pay-body__label" id="pay__label3">
                             <input class="default__radio" type="radio" name="pay-method">
                             <span class="custom__radio"></span>
-                            <img src="/images/modal-system3.png" width="32" height="24" alt="pay system">
-                            <span>1234 56•• •••• 1234</span>
+                            <div class="pay-info-data" id="pay__method3">
+                                <img src="/images/modal-system3.png" width="32" height="24" alt="pay system">
+                                <span>9943 56•• •••• 1299</span>
+                            </div>
                         </label>
-                        <label class="modal-pay-body__label">
+                        <label class="modal-pay-body__label" id="pay__label4">
                             <input class="default__radio" type="radio" name="pay-method">
                             <span class="custom__radio"></span>
-                            <img src="/images/modal-system4.png" width="32" height="24" alt="pay system">
-                            <span>1234 56•• •••• 1234</span>
+                            <div class="pay-info-data" id="pay__method4">
+                                <img src="/images/modal-system4.png" width="32" height="24" alt="pay system">
+                                <span>7934 66•• •••• 7774</span>
+                            </div>
                         </label>
                     </div>
                     <div class="modal-pay-footer">
-                        <button class="modal-pay__button">Выбрать</button>
+                        <button class="modal-pay__button" id="set-pay-data">Выбрать</button>
                     </div>
                 </div>
 
@@ -593,9 +600,9 @@
                         <h2>Способ оплаты</h2>
                         <button class="pay-header__change openModal-pay">Изменить</button>
                     </div>
-                    <div class="pay-data">
-                        <img src="/images/pay-system.png" width="32" height="24" alt="pay system">
-                        <span>1234 56•• •••• 1234</span>
+                    <div class="pay-data pay-currentMethod" id="pay__currentMethod">
+                        <!-- <img src="/images/pay-system.png" width="32" height="24" alt="pay system"> -->
+                        <!-- <span>1234 56•• •••• 1234</span> -->
                         <span>01/30</span>
                     </div>
                     <div class="pay-footer">
@@ -710,9 +717,9 @@
                         <button class="basket-info__edit openModal-pay"></button>
                     </div>
 
-                    <div class="basket-info-pay-data">
-                        <img src="/images/pay-system.png" width="32" height="24" alt="pay system">
-                        <span>1234 12•• •••• 1234</span>
+                    <div class="basket-info-pay-data pay-currentMethod">
+                        <!-- <img src="/images/pay-system.png" width="32" height="24" alt="pay system"> -->
+                        <!-- <span>1234 12•• •••• 1234</span> -->
                     </div>
                     <div class="basket-payNow">
                         <label class="container-checkbox-label basket-payNow__label" name="payNow">

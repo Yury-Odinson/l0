@@ -42,7 +42,44 @@ const buttonBasketBuy = document.getElementById("basket__buttonOrder")
 const modalBackground = document.getElementById("modal-background")
 const modalPayOpen = document.querySelectorAll(".openModal-pay")
 const modalPayClose = document.getElementById("modal-pay__close")
+const modalSetPay = document.getElementById("set-pay-data")
 
+// выбор оплаты из модального окна
+let methodPay = document.getElementById("pay__method1").cloneNode(true)
+// установка оплаты по умолчанию
+const methodPayCurrent = document.querySelectorAll(".pay-currentMethod")
+// устанавка оплаты по умолчанию в элементы (в блоки "Способ оплаты" и "Итого")
+methodPayCurrent.forEach((element) => {
+    element.appendChild(methodPay.cloneNode(true))
+})
+
+// функция для смены способа оплаты
+function setPayMethod(numPayCard) {
+    const methodPay = document.getElementById(`pay__method${numPayCard}`).cloneNode(true)
+    methodPayCurrent.forEach((element) => {
+        element.innerHTML = ""
+        element.appendChild(methodPay.cloneNode(true))
+    })
+}
+
+// устанавливаю число метода оплаты. в дальнейшем передаю его в функцию для смены способо оплаты
+let numberPayMethod = 1
+// получаю чекбоксы выбора оплаты из модального окна
+const pay1 = document.getElementById("pay__method1")
+const pay2 = document.getElementById("pay__method2")
+const pay3 = document.getElementById("pay__method3")
+const pay4 = document.getElementById("pay__method4")
+// присваиваю номер выбора оплаты
+pay1.addEventListener("click", () => numberPayMethod = 1)
+pay2.addEventListener("click", () => numberPayMethod = 2)
+pay3.addEventListener("click", () => numberPayMethod = 3)
+pay4.addEventListener("click", () => numberPayMethod = 4)
+
+// функция установления оплаты и закрытия модального окна
+modalSetPay.addEventListener("click", () => {
+    setPayMethod(numberPayMethod)
+    payClose()
+})
 
 // функция выделения/снятия галочек на всех позициях товара
 function checkAllGoods() {
@@ -190,7 +227,6 @@ amountCard3.addEventListener("change", () => {
     }
 })
 
-
 // обновляю общее количество товаров в корзине
 function getFullAmount() {
     const fullAmount = document.getElementById("basket__fullAmount")
@@ -296,7 +332,6 @@ function getTotalPrice() {
     totalPrice.textContent = addSpaces(resultTotalPrice)
     totalFprice.textContent = addSpaces(resultTotalFprice)
     totalDiscount.textContent = `- ${addSpaces(resultTotalFprice - resultTotalPrice)}`
-    buttonBasketBuy.textContent = `Оплатить ${totalPrice.textContent} com`
 }
 
 getTotalPrice()
@@ -311,11 +346,13 @@ modalPayOpen.forEach((element) => {
 })
 
 // закрываем модальное окно выбора оплаты
-modalPayClose.addEventListener("click", () => {
+function payClose() {
     const window = document.getElementById("modal-pay")
     modalBackground.style.display = "none"
     window.style.display = "none"
-})
+}
+
+modalPayClose.addEventListener("click", () => payClose())
 
 // делаем возможность закрытия модальных окон по клику на фон
 modalBackground.addEventListener("click", () => {
