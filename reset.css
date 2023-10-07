@@ -65,6 +65,7 @@ input::-webkit-inner-spin-button {
 .default__checkbox,
 .default__checkboxSmall,
 .default__checkbox,
+.default__checkboxCard,
 .default__radio {
     display: none;
 }
