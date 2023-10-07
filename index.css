@@ -1304,8 +1304,6 @@ footer {
 
 }
 
-
-
 #modal-background {
     position: fixed;
     top: 0;
@@ -1319,7 +1317,8 @@ footer {
     display: none;
 }
 
-.modal-pay-method {
+.modal-pay-method,
+.modal-delivery-method {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1333,17 +1332,23 @@ footer {
     display: none;
 }
 
-.modal-pay-method::before{
-    content: "";
-
+.modal-delivery-method {
+    display: block;
+    width: 500px;
 }
 
-.modal-pay-container {
+.modal-pay-method::before {
+    content: "";
+}
+
+.modal-pay-container,
+.modal-delivery-container {
     position: relative;
     height: 100%;
 }
 
-.modal-pay-header {
+.modal-pay-header,
+.modal-delivery-header {
     display: flex;
     justify-content: space-between;
 }
@@ -1355,16 +1360,17 @@ footer {
     gap: 16px;
 }
 
-
-.modal-pay-header__button {
+.modal-pay-header__button,
+.modal-delivery-header__button {
     width: 24px;
     height: 24px;
     background-image: url(/images/modal-close.svg);
     background-repeat: no-repeat;
     background-position: center;
-
 }
-.modal-pay-body__label {
+
+.modal-pay-body__label,
+.modal-delivery-body__label {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -1378,17 +1384,70 @@ footer {
     gap: 10px;
 }
 
-.modal-pay-footer {
+.modal-pay-footer,
+.modal-delivery-footer {
     position: absolute;
     bottom: 0;
     margin-bottom: 10px;
 }
 
-.modal-pay__button {
+.modal-pay__button,
+.modal-delivery__button {
     width: 164px;
     height: 44px;
     background-color: var(--var-ButtonsColor);
     border-radius: 8px;
     font-size: 16px;
     font-weight: 700;
+}
+
+.modal-delivery-body-method {
+    margin-top: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+.modal-delivery-method__item,
+.modal-delivery-method__ActiveItem {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+    text-wrap: nowrap;
+    color: #000;
+    border: 2px solid #CB11AB26;
+    border-radius: 20px;
+}
+
+.modal-delivery-method__ActiveItem {    
+    border: 2px solid var(--var-ButtonsColor);
+}
+
+.delivery-body-method-address {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.delivery-body-method-address__title {
+    margin: 20px 0 0px;
+}
+
+.modal-delivery-body__label {
+    width: 100%;
+    align-items: start;
+}
+
+.modal-delivery-label__text {
+    margin-top: -5px;
+    width: 100%;
+}
+
+.modal-delivery__itemTrash {
+    margin-top: -5px;
+}
+
+.modal-delivery__itemTrash:hover svg path {
+    fill: var(--var-Orange);
 }
