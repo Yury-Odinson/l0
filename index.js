@@ -43,6 +43,8 @@ const modalBackground = document.getElementById("modal-background")
 const modalPayOpen = document.querySelectorAll(".openModal-pay")
 const modalPayClose = document.getElementById("modal-pay__close")
 const modalSetPay = document.getElementById("set-pay-data")
+const modalDeliveryOpen = document.querySelectorAll(".openModal-delivery")
+const modalDeliveryClose = document.getElementById("modal-delivery__close")
 
 // выбор оплаты из модального окна
 let methodPay = document.getElementById("pay__method1").cloneNode(true)
@@ -336,23 +338,32 @@ function getTotalPrice() {
 
 getTotalPrice()
 
-// открываем модальное окно выбора оплаты
-modalPayOpen.forEach((element) => {
-    element.addEventListener("click", () => {
-        const window = document.getElementById("modal-pay")
-        modalBackground.style.display = "block"
-        window.style.display = "block"
-    })
-})
+// функция открытия модальных окон
+function openModal(modalName) {
+    const window = document.getElementById(modalName)
+    modalBackground.style.display = "block"
+    window.style.display = "block"
+}
 
-// закрываем модальное окно выбора оплаты
-function payClose() {
-    const window = document.getElementById("modal-pay")
+// функция закрытия модальных окон
+function closeModal(modalName) {
+    const window = document.getElementById(modalName)
     modalBackground.style.display = "none"
     window.style.display = "none"
 }
 
-modalPayClose.addEventListener("click", () => payClose())
+// открываем модальные окна
+modalPayOpen.forEach((element) => {
+    element.addEventListener("click", () => openModal("modal-pay"))
+})
+
+modalDeliveryOpen.forEach((element) => {
+    element.addEventListener("click", () => openModal("modal-delivery"))
+})
+
+// закрываем модальные окна 
+modalPayClose.addEventListener("click", () => closeModal("modal-pay"))
+modalDeliveryClose.addEventListener("click", () => closeModal("modal-delivery"))
 
 // делаем возможность закрытия модальных окон по клику на фон
 modalBackground.addEventListener("click", () => {

@@ -1333,7 +1333,7 @@ footer {
 }
 
 .modal-delivery-method {
-    display: block;
+    /* display: block; */
     width: 500px;
 }
 
