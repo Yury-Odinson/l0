@@ -43,17 +43,106 @@ const modalBackground = document.getElementById("modal-background")
 const modalPayOpen = document.querySelectorAll(".openModal-pay")
 const modalPayClose = document.getElementById("modal-pay__close")
 const modalSetPay = document.getElementById("set-pay-data")
+const modalSetDelivery = document.getElementById("set-delivery-data")
 const modalDeliveryOpen = document.querySelectorAll(".openModal-delivery")
 const modalDeliveryClose = document.getElementById("modal-delivery__close")
 
+
+// кнопки способа доставки
+const deliveryButtonPikup = document.getElementById("delivery__methodPickup")
+const delivetyButtonCourier = document.getElementById("delivery__methodCourier")
+
+const deliveryMethodPickUp = document.getElementById("delivery-doby-method-pickUp")
+const deliveryMethodCourier = document.getElementById("delivery-doby-method-courier")
+
+// меняем пункты меню в модальном окне доставки (доставка в пункт выдачи/доставка курьером)
+deliveryButtonPikup.addEventListener("click", () => {
+    deliveryButtonPikup.classList.add("modal-delivery-method__ActiveItem")
+    delivetyButtonCourier.classList.remove("modal-delivery-method__ActiveItem")
+    deliveryMethodPickUp.style.display = "flex"
+    deliveryMethodCourier.style.display = "none"
+    methodDelivery = "delivery__methodPickup"
+})
+
+delivetyButtonCourier.addEventListener("click", () => {
+    deliveryButtonPikup.classList.remove("modal-delivery-method__ActiveItem")
+    delivetyButtonCourier.classList.add("modal-delivery-method__ActiveItem")
+    deliveryMethodPickUp.style.display = "none"
+    deliveryMethodCourier.style.display = "flex"
+    methodDelivery = "delivery__method"
+})
+
+// выбор варианта доставки из модального окна
+let defaultMethodDelivery = document.getElementById("delivery__methodPickup1").cloneNode(true)
+// устанавка доставки по умолчанию в элементы (в блоки "Способ оплаты" и "Итого")
+const methodDeliveryCurrent = document.querySelectorAll(".delivery__currentMethod")
+methodDeliveryCurrent.forEach((element) => {
+    element.appendChild(defaultMethodDelivery.cloneNode(true))
+})
+
 // выбор оплаты из модального окна
-let methodPay = document.getElementById("pay__method1").cloneNode(true)
+let defaultMethodPay = document.getElementById("pay__method1").cloneNode(true)
 // установка оплаты по умолчанию
 const methodPayCurrent = document.querySelectorAll(".pay-currentMethod")
 // устанавка оплаты по умолчанию в элементы (в блоки "Способ оплаты" и "Итого")
 methodPayCurrent.forEach((element) => {
-    element.appendChild(methodPay.cloneNode(true))
+    element.appendChild(defaultMethodPay.cloneNode(true))
 })
+
+function setDeliveryMethodPickup(numDeliveryMethod) {
+    const methodDelivery = document.getElementById(`delivery__methodPickup${numDeliveryMethod}`)
+    methodDeliveryCurrent.forEach((element) => {
+        element.innerHTML = ""
+        element.appendChild(defaultMethodDelivery.cloneNode(true))
+    })
+}
+
+// устанавливаю число метода доставки. в дальнейшем передаю его в функцию для смены способо оплаты
+let numberDilivery = 1
+let methodDelivery = "delivery__method"
+
+const basketDeliveryOption = document.getElementById("basket-delivery-option")
+const deliveryOption = document.getElementById("delivery-option")
+
+// получаю чекбоксы выбора доставки в пункт выдачи из модального окна
+const deliveryPick1 = document.getElementById("delivery__methodPickup1")
+const deliveryPick2 = document.getElementById("delivery__methodPickup2")
+const delivery1 = document.getElementById("delivery__method1")
+const delivery2 = document.getElementById("delivery__method2")
+const delivery3 = document.getElementById("delivery__method3")
+// устанавливаю число варианта доставки
+deliveryPick1.addEventListener("click", () => numberDilivery = 1)
+deliveryPick2.addEventListener("click", () => numberDilivery = 2)
+delivery1.addEventListener("click", () => numberDilivery = 1)
+delivery2.addEventListener("click", () => numberDilivery = 2)
+delivery3.addEventListener("click", () => numberDilivery = 3)
+
+modalSetDelivery.addEventListener("click", () => {
+    setDeliveryMethod(methodDelivery, numberDilivery)
+})
+
+// устанавливаю вариант доставки. если method = ...pickUp - то доставка в пункт выдачи. если method = method - то доставка курьером.
+function setDeliveryMethod(method, methodNum) {
+    const methodDelivery = document.getElementById(method + methodNum)
+    switch (method + methodNum) {
+        case `delivery__methodPickup${methodNum}`:
+            methodDeliveryCurrent.forEach((element) => {
+                element.innerHTML = ""
+                element.appendChild(methodDelivery.cloneNode(true))
+            })
+            basketDeliveryOption.textContent = "Доставка в пункт выдачи"
+            deliveryOption.textContent = "Пункт выдачи"
+            break
+        case `delivery__method${methodNum}`:
+            methodDeliveryCurrent.forEach((element) => {
+                element.innerHTML = ""
+                element.appendChild(methodDelivery.cloneNode(true))
+            })
+            basketDeliveryOption.textContent = "Доставка курьером"
+            deliveryOption.textContent = "Доставка курьером"
+            break
+    }
+}
 
 // функция для смены способа оплаты
 function setPayMethod(numPayCard) {
@@ -80,7 +169,7 @@ pay4.addEventListener("click", () => numberPayMethod = 4)
 // функция установления оплаты и закрытия модального окна
 modalSetPay.addEventListener("click", () => {
     setPayMethod(numberPayMethod)
-    payClose()
+    closeModal("modal-pay")
 })
 
 // функция выделения/снятия галочек на всех позициях товара

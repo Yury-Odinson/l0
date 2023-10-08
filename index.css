@@ -1333,8 +1333,13 @@ footer {
 }
 
 .modal-delivery-method {
-    /* display: block; */
     width: 500px;
+}
+
+.delivery-doby-method-pickUp {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .modal-pay-method::before {
@@ -1420,7 +1425,7 @@ footer {
     border-radius: 20px;
 }
 
-.modal-delivery-method__ActiveItem {    
+.modal-delivery-method__ActiveItem {
     border: 2px solid var(--var-ButtonsColor);
 }
 
