@@ -297,7 +297,7 @@ userEmail.addEventListener("change", checkEmail);
 
 // проверка на валидность номера телефона
 function checkPhone() {
-    if (isValidData(PHONE_REGEXP, userPhone.value)) {
+    if (isValidData(patternPhone, userPhone.value)) {
         userPhoneError.style.display = "none";
     } else {
         userPhoneError.style.display = "block";
