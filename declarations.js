@@ -1,4 +1,8 @@
 // в этом файле декларирую константы DOM элементов, для последующего к ним обращения
+
+// основное
+export const hideAllCards = document.getElementById("hide__allCards")
+export const hideAllMissings = document.getElementById("hide__allMissings")
 // card 1
 export const priceCard1 = document.getElementById("card1__price")
 export const fpriceCard1 = document.getElementById("card1__fprice")

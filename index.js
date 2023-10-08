@@ -1,4 +1,4 @@
-import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription } from "./declarations.js"
+import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription, hideAllCards, hideAllMissings } from "./declarations.js"
 
 // выделение/снятие галочек на всех позициях товара
 basketCheckAll.addEventListener("change", () => {
@@ -8,6 +8,37 @@ basketCheckAll.addEventListener("change", () => {
     } else {
         element.forEach((e) => e.checked = false)
     }
+})
+
+// переменные, хранящие статус отображения блоков
+let displayAllCards = true
+let displayAllMissings = true
+
+// функция показать/скрыть блок. block - элементы, которые необходимо скрыть; button - кнопка, для которой меняем стиль; isHide - проверяем скрыты элементы или нет
+function hideCards(block, button, isHide) {
+    const cards = document.querySelectorAll(block)
+    if (isHide) {
+        cards.forEach((element) => {
+            element.style.display = "flex"
+            button.classList.remove("buttonHide")
+        })
+    } else {
+        cards.forEach((element) => {
+            element.style.display = "none"
+            button.classList.add("buttonHide")
+        })
+    }
+}
+
+// показать/скрыть блоки 
+hideAllCards.addEventListener("click", () => {
+    displayAllCards = !displayAllCards
+    hideCards(".card-item", hideAllCards, displayAllCards)
+})
+
+hideAllMissings.addEventListener("click", () => {
+    displayAllMissings = !displayAllMissings
+    hideCards(".missing__item", hideAllMissings, displayAllMissings)
 })
 
 // фиксированная цена за 1шт. для каждого из товаров
