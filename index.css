@@ -653,7 +653,9 @@ header {
 .recipient__firstNameHelp,
 .recipient__lastNameHelp,
 .recipient__emailHelp,
+.recipient__emailError,
 .recipient__phoneHelp,
+.recipient__phoneError,
 .recipient__innHelp {
     display: none;
     position: absolute;
@@ -661,6 +663,7 @@ header {
     font-size: 12px;
     color: var(--var-Orange);
 }
+
 
 .container-basket {
     margin: -15px 0 0;

@@ -23,7 +23,9 @@ export const reminderCard3 = document.getElementById("card3__reminder").textCont
 export const userFirstName = document.getElementById("data__firstName")
 export const userLastName = document.getElementById("data__lastName")
 export const userEmail = document.getElementById("data__email")
+export const userEmailError = document.getElementById("data__emailError")
 export const userPhone = document.getElementById("data__phone")
+export const userPhoneError = document.getElementById("data__phoneError")
 export const userINN = document.getElementById("data__inn")
 // baskets 
 export const totalPrice = document.getElementById("basket-header__totalPrice")

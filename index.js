@@ -1,4 +1,4 @@
-import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, modalBackground, modalPayOpen, modalPayClose, modalSetPay, modalSetDelivery, modalDeliveryOpen, modalDeliveryClose, deliveryButtonPikup, deliveryMethodPickUp, deliveryMethodCourier } from "./declarations.js"
+import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError } from "./declarations.js"
 
 // функция выделения/снятия галочек на всех позициях товара
 function checkAllGoods() {
@@ -241,3 +241,42 @@ function getTotalPrice() {
 }
 
 getTotalPrice()
+
+// регулярные выражения для проверки валидности данных
+const patternEmail = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+const patternPhone = /(\+7|8)[\s(]?(\d{3})[\s)]?(\d{3})[\s]?(\d{2})[\s]?(\d{2})/g;
+
+// функция проверки на валидность данных. dataREGEXP - метод проверки, value - значение для проверки
+function isValidData(dataREGEXP, value) {
+    return dataREGEXP.test(value);
+}
+
+// проверка на валидность электронной почты
+function checkEmail() {
+    if (isValidData(patternEmail, userEmail.value)) {
+        userEmailError.style.display = "none";
+    } else {
+        userEmailError.style.display = "block";
+    }
+}
+
+userEmail.addEventListener("change", checkEmail);
+
+
+// проверка на валидность номера телефона
+function checkPhone() {
+    if (isValidData(PHONE_REGEXP, userPhone.value)) {
+        userPhoneError.style.display = "none";
+    } else {
+        userPhoneError.style.display = "block";
+    }
+}
+
+userPhone.addEventListener("input", () => {
+    userPhone.value.replace(patternPhone, '<a href="tel:+7$2$3$4$5">+7 $2 $3 $4 $5</a>');
+    let phoneNumbers = userPhone.value.match(patternPhone);
+    let correctNumber = phoneNumbers[0].replace(patternPhone, '+7 $2 $3 $4 $5');    // пробуем замену
+    userPhone.value = correctNumber
+})
+
+userPhone.addEventListener("change", checkPhone);
