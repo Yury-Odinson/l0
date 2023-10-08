@@ -27,6 +27,8 @@ export const userEmailError = document.getElementById("data__emailError")
 export const userPhone = document.getElementById("data__phone")
 export const userPhoneError = document.getElementById("data__phoneError")
 export const userINN = document.getElementById("data__inn")
+export const userINNError = document.getElementById("data__innError")
+export const userINNDescription = document.getElementById("data__innDescription")
 // baskets 
 export const totalPrice = document.getElementById("basket-header__totalPrice")
 export const totalFprice = document.getElementById("basket__fprice")

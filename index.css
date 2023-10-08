@@ -656,7 +656,8 @@ header {
 .recipient__emailError,
 .recipient__phoneHelp,
 .recipient__phoneError,
-.recipient__innHelp {
+.recipient__innHelp,
+.recipient__innError {
     display: none;
     position: absolute;
     bottom: -25px;

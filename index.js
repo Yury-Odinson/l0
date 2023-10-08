@@ -1,4 +1,4 @@
-import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError } from "./declarations.js"
+import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription } from "./declarations.js"
 
 // функция выделения/снятия галочек на всех позициях товара
 function checkAllGoods() {
@@ -262,7 +262,6 @@ function checkEmail() {
 
 userEmail.addEventListener("change", checkEmail);
 
-
 // проверка на валидность номера телефона
 function checkPhone() {
     if (isValidData(PHONE_REGEXP, userPhone.value)) {
@@ -271,7 +270,7 @@ function checkPhone() {
         userPhoneError.style.display = "block";
     }
 }
-
+// автоматическое выставление пробелов при корректном вводе номера телефона (начиная с 8 или +7)
 userPhone.addEventListener("input", () => {
     userPhone.value.replace(patternPhone, '<a href="tel:+7$2$3$4$5">+7 $2 $3 $4 $5</a>');
     let phoneNumbers = userPhone.value.match(patternPhone);
@@ -280,3 +279,20 @@ userPhone.addEventListener("input", () => {
 })
 
 userPhone.addEventListener("change", checkPhone);
+
+// проверка на длину введённых данных. нельзя ввести больше 14 символов
+userINN.addEventListener("input", () => {
+    if (userINN.value.length > 14) {
+        userINN.value = userINN.value.substr(0, 14)
+    }
+})
+
+// при наличии ошибки в поле ИНН - появляется уведомление
+userINN.addEventListener("change", () => {
+    if (userINN.value.length < 14) {
+        userINNError.style.display = "block"
+        userINNDescription.style.display = "none"
+    } else {
+        userINNError.style.display = "none"
+    }
+})
