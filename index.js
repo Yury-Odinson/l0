@@ -1,12 +1,14 @@
 import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription } from "./declarations.js"
 
-// функция выделения/снятия галочек на всех позициях товара
-function checkAllGoods() {
+// выделение/снятие галочек на всех позициях товара
+basketCheckAll.addEventListener("change", () => {
     const element = document.querySelectorAll(".checkbox__card")
-    element.forEach((e) => e.checked = !e.checked)
-}
-
-basketCheckAll.addEventListener("change", () => checkAllGoods())
+    if (basketCheckAll.checked) {
+        element.forEach((e) => e.checked = true)
+    } else {
+        element.forEach((e) => e.checked = false)
+    }
+})
 
 // фиксированная цена за 1шт. для каждого из товаров
 const onePrice = {
