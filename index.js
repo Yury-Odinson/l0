@@ -1,4 +1,4 @@
-import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription, hideAllCards, hideAllMissings } from "./declarations.js"
+import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, reminderCard3, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription, hideAllCards, hideAllMissings } from "./declarations.js"
 
 // выделение/снятие галочек на всех позициях товара
 basketCheckAll.addEventListener("change", () => {
@@ -128,7 +128,7 @@ decrSumCard3.addEventListener("click", () => {
 })
 
 incrSumCard3.addEventListener("click", () => {
-    incrementGoodValue(amountCard3, reminderCard1);
+    incrementGoodValue(amountCard3, reminderCard3);
     priceCard3.textContent = amountCard3.value * onePrice.card3
     fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
     getTotalPrice()
@@ -137,7 +137,7 @@ incrSumCard3.addEventListener("click", () => {
 
 // пересчёт стоимости за позицию товара, при изменении значения количества в ручную (не через кнопки +-)
 amountCard1.addEventListener("change", () => {
-    if (amountCard1.value >= 1) {
+    if (amountCard1.value >= 1 && amountCard1.value < reminderCard1) {
         priceCard1.textContent = amountCard1.value * onePrice.card1
         fpriceCard1.textContent = amountCard1.value * fullOnePrice.card1
         getFullAmount()
@@ -165,7 +165,7 @@ amountCard2.addEventListener("change", () => {
     }
 })
 amountCard3.addEventListener("change", () => {
-    if (amountCard3.value >= 1) {
+    if (amountCard3.value >= 1 && amountCard3.value < reminderCard3) {
         priceCard3.textContent = amountCard3.value * onePrice.card3
         fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
         getFullAmount()
