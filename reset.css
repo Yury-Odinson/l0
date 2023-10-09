@@ -1,9 +1,9 @@
 @font-face {
     font-family: "SegoeUIRegular";
-    src: url("/fonts/SegoeUIRegular.eot");
-    src: url("/fonts/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
-        url("/fonts/SegoeUIRegular.woff") format("woff"),
-        url("/fonts/SegoeUIRegular.ttf") format("truetype");
+    src: url("./fonts/SegoeUIRegular.eot");
+    src: url("./fonts/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+        url("./fonts/SegoeUIRegular.woff") format("woff"),
+        url("./fonts/SegoeUIRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
 }
@@ -93,7 +93,7 @@ input::-webkit-inner-spin-button {
     height: 22px;
     background-color: var(--var-ButtonsColor);
     border-radius: 6px;
-    background-image: url(/images/check-mark.svg);
+    background-image: url(./images/check-mark.svg);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0;
@@ -116,7 +116,7 @@ input::-webkit-inner-spin-button {
     height: 14px;
     background-color: #fff;
     border-radius: 4px;
-    background-image: url(/images/check-mark-small.svg);
+    background-image: url(./images/check-mark-small.svg);
 }
 
 .custom__radio {

@@ -245,7 +245,7 @@ header {
 .card__color,
 .card__size,
 .card__sizeNumber,
-.missing-card__sizeNumber{
+.missing-card__sizeNumber {
     padding-right: 13px;
     font-size: 13px;
     line-height: 16px;
@@ -1320,6 +1320,19 @@ footer {
         background-color: #fff;
         z-index: 9999;
     }
+
+
+
+    .modal-pay-method,
+    .modal-delivery-method {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+    }
+
 
 }
 
