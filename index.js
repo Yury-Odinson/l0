@@ -184,6 +184,7 @@ function getFullAmount() {
     const fullAmount = document.getElementById("basket__fullAmount")
     fullAmount.textContent = Number(amountCard1.value) + Number(amountCard2.value) + Number(amountCard3.value)
 }
+getFullAmount()
 
 // проверка, нажат ли чекбокс для оплаты сразу
 function checkPaynow() {
