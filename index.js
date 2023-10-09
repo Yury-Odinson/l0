@@ -303,6 +303,14 @@ function checkPhone() {
         userPhoneError.style.display = "block";
     }
 }
+
+// автоматическое добавление +7 при наводке на инпут, если строка пустая
+userPhone.addEventListener("focus", () => {
+    if (userPhone.value === "") {
+        userPhone.value = "+7"
+    }
+})
+
 // автоматическое выставление пробелов при корректном вводе номера телефона (начиная с 8 или +7)
 userPhone.addEventListener("input", () => {
     userPhone.value.replace(patternPhone, '<a href="tel:+7$2$3$4$5">+7 $2 $3 $4 $5</a>');
