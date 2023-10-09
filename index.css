@@ -244,10 +244,15 @@ header {
 
 .card__color,
 .card__size,
-.card__sizeNumber {
+.card__sizeNumber,
+.missing-card__sizeNumber{
     padding-right: 13px;
     font-size: 13px;
     line-height: 16px;
+}
+
+.missing-card__sizeNumber {
+    display: none;
 }
 
 .card-tm {
@@ -1001,7 +1006,8 @@ footer {
         left: 5px;
     }
 
-    .card__sizeNumber {
+    .card__sizeNumber,
+    .missing-card__sizeNumber {
         padding: 0;
         position: absolute;
         top: 90px;
@@ -1015,6 +1021,10 @@ footer {
         border-radius: 6px;
         font-size: 14px;
         font-weight: 400;
+    }
+
+    .missing-card__sizeNumber {
+        top: 80px;
     }
 
     .card-price {

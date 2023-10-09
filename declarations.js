@@ -63,6 +63,8 @@ export const methodPayCurrent = document.querySelectorAll(".pay-currentMethod")
 export const deliveryOption = document.getElementById("delivery-option")
 
 
+export const buttonRemoveCard = document.querySelectorAll(".card-nav__itemTrash")
+
 
 // чекбоксы выбора доставки в пункт выдачи из модального окна
 export const deliveryPick1 = document.getElementById("delivery__methodPickup1")

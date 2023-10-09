@@ -1,4 +1,4 @@
-import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, reminderCard3, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription, hideAllCards, hideAllMissings } from "./declarations.js"
+import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, reminderCard3, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription, hideAllCards, hideAllMissings, buttonRemoveCard } from "./declarations.js"
 
 // выделение/снятие галочек на всех позициях товара
 basketCheckAll.addEventListener("change", () => {
@@ -336,4 +336,15 @@ userINN.addEventListener("change", () => {
     } else {
         userINNError.style.display = "none"
     }
+})
+
+// удаление карточки товара
+buttonRemoveCard.forEach((element) => {
+    element.addEventListener("click", () => {
+        if (element.closest(".card-item")) {
+            element.closest(".card-item").remove()
+        } else {
+            element.closest(".card-item-missing").remove()
+        }
+    })
 })
