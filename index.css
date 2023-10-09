@@ -68,7 +68,7 @@ header {
     font-weight: 400;
     color: #fff;
     background-color: var(--var-TranslucentWhite);
-    background-image: url(/images/header-search.png);
+    background-image: url(./images/header-search.png);
     background-repeat: no-repeat;
     background-position: top 50% right 22px;
 }
@@ -185,7 +185,7 @@ header {
     margin-top: 35px;
     width: 20px;
     height: 20px;
-    background-image: url(/images/body-hideAll.svg);
+    background-image: url(./images/body-hideAll.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -268,7 +268,7 @@ header {
 }
 
 .card-tm__image {
-    background-image: url(/images/body-card-importerInfo.png);
+    background-image: url(./images/body-card-importerInfo.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 20px;
@@ -581,7 +581,7 @@ header {
 .basket-info__edit {
     width: 32px;
     height: 24px;
-    background-image: url(/images/basket-edit.svg);
+    background-image: url(./images/basket-edit.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -938,7 +938,7 @@ footer {
         margin-right: 7px;
         width: 28px;
         height: 28px;
-        background-image: url(/images/header-search.png);
+        background-image: url(./images/header-search.png);
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -1388,7 +1388,7 @@ footer {
 .modal-delivery-header__button {
     width: 24px;
     height: 24px;
-    background-image: url(/images/modal-close.svg);
+    background-image: url(./images/modal-close.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
