@@ -3,6 +3,7 @@
 // основное
 export const hideAllCards = document.getElementById("hide__allCards")
 export const hideAllMissings = document.getElementById("hide__allMissings")
+export const mobileMenu= document.getElementById("mobile-menu")
 // card 1
 export const priceCard1 = document.getElementById("card1__price")
 export const fpriceCard1 = document.getElementById("card1__fprice")

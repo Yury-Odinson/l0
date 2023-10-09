@@ -1,4 +1,4 @@
-import { modalBackground, modalPayOpen, modalDeliveryOpen, modalPayClose, modalDeliveryClose, deliveryButtonPikup, deliveryButtonCourier, deliveryMethodPickUp, deliveryMethodCourier, defaultMethodDelivery, methodDeliveryCurrent, modalSetDelivery, basketDeliveryOption, deliveryOption, deliveryPick1, deliveryPick2, delivery1, delivery2, delivery3, methodPayCurrent, defaultMethodPay, pay1, pay2, pay3, pay4, modalSetPay } from "./declarations.js"
+import { mobileMenu, modalBackground, modalPayOpen, modalDeliveryOpen, modalPayClose, modalDeliveryClose, deliveryButtonPikup, deliveryButtonCourier, deliveryMethodPickUp, deliveryMethodCourier, defaultMethodDelivery, methodDeliveryCurrent, modalSetDelivery, basketDeliveryOption, deliveryOption, deliveryPick1, deliveryPick2, delivery1, delivery2, delivery3, methodPayCurrent, defaultMethodPay, pay1, pay2, pay3, pay4, modalSetPay } from "./declarations.js"
 
 // файл для работы модальных окон
 // функция открытия модальных окон 
@@ -6,6 +6,7 @@ function openModal(modalName) {
     const window = document.getElementById(modalName)
     modalBackground.style.display = "block"
     window.style.display = "block"
+    mobileMenu.style.display = "none"
 }
 
 // открытие модального окна по клику на каждую из кнопок открытия
@@ -21,6 +22,7 @@ function closeModal(modalName) {
     const window = document.getElementById(modalName)
     modalBackground.style.display = "none"
     window.style.display = "none"
+    mobileMenu.style.display = "flex"
 }
 
 // закрытие модальные окна 
