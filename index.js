@@ -1,4 +1,15 @@
-import { priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, reminderCard3, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription, hideAllCards, hideAllMissings, buttonRemoveCard } from "./declarations.js"
+import { basketCount, priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, reminderCard3, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription, hideAllCards, hideAllMissings, buttonRemoveCard } from "./declarations.js"
+
+// подсчёт и отображение количества товаров в корзине
+function setBasketGoodsValue() {
+    const value = document.querySelectorAll(".card-item").length
+    if (value > 0) {
+        basketCount.textContent = value
+    } else {
+        document.querySelector(".header-navbar__BasketCount").style.display = "none"
+    }
+}
+setBasketGoodsValue()
 
 // выделение/снятие галочек на всех позициях товара
 basketCheckAll.addEventListener("change", () => {
@@ -86,9 +97,16 @@ function incrementGoodValue(amount, remind) {
     }
 }
 
+// decrSumCard2.setAttribute("disabled", "disabled")
+
+function checkDisableButton(id) {
+
+}
+
 // декрементация/инкрементация количества каждой позиции товара
 decrSumCard1.addEventListener("click", () => {
     decrementGoodValue(amountCard1);
+    // decrSumCard1.style.color = "#9797AF"
     priceCard1.textContent = amountCard1.value * onePrice.card1
     fpriceCard1.textContent = amountCard1.value * fullOnePrice.card1
     getTotalPrice()
@@ -347,5 +365,6 @@ buttonRemoveCard.forEach((element) => {
         } else {
             element.closest(".card-item-missing").remove()
         }
+        setBasketGoodsValue()
     })
 })
