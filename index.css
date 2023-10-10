@@ -137,6 +137,10 @@ header {
     color: #fff;
 }
 
+.header-navbar__BasketCount {
+    display: none;
+}
+
 .mobile-menu {
     display: none;
 }
@@ -1544,6 +1548,7 @@ footer {
     }
 
     .header-navbar__BasketCount {
+        display: flex;
         top: -5px;
         right: -5px;
     }
