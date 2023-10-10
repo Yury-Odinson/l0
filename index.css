@@ -126,13 +126,15 @@ header {
     border-radius: 50%;
 }
 
-#basket__count {
+#basket__count,
+#mobile-basket__count {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 10px;
     line-height: 10px;
+    color: #fff;
 }
 
 .mobile-menu {
@@ -1527,6 +1529,15 @@ footer {
         align-items: center;
         background-color: #fff;
         z-index: 3;
+    }
+
+    .mobile-menu-basket {
+        position: relative;
+    }
+
+    .header-navbar__BasketCount {
+        top: -5px;
+        right: -5px;
     }
 
     .modal-pay-method,

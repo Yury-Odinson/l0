@@ -2,6 +2,7 @@
 
 // основное
 export const basketCount = document.getElementById("basket__count")
+export const mobileBasketCount = document.getElementById("mobile-basket__count")
 export const hideAllCards = document.getElementById("hide__allCards")
 export const hideAllMissings = document.getElementById("hide__allMissings")
 export const mobileMenu = document.getElementById("mobile-menu")
