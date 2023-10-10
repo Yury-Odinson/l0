@@ -51,6 +51,7 @@ export const modalSetPay = document.getElementById("set-pay-data")
 export const modalSetDelivery = document.getElementById("set-delivery-data")
 export const modalDeliveryOpen = document.querySelectorAll(".openModal-delivery")
 export const modalDeliveryClose = document.getElementById("modal-delivery__close")
+export const modalRemoveAddress = document.querySelectorAll(".modal-delivery__itemTrash")
 // кнопки способа доставки
 export const deliveryButtonPikup = document.getElementById("delivery__methodPickup")
 export const deliveryButtonCourier = document.getElementById("delivery__methodCourier")

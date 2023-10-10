@@ -1,4 +1,4 @@
-import { mobileMenu, modalBackground, modalPayOpen, modalDeliveryOpen, modalPayClose, modalDeliveryClose, deliveryButtonPikup, deliveryButtonCourier, deliveryMethodPickUp, deliveryMethodCourier, defaultMethodDelivery, methodDeliveryCurrent, modalSetDelivery, basketDeliveryOption, deliveryOption, deliveryPick1, deliveryPick2, delivery1, delivery2, delivery3, methodPayCurrent, defaultMethodPay, pay1, pay2, pay3, pay4, modalSetPay } from "./declarations.js"
+import { mobileMenu, modalBackground, modalPayOpen, modalDeliveryOpen, modalPayClose, modalDeliveryClose, deliveryButtonPikup, deliveryButtonCourier, deliveryMethodPickUp, deliveryMethodCourier, defaultMethodDelivery, methodDeliveryCurrent, modalSetDelivery, basketDeliveryOption, deliveryOption, deliveryPick1, deliveryPick2, delivery1, delivery2, delivery3, methodPayCurrent, defaultMethodPay, pay1, pay2, pay3, pay4, modalSetPay, modalRemoveAddress } from "./declarations.js"
 
 // файл для работы модальных окон
 // функция открытия модальных окон 
@@ -125,4 +125,15 @@ pay4.addEventListener("click", () => numberPayMethod = 4)
 modalSetPay.addEventListener("click", () => {
     setPayMethod(numberPayMethod)
     closeModal("modal-pay")
+})
+
+// удаление адресов доставки
+modalRemoveAddress.forEach((button) => {
+    button.addEventListener("click", () => {
+        const addresses = document.querySelectorAll(".modal-delivery-body__label")
+        console.log(addresses.length)
+        if (addresses.length >= 2) {
+            button.closest(".modal-delivery-body__label").remove()
+        } else alert("Нужно оставить хотя бы 1 адрес!")
+    })
 })
