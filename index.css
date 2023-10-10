@@ -1557,6 +1557,7 @@ footer {
     .modal-delivery-method {
         width: 100vw;
         height: 100vh;
+        padding-bottom: 70px;
         border-radius: 0%;
     }
 
