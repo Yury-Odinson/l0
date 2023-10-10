@@ -72,6 +72,7 @@ deliveryButtonCourier.addEventListener("click", () => {
 // функция установки варианта доставки
 function setDeliveryMethod(method, methodNum) {
     const methodDelivery = document.getElementById(method + methodNum)
+    const deliveryPickupInfo = document.querySelectorAll(".delivery-string-address__info")
     switch (method + methodNum) {
         case `delivery__methodPickup${methodNum}`:
             methodDeliveryCurrent.forEach((element) => {
@@ -80,6 +81,7 @@ function setDeliveryMethod(method, methodNum) {
             })
             basketDeliveryOption.textContent = "Доставка в пункт выдачи"
             deliveryOption.textContent = "Пункт выдачи"
+            deliveryPickupInfo.forEach((element) => element.style.display = "flex")
             break
         case `delivery__method${methodNum}`:
             methodDeliveryCurrent.forEach((element) => {
@@ -88,6 +90,7 @@ function setDeliveryMethod(method, methodNum) {
             })
             basketDeliveryOption.textContent = "Доставка курьером"
             deliveryOption.textContent = "Доставка курьером"
+            deliveryPickupInfo.forEach((element) => element.style.display = "none")
             break
     }
 }
