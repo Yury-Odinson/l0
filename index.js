@@ -98,12 +98,6 @@ function incrementGoodValue(amount, remind) {
     }
 }
 
-// decrSumCard2.setAttribute("disabled", "disabled")
-
-function checkDisableButton(id) {
-
-}
-
 // декрементация/инкрементация количества каждой позиции товара
 decrSumCard1.addEventListener("click", () => {
     decrementGoodValue(amountCard1);
@@ -377,10 +371,15 @@ userINN.addEventListener("change", () => {
 buttonRemoveCard.forEach((element) => {
     element.addEventListener("click", () => {
         if (element.closest(".card-item")) {
-            element.closest(".card-item").remove()
+            const card = element.closest(".card-item") // декларация родительского блока с картой товара
+            const counter = card.querySelector(".counter__value") // декларация счётчика количества товаров
+            console.log(counter.value = "0")
+            counter.value = "0" // обнуление количества товаров
+            card.remove() // удаление из DOM карточки с товаром
         } else {
             element.closest(".card-item-missing").remove()
         }
         setBasketGoodsValue()
+        getFullAmount()
     })
 })
