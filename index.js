@@ -1,4 +1,4 @@
-import { basketCount, mobileBasketCount, priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, reminderCard3, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription, hideAllCards, hideAllMissings, buttonRemoveCard } from "./declarations.js"
+import { basketCount, mobileBasketCount, checkboxConfirmOffer, priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, reminderCard3, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription, hideAllCards, hideAllMissings, buttonRemoveCard } from "./declarations.js"
 
 // подсчёт и отображение количества товаров в корзине
 function setBasketGoodsValue() {
@@ -233,13 +233,29 @@ function checkInput(input) {
     }
 }
 
+// установка по умолчанию принятия оферты
+let statusButtonBuy = true
+// установка атрибута disabled при несогласии с офертой
+checkboxConfirmOffer.addEventListener("change", () => {
+    statusButtonBuy = !statusButtonBuy
+    if (statusButtonBuy) {
+        buttonBasketBuy.removeAttribute("disabled", "disabled")
+    } else {
+        buttonBasketBuy.setAttribute("disabled", "disabled")
+    }
+})
+
+buttonBasketBuy.addEventListener("click", () => checkUserData())
+
 // проверка наличия заполнений полей в разделе "Получатель"
 function checkUserData() {
-    checkInput("data__firstName")
-    checkInput("data__lastName")
-    checkInput("data__email")
-    checkInput("data__phone")
-    checkInput("data__inn")
+    if (statusButtonBuy) {
+        checkInput("data__firstName")
+        checkInput("data__lastName")
+        checkInput("data__email")
+        checkInput("data__phone")
+        checkInput("data__inn")
+    } else return
 }
 
 // события на изменение полей данных
@@ -263,7 +279,6 @@ userINN.addEventListener("change", () => {
     document.getElementById("data__innClue").style.display = "block"
 })
 
-buttonBasketBuy.addEventListener("click", () => checkUserData())
 
 
 // функция добавления пробелом между числами

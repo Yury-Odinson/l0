@@ -44,6 +44,7 @@ export const checkboxBasketPaynow = document.getElementById("basket-checkbox-pay
 export const buttonBasketBuy = document.getElementById("basket__buttonOrder")
 export const basketCheckAll = document.getElementById("basket__checkAll")
 export const basketDeliveryOption = document.getElementById("basket-delivery-option")
+export const checkboxConfirmOffer = document.getElementById("confirm__offer")
 // модалки
 export const modalBackground = document.getElementById("modal-background")
 export const modalPayOpen = document.querySelectorAll(".openModal-pay")

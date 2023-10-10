@@ -991,7 +991,8 @@ header {
     letter-spacing: -0.1px;
 }
 
-.basket__buttonOrder {
+.basket__buttonOrder,
+.basket__buttonOrder:disabled {
     margin: 10px 0;
     padding: 10px 0;
     width: 100%;
@@ -999,6 +1000,13 @@ header {
     background-color: var(--var-ButtonsColor);
     font-size: 16px;
     font-weight: 700;
+}
+
+.basket__buttonOrder:disabled {
+    background-color: #fff;
+    border: 1px solid var(--var-ButtonsColor);
+    color: var(--var-GrayColor);
+
 }
 
 .basket-footer {
