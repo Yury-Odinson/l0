@@ -226,7 +226,7 @@ function checkInput(input) {
         element.classList.add("recipient__dataError")
         elementHelp.style.display = "block"
         input === "data__inn" ? innDescription.style.display = "none" : innDescription.style.display = "block" // если ошибочное поле является ИНН, то скрываем строку "Для таможенного оформления"
-        scrollTo(0, 1000) // в случае, если есть пустое поле, то страница прокручивается вниз до блока с данными, где есть пустые поля
+        document.querySelector(".container-main-recipient").scrollIntoView() // в случае, если есть пустое поле, то страница прокручивается до блока с данными, где есть пустые поля
     } else {
         element.classList.remove("recipient__dataError")
         elementHelp.style.display = "none"
