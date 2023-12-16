@@ -13,917 +13,895 @@
 
 <body>
 
-    <header>
-        <div class="header-container">
-            <div class="header-nav-element">
-                <button class="header-button__menu">
-                    <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
+<header>
+    <div class="header-container">
+        <div class="header-nav-element">
+            <button class="header-button__menu">
+                <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
                             d="M0 2C0 0.895431 0.895431 0 2 0H26C27.1046 0 28 0.895431 28 2C28 3.10457 27.1046 4 26 4H2C0.895431 4 0 3.10457 0 2Z"
-                            fill="white" />
-                        <path
+                            fill="white"/>
+                    <path
                             d="M0 12C0 10.8954 0.895431 10 2 10H26C27.1046 10 28 10.8954 28 12C28 13.1046 27.1046 14 26 14H2C0.895431 14 0 13.1046 0 12Z"
-                            fill="white" />
-                        <path
+                            fill="white"/>
+                    <path
                             d="M0 22C0 20.8954 0.895431 20 2 20H26C27.1046 20 28 20.8954 28 22C28 23.1046 27.1046 24 26 24H2C0.895431 24 0 23.1046 0 22Z"
-                            fill="white" />
-                    </svg>
-                </button>
+                            fill="white"/>
+                </svg>
+            </button>
 
-                <button class="header-button__menuMobile">
-                    <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M0.75 2C0.75 1.30964 1.30964 0.75 2 0.75H22C22.6904 0.75 23.25 1.30964 23.25 2C23.25 2.69036 22.6904 3.25 22 3.25H2C1.30964 3.25 0.75 2.69036 0.75 2Z"
-                            fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M0.75 10C0.75 9.30964 1.30964 8.75 2 8.75H22C22.6904 8.75 23.25 9.30964 23.25 10C23.25 10.6904 22.6904 11.25 22 11.25H2C1.30964 11.25 0.75 10.6904 0.75 10Z"
-                            fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M0.75 18C0.75 17.3096 1.30964 16.75 2 16.75H16C16.6904 16.75 17.25 17.3096 17.25 18C17.25 18.6904 16.6904 19.25 16 19.25H2C1.30964 19.25 0.75 18.6904 0.75 18Z"
-                            fill="white" />
-                    </svg>
-                </button>
-                <h1 class="header__title">ТОВАРЫ И ТОЧКА</h1>
-            </div>
-
-            <input class="header__search" type="search" placeholder="Я ищу...">
-
-            <button class="header__searchMobile"></button>
-
-            <div class="header-navbar">
-                <button class="header-navbar__Profile">
-                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M14.5207 5.28873C14.5207 8.05869 12.4361 10.2066 10.006 10.2066C7.57586 10.2066 5.49117 8.05869 5.49117 5.31221C5.47931 2.60094 7.58777 0.5 10.006 0.5C12.4241 0.5 14.5207 2.55399 14.5207 5.28873ZM0.5 18.9977C0.5 19.9836 1.14326 20.5 2.94201 20.5H17.058C18.8567 20.5 19.5 19.9836 19.5 18.9977C19.5 16.1338 15.8429 12.1901 10.006 12.1901C4.15705 12.1901 0.5 16.1338 0.5 18.9977Z"
-                            fill="white" />
-                    </svg>
-                    <span class="header-navbar__ProfileSpan">Профиль</span>
-                </button>
-                <button class="header-navbar__Basket">
-                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M10.2214 15.4665C10.3829 15.9206 10.8452 16.1949 11.3212 16.119L24.0874 14.0828C24.5004 14.017 24.8288 13.701 24.9106 13.2909L26.2654 6.49865C26.3875 5.88644 25.925 5.31324 25.3008 5.30317L7.94122 5.02324C7.24354 5.01199 6.74913 5.70067 6.98289 6.35812L10.2214 15.4665Z"
-                            fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M10.8262 23.3593C12.1109 23.3593 13.1523 22.3178 13.1523 21.0331C13.1523 19.7484 12.1109 18.707 10.8262 18.707C9.54146 18.707 8.5 19.7484 8.5 21.0331C8.5 22.3178 9.54146 23.3593 10.8262 23.3593Z"
-                            fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M22.457 23.3593C23.7417 23.3593 24.7831 22.3178 24.7831 21.0331C24.7831 19.7484 23.7417 18.707 22.457 18.707C21.1723 18.707 20.1308 19.7484 20.1308 21.0331C20.1308 22.3178 21.1723 23.3593 22.457 23.3593Z"
-                            fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M4 2C5.933 2 7.5 1.77614 7.5 1.5C7.5 1.22386 5.933 1 4 1C2.067 1 0.5 1.22386 0.5 1.5C0.5 1.77614 2.067 2 4 2Z"
-                            fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M1.45442 0.651472C2.1177 0.556717 3.01745 0.5 4 0.5C4.98255 0.5 5.8823 0.556717 6.54558 0.651472C6.87345 0.69831 7.16489 0.757343 7.38495 0.831667C7.4917 0.867722 7.61185 0.917169 7.71511 0.989256C7.80017 1.04864 8 1.21275 8 1.5C8 1.78725 7.80017 1.95136 7.71511 2.01074C7.61185 2.08283 7.4917 2.13228 7.38495 2.16833C7.16489 2.24266 6.87345 2.30169 6.54558 2.34853C5.8823 2.44328 4.98255 2.5 4 2.5C3.01745 2.5 2.1177 2.44328 1.45442 2.34853C1.12655 2.30169 0.835108 2.24266 0.615051 2.16833C0.508302 2.13228 0.388151 2.08283 0.284892 2.01074C0.199835 1.95136 0 1.78725 0 1.5C0 1.21275 0.199835 1.04864 0.284892 0.989256C0.388151 0.917169 0.508302 0.867722 0.615051 0.831667C0.835108 0.757343 1.12655 0.69831 1.45442 0.651472Z"
-                            fill="white" />
-                    </svg>
-                    <span class="header-navbar__BasketSpan">Корзина</span>
-                    <div class="header-navbar__BasketCount">
-                        <span id="basket__count"></span>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </header>
-
-
-
-    <div class="mobile-menu" id="mobile-menu">
-        <img src="./images/mobile-menu-home.svg" alt="home">
-        <img src="./images/mobile-menu-search.svg" alt="search">
-        <div class="mobile-menu-basket">
-            <img src="./images/mobile-menu-basket.svg" alt="basket">
-            <div class="header-navbar__BasketCount">
-                <span id="mobile-basket__count"></span>
-            </div>
+            <button class="header-button__menuMobile">
+                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M0.75 2C0.75 1.30964 1.30964 0.75 2 0.75H22C22.6904 0.75 23.25 1.30964 23.25 2C23.25 2.69036 22.6904 3.25 22 3.25H2C1.30964 3.25 0.75 2.69036 0.75 2Z"
+                          fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M0.75 10C0.75 9.30964 1.30964 8.75 2 8.75H22C22.6904 8.75 23.25 9.30964 23.25 10C23.25 10.6904 22.6904 11.25 22 11.25H2C1.30964 11.25 0.75 10.6904 0.75 10Z"
+                          fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M0.75 18C0.75 17.3096 1.30964 16.75 2 16.75H16C16.6904 16.75 17.25 17.3096 17.25 18C17.25 18.6904 16.6904 19.25 16 19.25H2C1.30964 19.25 0.75 18.6904 0.75 18Z"
+                          fill="white"/>
+                </svg>
+            </button>
+            <h1 class="header__title">ТОВАРЫ И ТОЧКА</h1>
         </div>
 
-        <img src="./images/mobile-menu-favorites.svg" alt="favorites">
-        <img src="./images/mobile-menu-profile.svg" alt="profile">
+        <input class="header__search" type="search" placeholder="Я ищу...">
+
+        <button class="header__searchMobile"></button>
+
+        <div class="header-navbar">
+            <button class="header-navbar__Profile">
+                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M14.5207 5.28873C14.5207 8.05869 12.4361 10.2066 10.006 10.2066C7.57586 10.2066 5.49117 8.05869 5.49117 5.31221C5.47931 2.60094 7.58777 0.5 10.006 0.5C12.4241 0.5 14.5207 2.55399 14.5207 5.28873ZM0.5 18.9977C0.5 19.9836 1.14326 20.5 2.94201 20.5H17.058C18.8567 20.5 19.5 19.9836 19.5 18.9977C19.5 16.1338 15.8429 12.1901 10.006 12.1901C4.15705 12.1901 0.5 16.1338 0.5 18.9977Z"
+                          fill="white"/>
+                </svg>
+                <span class="header-navbar__ProfileSpan">Профиль</span>
+            </button>
+            <button class="header-navbar__Basket">
+                <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M10.2214 15.4665C10.3829 15.9206 10.8452 16.1949 11.3212 16.119L24.0874 14.0828C24.5004 14.017 24.8288 13.701 24.9106 13.2909L26.2654 6.49865C26.3875 5.88644 25.925 5.31324 25.3008 5.30317L7.94122 5.02324C7.24354 5.01199 6.74913 5.70067 6.98289 6.35812L10.2214 15.4665Z"
+                          fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M10.8262 23.3593C12.1109 23.3593 13.1523 22.3178 13.1523 21.0331C13.1523 19.7484 12.1109 18.707 10.8262 18.707C9.54146 18.707 8.5 19.7484 8.5 21.0331C8.5 22.3178 9.54146 23.3593 10.8262 23.3593Z"
+                          fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M22.457 23.3593C23.7417 23.3593 24.7831 22.3178 24.7831 21.0331C24.7831 19.7484 23.7417 18.707 22.457 18.707C21.1723 18.707 20.1308 19.7484 20.1308 21.0331C20.1308 22.3178 21.1723 23.3593 22.457 23.3593Z"
+                          fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4 2C5.933 2 7.5 1.77614 7.5 1.5C7.5 1.22386 5.933 1 4 1C2.067 1 0.5 1.22386 0.5 1.5C0.5 1.77614 2.067 2 4 2Z"
+                          fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M1.45442 0.651472C2.1177 0.556717 3.01745 0.5 4 0.5C4.98255 0.5 5.8823 0.556717 6.54558 0.651472C6.87345 0.69831 7.16489 0.757343 7.38495 0.831667C7.4917 0.867722 7.61185 0.917169 7.71511 0.989256C7.80017 1.04864 8 1.21275 8 1.5C8 1.78725 7.80017 1.95136 7.71511 2.01074C7.61185 2.08283 7.4917 2.13228 7.38495 2.16833C7.16489 2.24266 6.87345 2.30169 6.54558 2.34853C5.8823 2.44328 4.98255 2.5 4 2.5C3.01745 2.5 2.1177 2.44328 1.45442 2.34853C1.12655 2.30169 0.835108 2.24266 0.615051 2.16833C0.508302 2.13228 0.388151 2.08283 0.284892 2.01074C0.199835 1.95136 0 1.78725 0 1.5C0 1.21275 0.199835 1.04864 0.284892 0.989256C0.388151 0.917169 0.508302 0.867722 0.615051 0.831667C0.835108 0.757343 1.12655 0.69831 1.45442 0.651472Z"
+                          fill="white"/>
+                </svg>
+                <span class="header-navbar__BasketSpan">Корзина</span>
+                <div class="header-navbar__BasketCount">
+                    <span id="basket__count"></span>
+                </div>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+<div class="mobile-menu" id="mobile-menu">
+    <img src="./images/mobile-menu-home.svg" alt="home">
+    <img src="./images/mobile-menu-search.svg" alt="search">
+    <div class="mobile-menu-basket">
+        <img src="./images/mobile-menu-basket.svg" alt="basket">
+        <div class="header-navbar__BasketCount">
+            <span id="mobile-basket__count"></span>
+        </div>
     </div>
 
+    <img src="./images/mobile-menu-favorites.svg" alt="favorites">
+    <img src="./images/mobile-menu-profile.svg" alt="profile">
+</div>
 
-    <div class="container">
-        <div class="container-wrapper">
 
-            <div id="modal-background">
+<div class="container">
+    <div class="container-wrapper">
 
+        <div id="modal-background">
+
+        </div>
+        <div class="modal modal-pay-method" id="modal-pay">
+            <div class="modal-pay-container">
+                <div class="modal-pay-header">
+                    <h2>Способ оплаты</h2>
+                    <button class="modal-pay-header__button" id="modal-pay__close"></button>
+                </div>
+                <div class="modal-pay-body">
+                    <label class="modal-pay-body__label" id="pay__label1">
+                        <input class="default__radio" type="radio" name="pay-method" checked>
+                        <span class="custom__radio"></span>
+                        <div class="pay-info-data" id="pay__method1">
+                            <img src="./images/modal-system1.png" width="32" height="24" alt="pay system">
+                            <span>1234 56•• •••• 1234</span>
+                        </div>
+                    </label>
+                    <label class="modal-pay-body__label" id="pay__label2">
+                        <input class="default__radio" type="radio" name="pay-method">
+                        <span class="custom__radio"></span>
+                        <div class="pay-info-data" id="pay__method2">
+                            <img src="./images/modal-system2.png" width="32" height="24" alt="pay system">
+                            <span>1435 56•• •••• 9934</span>
+                        </div>
+                    </label>
+                    <label class="modal-pay-body__label" id="pay__label3">
+                        <input class="default__radio" type="radio" name="pay-method">
+                        <span class="custom__radio"></span>
+                        <div class="pay-info-data" id="pay__method3">
+                            <img src="./images/modal-system3.png" width="32" height="24" alt="pay system">
+                            <span>9943 56•• •••• 1299</span>
+                        </div>
+                    </label>
+                    <label class="modal-pay-body__label" id="pay__label4">
+                        <input class="default__radio" type="radio" name="pay-method">
+                        <span class="custom__radio"></span>
+                        <div class="pay-info-data" id="pay__method4">
+                            <img src="./images/modal-system4.png" width="32" height="24" alt="pay system">
+                            <span>7934 66•• •••• 7774</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="modal-pay-footer">
+                    <button class="modal-pay__button" id="set-pay-data">Выбрать</button>
+                </div>
             </div>
-            <div class="modal modal-pay-method" id="modal-pay">
-                <div class="modal-pay-container">
-                    <div class="modal-pay-header">
-                        <h2>Способ оплаты</h2>
-                        <button class="modal-pay-header__button" id="modal-pay__close"></button>
-                    </div>
-                    <div class="modal-pay-body">
-                        <label class="modal-pay-body__label" id="pay__label1">
-                            <input class="default__radio" type="radio" name="pay-method" checked>
-                            <span class="custom__radio"></span>
-                            <div class="pay-info-data" id="pay__method1">
-                                <img src="./images/modal-system1.png" width="32" height="24" alt="pay system">
-                                <span>1234 56•• •••• 1234</span>
-                            </div>
-                        </label>
-                        <label class="modal-pay-body__label" id="pay__label2">
-                            <input class="default__radio" type="radio" name="pay-method">
-                            <span class="custom__radio"></span>
-                            <div class="pay-info-data" id="pay__method2">
-                                <img src="./images/modal-system2.png" width="32" height="24" alt="pay system">
-                                <span>1435 56•• •••• 9934</span>
-                            </div>
-                        </label>
-                        <label class="modal-pay-body__label" id="pay__label3">
-                            <input class="default__radio" type="radio" name="pay-method">
-                            <span class="custom__radio"></span>
-                            <div class="pay-info-data" id="pay__method3">
-                                <img src="./images/modal-system3.png" width="32" height="24" alt="pay system">
-                                <span>9943 56•• •••• 1299</span>
-                            </div>
-                        </label>
-                        <label class="modal-pay-body__label" id="pay__label4">
-                            <input class="default__radio" type="radio" name="pay-method">
-                            <span class="custom__radio"></span>
-                            <div class="pay-info-data" id="pay__method4">
-                                <img src="./images/modal-system4.png" width="32" height="24" alt="pay system">
-                                <span>7934 66•• •••• 7774</span>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="modal-pay-footer">
-                        <button class="modal-pay__button" id="set-pay-data">Выбрать</button>
-                    </div>
+
+        </div>
+
+        <div class="modal modal-delivery-method" id="modal-delivery">
+            <div class="modal-delivery-container">
+                <div class="modal-delivery-header">
+                    <h2>Способ доставки</h2>
+                    <button class="modal-delivery-header__button" id="modal-delivery__close"></button>
                 </div>
 
-            </div>
 
-            <div class="modal modal-delivery-method" id="modal-delivery">
-                <div class="modal-delivery-container">
-                    <div class="modal-delivery-header">
-                        <h2>Способ доставки</h2>
-                        <button class="modal-delivery-header__button" id="modal-delivery__close"></button>
+                <div class="modal-delivery-body">
+
+                    <div class="modal-delivery-body-method">
+                        <button class="modal-delivery-method__item" id="delivery__methodPickup">В пункт
+                            выдачи
+                        </button>
+                        <button class="modal-delivery-method__item modal-delivery-method__ActiveItem"
+                                id="delivery__methodCourier">Курьером
+                        </button>
                     </div>
 
-
-                    <div class="modal-delivery-body">
-
-                        <div class="modal-delivery-body-method">
-                            <button class="modal-delivery-method__item" id="delivery__methodPickup">В пункт
-                                выдачи</button>
-                            <button class="modal-delivery-method__item modal-delivery-method__ActiveItem"
-                                id="delivery__methodCourier">Курьером</button>
-                        </div>
-
-                        <div class="delivery-doby-method-pickUp" id="delivery-doby-method-pickUp">
-                            <h5 class="delivery-body-method-address__title">Мои пункты выдачи</h5>
-                            <label class="modal-delivery-body__label">
-                                <input class="default__radio" type="radio" name="pickUp" checked>
-                                <span class="custom__radio"></span>
-                                <span class="modal-delivery-label__text" id="delivery__methodPickup1">Бишкек, улица
+                    <div class="delivery-doby-method-pickUp" id="delivery-doby-method-pickUp">
+                        <h5 class="delivery-body-method-address__title">Мои пункты выдачи</h5>
+                        <label class="modal-delivery-body__label">
+                            <input class="default__radio" type="radio" name="pickUp" checked>
+                            <span class="custom__radio"></span>
+                            <span class="modal-delivery-label__text" id="delivery__methodPickup1">Бишкек, улица
                                     Ахматбека Суюмбаева, 12/1</span>
-                                <button class="modal-delivery__itemTrash">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                            </label>
-                            <label class="modal-delivery-body__label">
-                                <input class="default__radio" type="radio" name="pickUp">
-                                <span class="custom__radio"></span>
-                                <span class="modal-delivery-label__text" id="delivery__methodPickup2">Бишкек, улица
+                            <button class="modal-delivery__itemTrash">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="modal-delivery-body__label">
+                            <input class="default__radio" type="radio" name="pickUp">
+                            <span class="custom__radio"></span>
+                            <span class="modal-delivery-label__text" id="delivery__methodPickup2">Бишкек, улица
                                     Пушкина, дом Колотушкина</span>
-                                <button class="modal-delivery__itemTrash">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                            </label>
-                        </div>
+                            <button class="modal-delivery__itemTrash">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
+                        </label>
+                    </div>
 
-                        <div class="delivery-body-method-address" id="delivery-doby-method-courier">
+                    <div class="delivery-body-method-address" id="delivery-doby-method-courier">
 
-                            <h5 class="delivery-body-method-address__title">Мои адреса</h5>
+                        <h5 class="delivery-body-method-address__title">Мои адреса</h5>
 
-                            <label class="modal-delivery-body__label">
-                                <input class="default__radio" type="radio" name="adress">
-                                <span class="custom__radio"></span>
-                                <span class="modal-delivery-label__text" id="delivery__method1">Бишкек, улица
+                        <label class="modal-delivery-body__label">
+                            <input class="default__radio" type="radio" name="adress">
+                            <span class="custom__radio"></span>
+                            <span class="modal-delivery-label__text" id="delivery__method1">Бишкек, улица
                                     Табышалиева, 57</span>
-                                <button class="modal-delivery__itemTrash">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                            </label>
+                            <button class="modal-delivery__itemTrash">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
+                        </label>
 
-                            <label class="modal-delivery-body__label">
-                                <input class="default__radio" type="radio" name="adress">
-                                <span class="custom__radio"></span>
-                                <span class="modal-delivery-label__text" id="delivery__method2">Бишкек, улица
+                        <label class="modal-delivery-body__label">
+                            <input class="default__radio" type="radio" name="adress">
+                            <span class="custom__radio"></span>
+                            <span class="modal-delivery-label__text" id="delivery__method2">Бишкек, улица
                                     Жукеева-Пудовкина, 77/1</span>
-                                <button class="modal-delivery__itemTrash">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                            </label>
+                            <button class="modal-delivery__itemTrash">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
+                        </label>
 
-                            <label class="modal-delivery-body__label">
-                                <input class="default__radio" type="radio" name="adress">
-                                <span class="custom__radio"></span>
-                                <span class="modal-delivery-label__text" id="delivery__method3">Бишкек, микрорайон Джал,
+                        <label class="modal-delivery-body__label">
+                            <input class="default__radio" type="radio" name="adress">
+                            <span class="custom__radio"></span>
+                            <span class="modal-delivery-label__text" id="delivery__method3">Бишкек, микрорайон Джал,
                                     улица Ахунбаева Исы,
                                     67/1</span>
-                                <button class="modal-delivery__itemTrash">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                            </label>
-                        </div>
+                            <button class="modal-delivery__itemTrash">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
+                        </label>
                     </div>
-
-                    <div class="modal-delivery-footer">
-                        <button class="modal-delivery__button" id="set-delivery-data">Выбрать</button>
-                    </div>
-
-
                 </div>
+
+                <div class="modal-delivery-footer">
+                    <button class="modal-delivery__button" id="set-delivery-data">Выбрать</button>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="container-main">
+            <h2 class="container__title">Корзина</h2>
+            <div class="container-main-header">
+                <div class="checkbox-area container-checkbox-area__hideAll">
+                    <label class="container-checkbox-label" name="checkAll">
+                        <input class="default__checkbox" type="checkbox" id="basket__checkAll">
+                        <span class="custom__checkbox"></span>
+                        <span class="container-checkbox__span">Выбрать все</span>
+                    </label>
+                </div>
+                <button class="container-checkbox__button" id="hide__allCards"></button>
             </div>
 
 
+            <div class="container-main-cards">
 
-
-            <div class="container-main">
-                <h2 class="container__title">Корзина</h2>
-                <div class="container-main-header">
-                    <div class="checkbox-area container-checkbox-area__hideAll">
-                        <label class="container-checkbox-label" name="checkAll">
-                            <input class="default__checkbox" type="checkbox" id="basket__checkAll">
-                            <span class="custom__checkbox"></span>
-                            <span class="container-checkbox__span">Выбрать все</span>
-                        </label>
+                <div class="card-item" id="card1__item">
+                    <div class="card-main">
+                        <div class="card-main-good">
+                            <label class="container-checkboxCard-label" name="checkGood">
+                                <input class="default__checkboxCard checkbox__card" type="checkbox">
+                                <span class="custom__checkboxCard"></span>
+                                <img class="card__image" src="./images/body-card1.png"
+                                     alt="какой-то всплывающий текст" width="72" height="96">
+                            </label>
+                        </div>
+                        <div class="card-description">
+                            <span class="card__name">Футболка UZcotton мужская</span>
+                            <div class="card-info">
+                                <span class="card__color">Цвет: белый</span>
+                                <span class="card__size">Размер: </span><span class="card__sizeNumber">56</span>
+                            </div>
+                            <span class="card__importer">Коледино WB</span>
+                            <div class="card-tm">
+                                <span class="card-tm__item">OOO Вайлдберриз</span>
+                                <button class="card-tm__image tooltip__importer"></button>
+                                <div class="tooltip__importerText">
+                                    <h5>OOO «ВАЙЛДБЕРРИЗ»</h5>
+                                    <p class="tooltip__text">ОГРН: 1067746062449</p>
+                                    <p class="tooltip__text">142181, Московская Область, Подольск, Д Коледино, Д. 6
+                                        СТР. 1</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <button class="container-checkbox__button" id="hide__allCards"></button>
+                    <div class="card-nav">
+                        <div class="card-settings">
+                            <div class="card-nav-counter">
+                                <button class="counter__decrement" id="card1__decr">−</button>
+                                <input class="counter__value" id="card1__value" type="number" value="1">
+                                <button class="counter__increment" id="card1__incr">+</button>
+                            </div>
+                            <span class="card-nav__reminder">Осталось <span id="card1__reminder">2</span> шт.</span>
+                            <div class="card-nav-options">
+
+
+                                <button class="card-nav__itemFavorites">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                              fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="card-nav__itemTrash">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                              fill="black"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                              fill="black"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                              fill="black"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-price">
+                            <div>
+                                <span class="card-price__discountPrice" id="card1__price"></span>
+                                <span class="card-price__discountPriceCom">сом</span>
+                            </div>
+                            <div>
+                                <span class="card-price__price" id="card1__fprice"></span>
+                                <span class="card-price__price"> сом</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-
-
-                <!-- Cards -->
-                <div class="container-main-cards">
-
-                    <div class="card-item" id="card1__item">
-                        <div class="card-main">
-                            <div class="card-main-good">
-                                <label class="container-checkboxCard-label" name="checkGood">
-                                    <input class="default__checkboxCard checkbox__card" type="checkbox">
-                                    <span class="custom__checkboxCard"></span>
-                                    <img class="card__image" src="./images/body-card1.png"
-                                        alt="какой-то всплывающий текст" width="72" height="96">
-                                </label>
-                            </div>
-                            <div class="card-description">
-                                <span class="card__name">Футболка UZcotton мужская</span>
-                                <div class="card-info">
-                                    <span class="card__color">Цвет: белый</span>
-                                    <span class="card__size">Размер: </span><span class="card__sizeNumber">56</span>
-                                </div>
-                                <span class="card__importer">Коледино WB</span>
-                                <div class="card-tm">
-                                    <span class="card-tm__item">OOO Вайлдберриз</span>
-                                    <button class="card-tm__image tooltip__importer"></button>
-                                    <div class="tooltip__importerText">
-                                        <h5>OOO «ВАЙЛДБЕРРИЗ»</h5>
-                                        <p class="tooltip__text">ОГРН: 1067746062449</p>
-                                        <p class="tooltip__text">142181, Московская Область, Подольск, Д Коледино, Д. 6
-                                            СТР. 1</p>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="card-item" id="card2__item">
+                    <div class="card-main">
+                        <div class="card-main-good">
+                            <label class="container-checkboxCard-label" name="checkGood">
+                                <input class="default__checkboxCard checkbox__card" type="checkbox">
+                                <span class="custom__checkboxCard"></span>
+                                <img class="card__image" src="./images/body-card2.png"
+                                     alt="какой-то всплывающий текст" width="72" height="96">
+                            </label>
                         </div>
-                        <div class="card-nav">
-                            <div class="card-settings">
-                                <div class="card-nav-counter">
-                                    <button class="counter__decrement" id="card1__decr">−</button>
-                                    <input class="counter__value" id="card1__value" type="number" value="1">
-                                    <button class="counter__increment" id="card1__incr">+</button>
-                                </div>
-                                <span class="card-nav__reminder">Осталось <span id="card1__reminder">2</span> шт.</span>
-                                <div class="card-nav-options">
-
-
-                                    <button class="card-nav__itemFavorites">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                                fill="black" />
-                                        </svg>
-                                    </button>
-                                    <button class="card-nav__itemTrash">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                                fill="black" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                                fill="black" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                                fill="black" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-price">
-                                <div>
-                                    <span class="card-price__discountPrice" id="card1__price"></span>
-                                    <span class="card-price__discountPriceCom">com</span>
-                                </div>
-                                <div>
-                                    <span class="card-price__price" id="card1__fprice"></span>
-                                    <span class="card-price__price"> com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-item" id="card2__item">
-                        <div class="card-main">
-                            <div class="card-main-good">
-                                <label class="container-checkboxCard-label" name="checkGood">
-                                    <input class="default__checkboxCard checkbox__card" type="checkbox">
-                                    <span class="custom__checkboxCard"></span>
-                                    <img class="card__image" src="./images/body-card2.png"
-                                        alt="какой-то всплывающий текст" width="72" height="96">
-                                </label>
-                            </div>
-                            <div class="card-description">
+                        <div class="card-description">
                                 <span class="card__name">Силиконовый чехол картхолдер (отверстия) для карт,
                                     прозрачный
                                     кейс бампер на Apple iPhone XR, MobiSafe</span>
-                                <div class="card-info">
-                                    <span class="card__color">Цвет: прозрачный</span>
-                                    <!-- <span class="card__size">Размер: </span><span class="card__sizeNumber">56</span> -->
-                                </div>
-                                <span class="card__importer">Коледино WB</span>
-                                <div class="card-tm">
-                                    <span class="card-tm__item">OOO Мегапрофстиль</span>
-                                    <button class="card-tm__image tooltip__importer"></button>
-                                    <div class="tooltip__importerText">
-                                        <h5>OOO «МЕГАПРОФСТИЛЬ»</h5>
-                                        <p class="tooltip__text">ОГРН: 5167746237148</p>
-                                        <p class="tooltip__text">129337, Москва, улица Красная Сосна, 2, корпус 1, стр.
-                                            1, помещение 2, офис 34</p>
-                                    </div>
-                                </div>
+                            <div class="card-info">
+                                <span class="card__color">Цвет: прозрачный</span>
                             </div>
-                        </div>
-                        <div class="card-nav">
-                            <div class="card-settings">
-                                <div class="card-nav-counter">
-                                    <button class="counter__decrement" id="card2__decr">−</button>
-                                    <input class="counter__value" id="card2__value" type="number" value="200">
-                                    <button class="counter__increment" id="card2__incr">+</button>
-                                </div>
-                                <!-- <span class="card-nav__reminder">Осталось 2 шт.</span> -->
-                                <div class="card-nav-options">
-
-
-                                    <button class="card-nav__itemFavorites">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                                fill="black" />
-                                        </svg>
-                                    </button>
-                                    <button class="card-nav__itemTrash">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                                fill="black" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                                fill="black" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                                fill="black" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-
-                            <div class="card-price">
-                                <div>
-                                    <span class="card-price__discountPrice" id="card2__price"></span>
-                                    <span class="card-price__discountPriceCom">com</span>
-                                </div>
-                                <div>
-                                    <span class="card-price__price" id="card2__fprice"></span>
-                                    <span class="card-price__price"> com</span>
+                            <span class="card__importer">Коледино WB</span>
+                            <div class="card-tm">
+                                <span class="card-tm__item">OOO Мегапрофстиль</span>
+                                <button class="card-tm__image tooltip__importer"></button>
+                                <div class="tooltip__importerText">
+                                    <h5>OOO «МЕГАПРОФСТИЛЬ»</h5>
+                                    <p class="tooltip__text">ОГРН: 5167746237148</p>
+                                    <p class="tooltip__text">129337, Москва, улица Красная Сосна, 2, корпус 1, стр.
+                                        1, помещение 2, офис 34</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="card-item" id="card3__item">
-                        <div class="card-main">
-                            <div class="card-main-good">
-                                <label class="container-checkboxCard-label" name="checkGood">
-                                    <input class="default__checkboxCard checkbox__card" type="checkbox">
-                                    <span class="custom__checkboxCard"></span>
-                                    <img class="card__image" src="./images/body-card3.png"
-                                        alt="какой-то всплывающий текст" width="72" height="96">
-                                </label>
+                    <div class="card-nav">
+                        <div class="card-settings">
+                            <div class="card-nav-counter">
+                                <button class="counter__decrement" id="card2__decr">−</button>
+                                <input class="counter__value" id="card2__value" type="number" value="200">
+                                <button class="counter__increment" id="card2__incr">+</button>
                             </div>
-                            <div class="card-description">
-                                <span class="card__name">Карандаши цветные Faber-Castell "Замок", набор 24
-                                    цвета, заточенные, шестигранные, Faber-Castell </span>
-                                <div class="card-info">
-                                    <!-- <span class="card__color">Цвет: прозрачный</span> -->
-                                    <!-- <span class="card__size">Размер: </span><span class="card__sizeNumber">56</span> -->
-                                </div>
-                                <span class="card__importer">Коледино WB</span>
-                                <div class="card-tm">
-                                    <span class="card-tm__item">OOO Вайлдберри</span>
-                                    <button class="card-tm__image tooltip__importer"></button>
-                                    <div class="tooltip__importerText">
-                                        <h5>OOO «ВАЙЛДБЕРРИЗ»</h5>
-                                        <p class="tooltip__text">ОГРН: 1067746062449</p>
-                                        <p class="tooltip__text">142181, Московская Область, Подольск, Д Коледино, Д. 6
-                                            СТР. 1</p>
-                                    </div>
-                                </div>
+                            <div class="card-nav-options">
+
+
+                                <button class="card-nav__itemFavorites">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                              fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="card-nav__itemTrash">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                              fill="black"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                              fill="black"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                              fill="black"/>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                        <div class="card-nav">
-                            <div class="card-settings">
-                                <div class="card-nav-counter">
-                                    <button class="counter__decrement" id="card3__decr">−</button>
-                                    <input class="counter__value" id="card3__value" type="number" value="1">
-                                    <button class="counter__increment" id="card3__incr">+</button>
-                                </div>
-                                <span class="card-nav__reminder">Осталось <span id="card3__reminder">2</span> шт.</span>
-                                <div class="card-nav-options">
 
 
-                                    <button class="card-nav__itemFavorites">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                                fill="black" />
-                                        </svg>
-                                    </button>
-                                    <button class="card-nav__itemTrash">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                                fill="black" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                                fill="black" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                                fill="black" />
-                                        </svg>
-                                    </button>
-                                </div>
+                        <div class="card-price">
+                            <div>
+                                <span class="card-price__discountPrice" id="card2__price"></span>
+                                <span class="card-price__discountPriceCom">сом</span>
                             </div>
-                            <div class="card-price">
-                                <div>
-                                    <span class="card-price__discountPrice" id="card3__price"></span>
-                                    <span class="card-price__discountPriceCom">com</span>
-                                </div>
-                                <div>
-                                    <span class="card-price__price" id="card3__fprice"></span>
-                                    <span class="card-price__price"> com</span>
-                                </div>
+                            <div>
+                                <span class="card-price__price" id="card2__fprice"></span>
+                                <span class="card-price__price"> сом</span>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
+                <div class="card-item" id="card3__item">
+                    <div class="card-main">
+                        <div class="card-main-good">
+                            <label class="container-checkboxCard-label" name="checkGood">
+                                <input class="default__checkboxCard checkbox__card" type="checkbox">
+                                <span class="custom__checkboxCard"></span>
+                                <img class="card__image" src="./images/body-card3.png"
+                                     alt="какой-то всплывающий текст" width="72" height="96">
+                            </label>
+                        </div>
+                        <div class="card-description">
+                                <span class="card__name">Карандаши цветные Faber-Castell "Замок", набор 24
+                                    цвета, заточенные, шестигранные, Faber-Castell </span>
+                            <div class="card-info">
+                            </div>
+                            <span class="card__importer">Коледино WB</span>
+                            <div class="card-tm">
+                                <span class="card-tm__item">OOO Вайлдберри</span>
+                                <button class="card-tm__image tooltip__importer"></button>
+                                <div class="tooltip__importerText">
+                                    <h5>OOO «ВАЙЛДБЕРРИЗ»</h5>
+                                    <p class="tooltip__text">ОГРН: 1067746062449</p>
+                                    <p class="tooltip__text">142181, Московская Область, Подольск, Д Коледино, Д. 6
+                                        СТР. 1</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-nav">
+                        <div class="card-settings">
+                            <div class="card-nav-counter">
+                                <button class="counter__decrement" id="card3__decr">−</button>
+                                <input class="counter__value" id="card3__value" type="number" value="1">
+                                <button class="counter__increment" id="card3__incr">+</button>
+                            </div>
+                            <span class="card-nav__reminder">Осталось <span id="card3__reminder">2</span> шт.</span>
+                            <div class="card-nav-options">
 
 
-                <!-- Missing -->
-                <div class="container-main-missing">
-                    <div class="missing-header">
-                        <span class="missing__title">Отсутствуют · 3 товара</span>
-                        <button class="missing__button" id="hide__allMissings"></button>
+                                <button class="card-nav__itemFavorites">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                              fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="card-nav__itemTrash">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                              fill="black"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                              fill="black"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                              fill="black"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-price">
+                            <div>
+                                <span class="card-price__discountPrice" id="card3__price"></span>
+                                <span class="card-price__discountPriceCom">сом</span>
+                            </div>
+                            <div>
+                                <span class="card-price__price" id="card3__fprice"></span>
+                                <span class="card-price__price"> сом</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="container-main-missing">
+                <div class="missing-header">
+                    <span class="missing__title">Отсутствуют · 3 товара</span>
+                    <button class="missing__button" id="hide__allMissings"></button>
+                </div>
+
+                <div class="missing-items">
+                    <div class="missing__item card-item-missing">
+                        <div class="missing-good-info">
+                            <img class="missingCard__image" src="./images/body-card1.png"
+                                 alt="какой-то всплывающий текст" width="72" height="96">
+                            <div class="missing-description">
+                                <span class="missing__name">Футболка UZcotton мужская</span>
+                                <div class="card-info">
+                                    <span class="missing__color">Цвет: белый</span>
+                                    <span class="missing__size">Размер: 56</span>
+                                    <div class="missing-card__sizeNumber">56</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="missing-options">
+                            <button class="card-nav__itemFavorites">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
+                            <button class="card-nav__itemTrash">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="missing-items">
-                        <div class="missing__item card-item-missing">
-                            <div class="missing-good-info">
-                                <img class="missingCard__image" src="./images/body-card1.png"
-                                    alt="какой-то всплывающий текст" width="72" height="96">
-                                <div class="missing-description">
-                                    <span class="missing__name">Футболка UZcotton мужская</span>
-                                    <div class="card-info">
-                                        <span class="missing__color">Цвет: белый</span>
-                                        <span class="missing__size">Размер: 56</span>
-                                        <div class="missing-card__sizeNumber">56</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="missing-options">
-                                <button class="card-nav__itemFavorites">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                                <button class="card-nav__itemTrash">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="missing__item card-item-missing">
-                            <div class="missing-good-info">
-                                <img class="missingCard__image" src="./images/body-card2.png"
-                                    alt="какой-то всплывающий текст" width="72" height="96">
-                                <div class="missing-description">
+                    <div class="missing__item card-item-missing">
+                        <div class="missing-good-info">
+                            <img class="missingCard__image" src="./images/body-card2.png"
+                                 alt="какой-то всплывающий текст" width="72" height="96">
+                            <div class="missing-description">
                                     <span class="missing__name">Силиконовый чехол картхолдер (отверстия) для карт,
                                         прозрачный кейс бампер на Apple iPhone XR, MobiSafe</span>
-                                    <div class="card-info">
-                                        <span class="missing__color">Цвет: прозрачный</span>
-                                    </div>
+                                <div class="card-info">
+                                    <span class="missing__color">Цвет: прозрачный</span>
                                 </div>
                             </div>
-                            <div class="missing-options">
-                                <button class="card-nav__itemFavorites">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                                <button class="card-nav__itemTrash">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                            </div>
                         </div>
+                        <div class="missing-options">
+                            <button class="card-nav__itemFavorites">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
+                            <button class="card-nav__itemTrash">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
 
-                        <div class="missing__item card-item-missing">
-                            <div class="missing-good-info">
-                                <img class="missingCard__image" src="./images/body-card3.png"
-                                    alt="какой-то всплывающий текст" width="72" height="96">
-                                <div class="missing-description">
+                    <div class="missing__item card-item-missing">
+                        <div class="missing-good-info">
+                            <img class="missingCard__image" src="./images/body-card3.png"
+                                 alt="какой-то всплывающий текст" width="72" height="96">
+                            <div class="missing-description">
                                     <span class="missing__name">Карандаши цветные Faber-Castell "Замок", набор 24
                                         цвета,
                                         заточенные, шестигранные, Faber-Castell </span>
-                                </div>
                             </div>
-                            <div class="missing-options">
-                                <button class="card-nav__itemFavorites">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                                <button class="card-nav__itemTrash">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                            fill="black" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                            </div>
+                        </div>
+                        <div class="missing-options">
+                            <button class="card-nav__itemFavorites">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
+                            <button class="card-nav__itemTrash">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                          fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
+            </div>
 
 
-
-                <!-- Delivery -->
-                <div class="container-main-delivery">
-                    <div class="delivery-header">
-                        <h2>Способ доставки</h2>
-                        <button class="delivery-header__change openModal-delivery">Изменить</button>
-                    </div>
-                    <div class="delivery-settings">
-                        <div class="delivery-string">
-                            <span class="delivery-firstColl" id="delivery-option">Пункт выдачи</span>
-                            <div class="delivery-secondColl">
-                                <!-- <span class="delivery__currentMethod">Бишкек, улица Ахматбека Суюмбаева, 12/1</span> -->
-                                <span class="delivery__currentMethod"></span>
-                                <span class="delivery-string-address__info">
+            <div class="container-main-delivery">
+                <div class="delivery-header">
+                    <h2>Способ доставки</h2>
+                    <button class="delivery-header__change openModal-delivery">Изменить</button>
+                </div>
+                <div class="delivery-settings">
+                    <div class="delivery-string">
+                        <span class="delivery-firstColl" id="delivery-option">Пункт выдачи</span>
+                        <div class="delivery-secondColl">
+                            <span class="delivery__currentMethod"></span>
+                            <span class="delivery-string-address__info">
                                     <div>
                                         <img src="./images/rating.svg" alt="rating star" width="11" height="11">
                                         4.99
                                     </div>
                                     Ежедневно с 10 до 21
                                 </span>
-                            </div>
                         </div>
-                        <div class="delivery-string">
-                            <span class="delivery-firstColl">Стоимость доставки</span>
-                            <div class="delivery-secondColl">
-                                <span>Бесплатно</span>
-                            </div>
+                    </div>
+                    <div class="delivery-string">
+                        <span class="delivery-firstColl">Стоимость доставки</span>
+                        <div class="delivery-secondColl">
+                            <span>Бесплатно</span>
                         </div>
-                        <div class="delivery-string">
-                            <span class="delivery-firstColl">5—6 февраля</span>
-                            <div class="delivery-secondColl">
-                                <div class="delivery-secondColl-goods">
-                                    <div class="delivery-secondColl-goods__item">
-                                        <img class="delivery-secondColl__image" src="./images/body-card1.png" width="40"
-                                            height="56" alt="Футболка">
-                                    </div>
-                                    <div class="delivery-secondColl-goods__item">
-                                        <img class="delivery-secondColl__image" src="./images/body-card2.png" width="40"
-                                            height="56" alt="Футболка">
-                                        <span class="delivery-secondColl__imageCount">184</span>
-                                    </div>
-                                    <div class="delivery-secondColl-goods__item">
-                                        <img class="delivery-secondColl__image" src="./images/body-card3.png" width="40"
-                                            height="56" alt="Футболка">
-                                        <span class="delivery-secondColl__imageCount">2</span>
-                                    </div>
-
+                    </div>
+                    <div class="delivery-string">
+                        <span class="delivery-firstColl">5—6 февраля</span>
+                        <div class="delivery-secondColl">
+                            <div class="delivery-secondColl-goods">
+                                <div class="delivery-secondColl-goods__item">
+                                    <img class="delivery-secondColl__image" src="./images/body-card1.png" width="40"
+                                         height="56" alt="Футболка">
                                 </div>
+                                <div class="delivery-secondColl-goods__item">
+                                    <img class="delivery-secondColl__image" src="./images/body-card2.png" width="40"
+                                         height="56" alt="Футболка">
+                                    <span class="delivery-secondColl__imageCount">184</span>
+                                </div>
+                                <div class="delivery-secondColl-goods__item">
+                                    <img class="delivery-secondColl__image" src="./images/body-card3.png" width="40"
+                                         height="56" alt="Футболка">
+                                    <span class="delivery-secondColl__imageCount">2</span>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="delivery-string">
-                            <span class="delivery-firstColl">7—8 февраля</span>
-                            <div class="delivery-secondColl">
-                                <div class="delivery-secondColl-goods">
-                                    <div class="delivery-secondColl-goods__item">
-                                        <img class="delivery-secondColl__image" src="./images/body-card2.png" width="40"
-                                            height="56" alt="Футболка">
-                                        <span class="delivery-secondColl__imageCount">2</span>
-                                    </div>
+                    </div>
+                    <div class="delivery-string">
+                        <span class="delivery-firstColl">7—8 февраля</span>
+                        <div class="delivery-secondColl">
+                            <div class="delivery-secondColl-goods">
+                                <div class="delivery-secondColl-goods__item">
+                                    <img class="delivery-secondColl__image" src="./images/body-card2.png" width="40"
+                                         height="56" alt="Футболка">
+                                    <span class="delivery-secondColl__imageCount">2</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="delivery-footer">
-                        <img src="./images/price-shipping.svg">
-                        <span class="delivery-footer__text">Обратная доставка товаров на склад при отказе —
+                </div>
+                <div class="delivery-footer">
+                    <img src="./images/price-shipping.svg">
+                    <span class="delivery-footer__text">Обратная доставка товаров на склад при отказе —
                             <span class="delivery-footer__textGeen tooltip__shipping">бесплатно</span>
                             <span class="tooltip__shippingText">Если товары вам не подойдут, мы вернем их обратно на
                                 склад — это бесплатно</span>
                         </span>
-                    </div>
-                </div>
-
-
-
-                <!-- Pay -->
-                <div class="container-main-pay">
-                    <div class="pay-header">
-                        <h2>Способ оплаты</h2>
-                        <button class="pay-header__change openModal-pay">Изменить</button>
-                    </div>
-                    <div class="pay-data pay-currentMethod" id="pay__currentMethod">
-                        <!-- <img src="/images/pay-system.png" width="32" height="24" alt="pay system"> -->
-                        <!-- <span>1234 56•• •••• 1234</span> -->
-                        <span>01/30</span>
-                    </div>
-                    <div class="pay-footer">
-                        <span>Спишем оплату с карты при получении</span>
-                    </div>
-                </div>
-
-
-
-                <!-- Recipient -->
-                <div class="container-main-recipient">
-                    <div class="recipient-header">
-                        <h2>Получатель</h2>
-                    </div>
-                    <div class="recipient-info">
-                        <div class="recipient-info-string">
-                            <label class="recipient__label">
-                                <span class="recipient__dataClue" id="data__firstNameClue">Имя</span>
-                                <input class="recipient__data recipient__firstName" id="data__firstName" type="text"
-                                    placeholder="Имя">
-                                <span class="recipient__firstNameHelp" id="data__firstNameHelp">Укажите имя</span>
-                            </label>
-                            <label class="recipient__label">
-                                <span class="recipient__dataClue" id="data__lastNameClue">Фамилия</span>
-                                <input class="recipient__data recipient__lastName" id="data__lastName" type="text"
-                                    placeholder="Фамилия">
-                                <span class="recipient__lastNameHelp" id="data__lastNameHelp">Введите Фамилию</span>
-                            </label>
-                        </div>
-                        <div class="recipient-info-string">
-                            <label class="recipient__label">
-                                <span class="recipient__dataClue" id="data__EmailClue">Почта</span>
-                                <input class="recipient__data recipient__email" id="data__email" type="email"
-                                    placeholder="Почта">
-                                <span class="recipient__emailHelp" id="data__emailHelp">Укажите электронную почту</span>
-                                <span class="recipient__emailError" id="data__emailError">Проверьте адрес электронной
-                                    почты</span>
-                            </label>
-                            <label class="recipient__label">
-                                <span class="recipient__dataClue" id="data__phoneClue">Телефон</span>
-                                <input class="recipient__data recipient__phone" id="data__phone" type="tel"
-                                    pattern="[8-9]{1} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="Телефон">
-                                <span class="recipient__phoneHelp" id="data__phoneHelp">Укажите телефон</span>
-                                <span class="recipient__phoneError" id="data__phoneError">Формат: +9 999 999 99
-                                    99</span>
-                            </label>
-                            <label class="recipient__label">
-                                <span class="recipient__dataClue" id="data__innClue">ИНН</span>
-                                <input class="recipient__data recipient__inn" id="data__inn" type="number"
-                                    minlength="14" maxlength="14" placeholder="ИНН">
-                                <span class="recipient__innHelp" id="data__innHelp">Укажите ИНН</span>
-                                <span class="recipient__dataInn" id="data__innDescription">Для таможенного
-                                    оформления</span>
-                                <span class="recipient__innError" id="data__innError">Проверьте ИНН</span>
-                            </label>
-                        </div>
-                    </div>
                 </div>
             </div>
 
 
+            <div class="container-main-pay">
+                <div class="pay-header">
+                    <h2>Способ оплаты</h2>
+                    <button class="pay-header__change openModal-pay">Изменить</button>
+                </div>
+                <div class="pay-data pay-currentMethod" id="pay__currentMethod">
+                    <span>01/30</span>
+                </div>
+                <div class="pay-footer">
+                    <span>Спишем оплату с карты при получении</span>
+                </div>
+            </div>
 
-            <!-- Basket -->
-            <div class="container-basket">
 
-                <div class="basket-header">
-                    <h2>Итого</h2>
-                    <div class="basket-header-total">
-                        <h2 id="basket-header__totalPrice"></h2> <span class="backet-header__totalCurrency">com</span>
+            <div class="container-main-recipient">
+                <div class="recipient-header">
+                    <h2>Получатель</h2>
+                </div>
+                <div class="recipient-info">
+                    <div class="recipient-info-string">
+                        <label class="recipient__label">
+                            <span class="recipient__dataClue" id="data__firstNameClue">Имя</span>
+                            <input class="recipient__data recipient__firstName" id="data__firstName" type="text"
+                                   placeholder="Имя">
+                            <span class="recipient__firstNameHelp" id="data__firstNameHelp">Укажите имя</span>
+                        </label>
+                        <label class="recipient__label">
+                            <span class="recipient__dataClue" id="data__lastNameClue">Фамилия</span>
+                            <input class="recipient__data recipient__lastName" id="data__lastName" type="text"
+                                   placeholder="Фамилия">
+                            <span class="recipient__lastNameHelp" id="data__lastNameHelp">Введите Фамилию</span>
+                        </label>
+                    </div>
+                    <div class="recipient-info-string">
+                        <label class="recipient__label">
+                            <span class="recipient__dataClue" id="data__EmailClue">Почта</span>
+                            <input class="recipient__data recipient__email" id="data__email" type="email"
+                                   placeholder="Почта">
+                            <span class="recipient__emailHelp" id="data__emailHelp">Укажите электронную почту</span>
+                            <span class="recipient__emailError" id="data__emailError">Проверьте адрес электронной
+                                    почты</span>
+                        </label>
+                        <label class="recipient__label">
+                            <span class="recipient__dataClue" id="data__phoneClue">Телефон</span>
+                            <input class="recipient__data recipient__phone" id="data__phone" type="tel"
+                                   pattern="[8-9]{1} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="Телефон">
+                            <span class="recipient__phoneHelp" id="data__phoneHelp">Укажите телефон</span>
+                            <span class="recipient__phoneError" id="data__phoneError">Формат: +9 999 999 99
+                                    99</span>
+                        </label>
+                        <label class="recipient__label">
+                            <span class="recipient__dataClue" id="data__innClue">ИНН</span>
+                            <input class="recipient__data recipient__inn" id="data__inn" type="number"
+                                   minlength="14" maxlength="14" placeholder="ИНН">
+                            <span class="recipient__innHelp" id="data__innHelp">Укажите ИНН</span>
+                            <span class="recipient__dataInn" id="data__innDescription">Для таможенного
+                                    оформления</span>
+                            <span class="recipient__innError" id="data__innError">Проверьте ИНН</span>
+                        </label>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <div class="basket-info-price">
-                    <div class="basket-info-price-string">
-                        <span class="basket-info-price-string__item"><span id="basket__fullAmount"></span> товара</span>
-                        <span class="basket-info-price-string__item"><span id="basket__fprice"></span> com</span>
-                    </div>
-                    <div class="basket-info-price-string">
-                        <span class="basket-info-price-string__item">Скидка</span>
-                        <div>
-                            <span class="basket-info-price-string__item" id="basket__discount"></span>
-                            <span class="basket-info-price-string__item">com</span>
 
-                        </div>
-                    </div>
-                    <div class="basket-info-price-string">
-                        <span class="basket-info-price-string__item">Доставка</span>
-                        <span class="basket-info-price-string__item">Бесплатно</span>
+        <div class="container-basket">
+
+            <div class="basket-header">
+                <h2>Итого</h2>
+                <div class="basket-header-total">
+                    <h2 id="basket-header__totalPrice"></h2> <span class="backet-header__totalCurrency">сом</span>
+                </div>
+            </div>
+
+            <div class="basket-info-price">
+                <div class="basket-info-price-string">
+                    <span class="basket-info-price-string__item"><span id="basket__fullAmount"></span> товара</span>
+                    <span class="basket-info-price-string__item"><span id="basket__fprice"></span> сом</span>
+                </div>
+                <div class="basket-info-price-string">
+                    <span class="basket-info-price-string__item">Скидка</span>
+                    <div>
+                        <span class="basket-info-price-string__item" id="basket__discount"></span>
+                        <span class="basket-info-price-string__item">сом</span>
+
                     </div>
                 </div>
+                <div class="basket-info-price-string">
+                    <span class="basket-info-price-string__item">Доставка</span>
+                    <span class="basket-info-price-string__item">Бесплатно</span>
+                </div>
+            </div>
 
-                <div class="basket-info-delivery">
-                    <div class="basket-info-delivery-header">
-                        <h4 id="basket-delivery-option">Доставка в пункт выдачи</h4>
-                        <button class="basket-info__edit openModal-delivery"></button>
-                    </div>
-                    <div class="basket-info-delivery-info">
-                        <span class="delivery__currentMethod"></span>
-                        <span class="basket-info-delivery-info__data">5–8 фев</span>
-                    </div>
-                    <div class="basket-info-delivery-notification">
-                        <img src="./images/price-shipping.svg">
-                        <span class="basket-info-delivery-notification__text">Обратная доставка товаров на склад при
+            <div class="basket-info-delivery">
+                <div class="basket-info-delivery-header">
+                    <h4 id="basket-delivery-option">Доставка в пункт выдачи</h4>
+                    <button class="basket-info__edit openModal-delivery"></button>
+                </div>
+                <div class="basket-info-delivery-info">
+                    <span class="delivery__currentMethod"></span>
+                    <span class="basket-info-delivery-info__data">5–8 фев</span>
+                </div>
+                <div class="basket-info-delivery-notification">
+                    <img src="./images/price-shipping.svg">
+                    <span class="basket-info-delivery-notification__text">Обратная доставка товаров на склад при
                             отказе —
                             <span
-                                class="basket-info-delivery-notification__textGreen tooltip__shipping">бесплатно</span>
+                                    class="basket-info-delivery-notification__textGreen tooltip__shipping">бесплатно</span>
                             <span class="tooltip__basketShippingText">Если товары вам не подойдут, мы вернем их обратно
                                 на
                                 склад — это бесплатно</span>
                         </span>
-                    </div>
-                </div>
-
-                <div class="basket-info-pay">
-                    <div class="basket-info-pay-header">
-                        <h4>Оплата картой</h4>
-                        <button class="basket-info__edit openModal-pay"></button>
-                    </div>
-
-                    <div class="basket-info-pay-data pay-currentMethod">
-                        <!-- <img src="/images/pay-system.png" width="32" height="24" alt="pay system"> -->
-                        <!-- <span>1234 12•• •••• 1234</span> -->
-                    </div>
-                    <div class="basket-payNow">
-                        <label class="container-checkbox-label basket-payNow__label" name="payNow">
-                            <input id="basket-checkbox-payNow" class="default__checkbox" type="checkbox">
-                            <span class="custom__checkbox"></span>
-                            <span>Списать оплату сразу</span>
-                        </label>
-                        <span class="basket-payNow__descripton">Спишем оплату с карты при получении</span>
-                    </div>
-                    <button class="basket__buttonOrder" id="basket__buttonOrder">Заказать</button>
-                    <div class="basket-footer">
-                        <label class="container-checkboxSmall-label basket-footer-label" name="offer">
-                            <input class="default__checkboxSmall" id="confirm__offer" type="checkbox" checked>
-                            <span class="custom__checkboxSmall"></span>
-                            <div class="basket-footer-label-text">
-                                <span class="basket-footer-label-text__item">Соглашаюсь</span>
-                                <span class="basket-footer-label-text__itemUnderline">c правилами пользования
-                                    торговой
-                                    площадкой</span>
-                                <span class="basket-footer-label-text__item">и</span>
-                                <span class="basket-footer-label-text__itemUnderline">возврата</span>
-                            </div>
-                        </label>
-                    </div>
                 </div>
             </div>
 
-        </div>
-    </div>
+            <div class="basket-info-pay">
+                <div class="basket-info-pay-header">
+                    <h4>Оплата картой</h4>
+                    <button class="basket-info__edit openModal-pay"></button>
+                </div>
 
-    <footer>
-        <div class="footer-container">
-            <span class="footer__copyright">© 2022 ООО «Товары и точка»</span>
+                <div class="basket-info-pay-data pay-currentMethod">
+                </div>
+                <div class="basket-payNow">
+                    <label class="container-checkbox-label basket-payNow__label" name="payNow">
+                        <input id="basket-checkbox-payNow" class="default__checkbox" type="checkbox">
+                        <span class="custom__checkbox"></span>
+                        <span>Списать оплату сразу</span>
+                    </label>
+                    <span class="basket-payNow__descripton">Спишем оплату с карты при получении</span>
+                </div>
+                <button class="basket__buttonOrder" id="basket__buttonOrder">Заказать</button>
+                <div class="basket-footer">
+                    <label class="container-checkboxSmall-label basket-footer-label" name="offer">
+                        <input class="default__checkboxSmall" id="confirm__offer" type="checkbox" checked>
+                        <span class="custom__checkboxSmall"></span>
+                        <div class="basket-footer-label-text">
+                            <span class="basket-footer-label-text__item">Соглашаюсь</span>
+                            <span class="basket-footer-label-text__itemUnderline">c правилами пользования
+                                    торговой
+                                    площадкой</span>
+                            <span class="basket-footer-label-text__item">и</span>
+                            <span class="basket-footer-label-text__itemUnderline">возврата</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script type="module" src="./declarations.js"></script>
-    <script type="module" src="./index.js"></script>
-    <script type="module" src="./modal.js"></script>
+
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <span class="footer__copyright">© 2022 ООО «Товары и точка»</span>
+    </div>
+</footer>
+<script type="module" src="./declarations.js"></script>
+<script type="module" src="./index.js"></script>
+<script type="module" src="./modal.js"></script>
 </body>
 
 </html>
