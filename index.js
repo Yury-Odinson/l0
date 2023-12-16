@@ -221,14 +221,14 @@ checkboxBasketPaynow.addEventListener("change", () => checkPaynow())
 function checkInput(input) {
     const element = document.getElementById(input)
     const elementHelp = document.getElementById(`${input}Help`)
-    const innDescription = document.getElementById("data__innDescription")
+    const innDescription = document.getElementById("data__inn-description")
     if (element.value === "") {
-        element.classList.add("recipient__dataError")
+        element.classList.add("recipient__data-error")
         elementHelp.style.display = "block"
         input === "data__inn" ? innDescription.style.display = "none" : innDescription.style.display = "block" // если ошибочное поле является ИНН, то скрываем строку "Для таможенного оформления"
         document.querySelector(".container-main-recipient").scrollIntoView() // в случае, если есть пустое поле, то страница прокручивается до блока с данными, где есть пустые поля
     } else {
-        element.classList.remove("recipient__dataError")
+        element.classList.remove("recipient__data-error")
         elementHelp.style.display = "none"
     }
 }
@@ -250,8 +250,8 @@ buttonBasketBuy.addEventListener("click", () => checkUserData())
 // проверка наличия заполнений полей в разделе "Получатель"
 function checkUserData() {
     if (statusButtonBuy) {
-        checkInput("data__firstName")
-        checkInput("data__lastName")
+        checkInput("data__firstname")
+        checkInput("data__lastname")
         checkInput("data__email")
         checkInput("data__phone")
         checkInput("data__inn")
@@ -260,23 +260,23 @@ function checkUserData() {
 
 // события на изменение полей данных
 userFirstName.addEventListener("change", () => {
-    document.getElementById("data__firstNameClue").style.display = "block"
+    document.getElementById("data__firstname-clue").style.display = "block"
 })
 
 userLastName.addEventListener("change", () => {
-    document.getElementById("data__lastNameClue").style.display = "block"
+    document.getElementById("data__lastname-clue").style.display = "block"
 })
 
 userEmail.addEventListener("change", () => {
-    document.getElementById("data__EmailClue").style.display = "block"
+    document.getElementById("data__email-clue").style.display = "block"
 })
 
 userPhone.addEventListener("change", () => {
-    document.getElementById("data__phoneClue").style.display = "block"
+    document.getElementById("data__phone-clue").style.display = "block"
 })
 
 userINN.addEventListener("change", () => {
-    document.getElementById("data__innClue").style.display = "block"
+    document.getElementById("data__inn-clue").style.display = "block"
 })
 
 

@@ -30,7 +30,7 @@
                 </svg>
             </button>
 
-            <button class="header-button__menuMobile">
+            <button class="header-button__menu-mobile">
                 <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M0.75 2C0.75 1.30964 1.30964 0.75 2 0.75H22C22.6904 0.75 23.25 1.30964 23.25 2C23.25 2.69036 22.6904 3.25 22 3.25H2C1.30964 3.25 0.75 2.69036 0.75 2Z"
@@ -48,18 +48,18 @@
 
         <input class="header__search" type="search" placeholder="Я ищу...">
 
-        <button class="header__searchMobile"></button>
+        <button class="header__search-mobile"></button>
 
         <div class="header-navbar">
-            <button class="header-navbar__Profile">
+            <button class="header-navbar__profile">
                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M14.5207 5.28873C14.5207 8.05869 12.4361 10.2066 10.006 10.2066C7.57586 10.2066 5.49117 8.05869 5.49117 5.31221C5.47931 2.60094 7.58777 0.5 10.006 0.5C12.4241 0.5 14.5207 2.55399 14.5207 5.28873ZM0.5 18.9977C0.5 19.9836 1.14326 20.5 2.94201 20.5H17.058C18.8567 20.5 19.5 19.9836 19.5 18.9977C19.5 16.1338 15.8429 12.1901 10.006 12.1901C4.15705 12.1901 0.5 16.1338 0.5 18.9977Z"
                           fill="white"/>
                 </svg>
-                <span class="header-navbar__ProfileSpan">Профиль</span>
+                <span class="header-navbar__profile-span">Профиль</span>
             </button>
-            <button class="header-navbar__Basket">
+            <button class="header-navbar__basket">
                 <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M10.2214 15.4665C10.3829 15.9206 10.8452 16.1949 11.3212 16.119L24.0874 14.0828C24.5004 14.017 24.8288 13.701 24.9106 13.2909L26.2654 6.49865C26.3875 5.88644 25.925 5.31324 25.3008 5.30317L7.94122 5.02324C7.24354 5.01199 6.74913 5.70067 6.98289 6.35812L10.2214 15.4665Z"
@@ -77,8 +77,8 @@
                           d="M1.45442 0.651472C2.1177 0.556717 3.01745 0.5 4 0.5C4.98255 0.5 5.8823 0.556717 6.54558 0.651472C6.87345 0.69831 7.16489 0.757343 7.38495 0.831667C7.4917 0.867722 7.61185 0.917169 7.71511 0.989256C7.80017 1.04864 8 1.21275 8 1.5C8 1.78725 7.80017 1.95136 7.71511 2.01074C7.61185 2.08283 7.4917 2.13228 7.38495 2.16833C7.16489 2.24266 6.87345 2.30169 6.54558 2.34853C5.8823 2.44328 4.98255 2.5 4 2.5C3.01745 2.5 2.1177 2.44328 1.45442 2.34853C1.12655 2.30169 0.835108 2.24266 0.615051 2.16833C0.508302 2.13228 0.388151 2.08283 0.284892 2.01074C0.199835 1.95136 0 1.78725 0 1.5C0 1.21275 0.199835 1.04864 0.284892 0.989256C0.388151 0.917169 0.508302 0.867722 0.615051 0.831667C0.835108 0.757343 1.12655 0.69831 1.45442 0.651472Z"
                           fill="white"/>
                 </svg>
-                <span class="header-navbar__BasketSpan">Корзина</span>
-                <div class="header-navbar__BasketCount">
+                <span class="header-navbar__basket-span">Корзина</span>
+                <div class="header-navbar__basket-count">
                     <span id="basket__count"></span>
                 </div>
             </button>
@@ -92,7 +92,7 @@
     <img src="./images/mobile-menu-search.svg" alt="search">
     <div class="mobile-menu-basket">
         <img src="./images/mobile-menu-basket.svg" alt="basket">
-        <div class="header-navbar__BasketCount">
+        <div class="header-navbar__basket-count">
             <span id="mobile-basket__count"></span>
         </div>
     </div>
@@ -166,22 +166,22 @@
                 <div class="modal-delivery-body">
 
                     <div class="modal-delivery-body-method">
-                        <button class="modal-delivery-method__item" id="delivery__methodPickup">В пункт
+                        <button class="modal-delivery-method__item" id="delivery__method-pickup">В пункт
                             выдачи
                         </button>
-                        <button class="modal-delivery-method__item modal-delivery-method__ActiveItem"
-                                id="delivery__methodCourier">Курьером
+                        <button class="modal-delivery-method__item modal-delivery-method__active-item"
+                                id="delivery__method-courier">Курьером
                         </button>
                     </div>
 
-                    <div class="delivery-doby-method-pickUp" id="delivery-doby-method-pickUp">
+                    <div class="delivery-body-method-pickUp" id="delivery-body-method-pickUp">
                         <h5 class="delivery-body-method-address__title">Мои пункты выдачи</h5>
                         <label class="modal-delivery-body__label">
                             <input class="default__radio" type="radio" name="pickUp" checked>
                             <span class="custom__radio"></span>
-                            <span class="modal-delivery-label__text" id="delivery__methodPickup1">Бишкек, улица
+                            <span class="modal-delivery-label__text" id="delivery__method-pickup1">Бишкек, улица
                                     Ахматбека Суюмбаева, 12/1</span>
-                            <button class="modal-delivery__itemTrash">
+                            <button class="modal-delivery__item-trash">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -199,9 +199,9 @@
                         <label class="modal-delivery-body__label">
                             <input class="default__radio" type="radio" name="pickUp">
                             <span class="custom__radio"></span>
-                            <span class="modal-delivery-label__text" id="delivery__methodPickup2">Бишкек, улица
+                            <span class="modal-delivery-label__text" id="delivery__method-pickup2">Бишкек, улица
                                     Пушкина, дом Колотушкина</span>
-                            <button class="modal-delivery__itemTrash">
+                            <button class="modal-delivery__item-trash">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -218,16 +218,16 @@
                         </label>
                     </div>
 
-                    <div class="delivery-body-method-address" id="delivery-doby-method-courier">
+                    <div class="delivery-body-method-address" id="delivery-body-method-courier">
 
                         <h5 class="delivery-body-method-address__title">Мои адреса</h5>
 
                         <label class="modal-delivery-body__label">
-                            <input class="default__radio" type="radio" name="adress">
+                            <input class="default__radio" type="radio" name="address">
                             <span class="custom__radio"></span>
                             <span class="modal-delivery-label__text" id="delivery__method1">Бишкек, улица
                                     Табышалиева, 57</span>
-                            <button class="modal-delivery__itemTrash">
+                            <button class="modal-delivery__item-trash">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -244,11 +244,11 @@
                         </label>
 
                         <label class="modal-delivery-body__label">
-                            <input class="default__radio" type="radio" name="adress">
+                            <input class="default__radio" type="radio" name="address">
                             <span class="custom__radio"></span>
                             <span class="modal-delivery-label__text" id="delivery__method2">Бишкек, улица
                                     Жукеева-Пудовкина, 77/1</span>
-                            <button class="modal-delivery__itemTrash">
+                            <button class="modal-delivery__item-trash">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -265,12 +265,12 @@
                         </label>
 
                         <label class="modal-delivery-body__label">
-                            <input class="default__radio" type="radio" name="adress">
+                            <input class="default__radio" type="radio" name="address">
                             <span class="custom__radio"></span>
                             <span class="modal-delivery-label__text" id="delivery__method3">Бишкек, микрорайон Джал,
                                     улица Ахунбаева Исы,
                                     67/1</span>
-                            <button class="modal-delivery__itemTrash">
+                            <button class="modal-delivery__item-trash">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -316,9 +316,9 @@
                 <div class="card-item" id="card1__item">
                     <div class="card-main">
                         <div class="card-main-good">
-                            <label class="container-checkboxCard-label" name="checkGood">
-                                <input class="default__checkboxCard checkbox__card" type="checkbox">
-                                <span class="custom__checkboxCard"></span>
+                            <label class="container-checkbox-card-label" name="checkGood">
+                                <input class="default__checkbox-card checkbox__card" type="checkbox">
+                                <span class="custom__checkbox-card"></span>
                                 <img class="card__image" src="./images/body-card1.png"
                                      alt="какой-то всплывающий текст" width="72" height="96">
                             </label>
@@ -333,7 +333,7 @@
                             <div class="card-tm">
                                 <span class="card-tm__item">OOO Вайлдберриз</span>
                                 <button class="card-tm__image tooltip__importer"></button>
-                                <div class="tooltip__importerText">
+                                <div class="tooltip__importer-text">
                                     <h5>OOO «ВАЙЛДБЕРРИЗ»</h5>
                                     <p class="tooltip__text">ОГРН: 1067746062449</p>
                                     <p class="tooltip__text">142181, Московская Область, Подольск, Д Коледино, Д. 6
@@ -353,7 +353,7 @@
                             <div class="card-nav-options">
 
 
-                                <button class="card-nav__itemFavorites">
+                                <button class="card-nav__item-favorites">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -361,7 +361,7 @@
                                               fill="black"/>
                                     </svg>
                                 </button>
-                                <button class="card-nav__itemTrash">
+                                <button class="card-nav__item-trash">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -379,8 +379,8 @@
                         </div>
                         <div class="card-price">
                             <div>
-                                <span class="card-price__discountPrice" id="card1__price"></span>
-                                <span class="card-price__discountPriceCom">сом</span>
+                                <span class="card-price__discount-price" id="card1__price"></span>
+                                <span class="card-price__discount-priceCom">сом</span>
                             </div>
                             <div>
                                 <span class="card-price__price" id="card1__fprice"></span>
@@ -393,9 +393,9 @@
                 <div class="card-item" id="card2__item">
                     <div class="card-main">
                         <div class="card-main-good">
-                            <label class="container-checkboxCard-label" name="checkGood">
-                                <input class="default__checkboxCard checkbox__card" type="checkbox">
-                                <span class="custom__checkboxCard"></span>
+                            <label class="container-checkbox-card-label" name="checkGood">
+                                <input class="default__checkbox-card checkbox__card" type="checkbox">
+                                <span class="custom__checkbox-card"></span>
                                 <img class="card__image" src="./images/body-card2.png"
                                      alt="какой-то всплывающий текст" width="72" height="96">
                             </label>
@@ -411,7 +411,7 @@
                             <div class="card-tm">
                                 <span class="card-tm__item">OOO Мегапрофстиль</span>
                                 <button class="card-tm__image tooltip__importer"></button>
-                                <div class="tooltip__importerText">
+                                <div class="tooltip__importer-text">
                                     <h5>OOO «МЕГАПРОФСТИЛЬ»</h5>
                                     <p class="tooltip__text">ОГРН: 5167746237148</p>
                                     <p class="tooltip__text">129337, Москва, улица Красная Сосна, 2, корпус 1, стр.
@@ -472,9 +472,9 @@
                 <div class="card-item" id="card3__item">
                     <div class="card-main">
                         <div class="card-main-good">
-                            <label class="container-checkboxCard-label" name="checkGood">
-                                <input class="default__checkboxCard checkbox__card" type="checkbox">
-                                <span class="custom__checkboxCard"></span>
+                            <label class="container-checkbox-card-label" name="checkGood">
+                                <input class="default__checkbox-card checkbox__card" type="checkbox">
+                                <span class="custom__checkbox-card"></span>
                                 <img class="card__image" src="./images/body-card3.png"
                                      alt="какой-то всплывающий текст" width="72" height="96">
                             </label>
@@ -488,7 +488,7 @@
                             <div class="card-tm">
                                 <span class="card-tm__item">OOO Вайлдберри</span>
                                 <button class="card-tm__image tooltip__importer"></button>
-                                <div class="tooltip__importerText">
+                                <div class="tooltip__importer-text">
                                     <h5>OOO «ВАЙЛДБЕРРИЗ»</h5>
                                     <p class="tooltip__text">ОГРН: 1067746062449</p>
                                     <p class="tooltip__text">142181, Московская Область, Подольск, Д Коледино, Д. 6
@@ -551,7 +551,7 @@
             <div class="container-main-missing">
                 <div class="missing-header">
                     <span class="missing__title">Отсутствуют · 3 товара</span>
-                    <button class="missing__button" id="hide__allMissings"></button>
+                    <button class="missing__button" id="hide__all-missing"></button>
                 </div>
 
                 <div class="missing-items">
@@ -680,7 +680,7 @@
                     <div class="delivery-string">
                         <span class="delivery-firstColl" id="delivery-option">Пункт выдачи</span>
                         <div class="delivery-secondColl">
-                            <span class="delivery__currentMethod"></span>
+                            <span class="delivery__current-method"></span>
                             <span class="delivery-string-address__info">
                                     <div>
                                         <img src="./images/rating.svg" alt="rating star" width="11" height="11">
@@ -747,7 +747,7 @@
                     <h2>Способ оплаты</h2>
                     <button class="pay-header__change openModal-pay">Изменить</button>
                 </div>
-                <div class="pay-data pay-currentMethod" id="pay__currentMethod">
+                <div class="pay-data pay-current-method" id="pay__current-method">
                     <span>01/30</span>
                 </div>
                 <div class="pay-footer">
@@ -763,43 +763,43 @@
                 <div class="recipient-info">
                     <div class="recipient-info-string">
                         <label class="recipient__label">
-                            <span class="recipient__dataClue" id="data__firstNameClue">Имя</span>
-                            <input class="recipient__data recipient__firstName" id="data__firstName" type="text"
+                            <span class="recipient__dataClue" id="data__firstname-cClue">Имя</span>
+                            <input class="recipient__data recipient__firstname" id="data__firstname" type="text"
                                    placeholder="Имя">
-                            <span class="recipient__firstNameHelp" id="data__firstNameHelp">Укажите имя</span>
+                            <span class="recipient__firstname-help" id="data__firstname-help">Укажите имя</span>
                         </label>
                         <label class="recipient__label">
-                            <span class="recipient__dataClue" id="data__lastNameClue">Фамилия</span>
-                            <input class="recipient__data recipient__lastName" id="data__lastName" type="text"
+                            <span class="recipient__data-clue" id="data__lastname-clue">Фамилия</span>
+                            <input class="recipient__data recipient__lastname" id="data__lastname" type="text"
                                    placeholder="Фамилия">
-                            <span class="recipient__lastNameHelp" id="data__lastNameHelp">Введите Фамилию</span>
+                            <span class="recipient__lastname-help" id="data__lastname-help">Введите Фамилию</span>
                         </label>
                     </div>
                     <div class="recipient-info-string">
                         <label class="recipient__label">
-                            <span class="recipient__dataClue" id="data__EmailClue">Почта</span>
+                            <span class="recipient__data-clue" id="data__email-clue">Почта</span>
                             <input class="recipient__data recipient__email" id="data__email" type="email"
                                    placeholder="Почта">
-                            <span class="recipient__emailHelp" id="data__emailHelp">Укажите электронную почту</span>
-                            <span class="recipient__emailError" id="data__emailError">Проверьте адрес электронной
+                            <span class="recipient__email-help" id="data__email-help">Укажите электронную почту</span>
+                            <span class="recipient__email-error" id="data__email-error">Проверьте адрес электронной
                                     почты</span>
                         </label>
                         <label class="recipient__label">
-                            <span class="recipient__dataClue" id="data__phoneClue">Телефон</span>
+                            <span class="recipient__data-clue" id="data__phone-clue">Телефон</span>
                             <input class="recipient__data recipient__phone" id="data__phone" type="tel"
                                    pattern="[8-9]{1} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="Телефон">
-                            <span class="recipient__phoneHelp" id="data__phoneHelp">Укажите телефон</span>
-                            <span class="recipient__phoneError" id="data__phoneError">Формат: +9 999 999 99
+                            <span class="recipient__phone-help" id="data__phone-help">Укажите телефон</span>
+                            <span class="recipient__phone-error" id="data__phone-error">Формат: +9 999 999 99
                                     99</span>
                         </label>
                         <label class="recipient__label">
-                            <span class="recipient__dataClue" id="data__innClue">ИНН</span>
+                            <span class="recipient__data-clue" id="data__inn-clue">ИНН</span>
                             <input class="recipient__data recipient__inn" id="data__inn" type="number"
                                    minlength="14" maxlength="14" placeholder="ИНН">
-                            <span class="recipient__innHelp" id="data__innHelp">Укажите ИНН</span>
-                            <span class="recipient__dataInn" id="data__innDescription">Для таможенного
+                            <span class="recipient__inn-help" id="data__inn-help">Укажите ИНН</span>
+                            <span class="recipient__data-inn" id="data__inn-description">Для таможенного
                                     оформления</span>
-                            <span class="recipient__innError" id="data__innError">Проверьте ИНН</span>
+                            <span class="recipient__inn-error" id="data__inn-error">Проверьте ИНН</span>
                         </label>
                     </div>
                 </div>
@@ -812,13 +812,13 @@
             <div class="basket-header">
                 <h2>Итого</h2>
                 <div class="basket-header-total">
-                    <h2 id="basket-header__totalPrice"></h2> <span class="backet-header__totalCurrency">сом</span>
+                    <h2 id="basket-header__total-price"></h2> <span class="basket-header__total-currency">сом</span>
                 </div>
             </div>
 
             <div class="basket-info-price">
                 <div class="basket-info-price-string">
-                    <span class="basket-info-price-string__item"><span id="basket__fullAmount"></span> товара</span>
+                    <span class="basket-info-price-string__item"><span id="basket__full-amount"></span> товара</span>
                     <span class="basket-info-price-string__item"><span id="basket__fprice"></span> сом</span>
                 </div>
                 <div class="basket-info-price-string">
@@ -863,7 +863,7 @@
                     <button class="basket-info__edit openModal-pay"></button>
                 </div>
 
-                <div class="basket-info-pay-data pay-currentMethod">
+                <div class="basket-info-pay-data pay-current-method">
                 </div>
                 <div class="basket-payNow">
                     <label class="container-checkbox-label basket-payNow__label" name="payNow">
@@ -871,20 +871,20 @@
                         <span class="custom__checkbox"></span>
                         <span>Списать оплату сразу</span>
                     </label>
-                    <span class="basket-payNow__descripton">Спишем оплату с карты при получении</span>
+                    <span class="basket-payNow__description">Спишем оплату с карты при получении</span>
                 </div>
-                <button class="basket__buttonOrder" id="basket__buttonOrder">Заказать</button>
+                <button class="basket__button-order" id="basket__button-order">Заказать</button>
                 <div class="basket-footer">
-                    <label class="container-checkboxSmall-label basket-footer-label" name="offer">
-                        <input class="default__checkboxSmall" id="confirm__offer" type="checkbox" checked>
-                        <span class="custom__checkboxSmall"></span>
+                    <label class="container-checkbox-small-label basket-footer-label" name="offer">
+                        <input class="default__checkbox-small" id="confirm__offer" type="checkbox" checked>
+                        <span class="custom__checkbox-small"></span>
                         <div class="basket-footer-label-text">
                             <span class="basket-footer-label-text__item">Соглашаюсь</span>
                             <span class="basket-footer-label-text__itemUnderline">c правилами пользования
                                     торговой
                                     площадкой</span>
                             <span class="basket-footer-label-text__item">и</span>
-                            <span class="basket-footer-label-text__itemUnderline">возврата</span>
+                            <span class="basket-footer-label-text__item-under-line">возврата</span>
                         </div>
                     </label>
                 </div>
