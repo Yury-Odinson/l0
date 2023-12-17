@@ -54,16 +54,16 @@ delivery3.addEventListener("click", () => numberDilivery = 3)
 
 // меняем пункты меню в модальном окне доставки (доставка в пункт выдачи/доставка курьером)
 deliveryButtonPikup.addEventListener("click", () => {
-    deliveryButtonPikup.classList.add("modal-delivery-method__ActiveItem")
-    deliveryButtonCourier.classList.remove("modal-delivery-method__ActiveItem")
+    deliveryButtonPikup.classList.add("modal-delivery-method__active-item")
+    deliveryButtonCourier.classList.remove("modal-delivery-method__active-item")
     deliveryMethodPickUp.style.display = "flex"
     deliveryMethodCourier.style.display = "none"
     methodDelivery = "delivery__methodPickup"
 })
 
 deliveryButtonCourier.addEventListener("click", () => {
-    deliveryButtonPikup.classList.remove("modal-delivery-method__ActiveItem")
-    deliveryButtonCourier.classList.add("modal-delivery-method__ActiveItem")
+    deliveryButtonPikup.classList.remove("modal-delivery-method__active-tem")
+    deliveryButtonCourier.classList.add("modal-delivery-method__active-item")
     deliveryMethodPickUp.style.display = "none"
     deliveryMethodCourier.style.display = "flex"
     methodDelivery = "delivery__method"
@@ -74,7 +74,7 @@ function setDeliveryMethod(method, methodNum) {
     const methodDelivery = document.getElementById(method + methodNum)
     const deliveryPickupInfo = document.querySelectorAll(".delivery-string-address__info")
     switch (method + methodNum) {
-        case `delivery__methodPickup${methodNum}`:
+        case `delivery__method-pickup${methodNum}`:
             methodDeliveryCurrent.forEach((element) => {
                 element.innerHTML = ""
                 element.appendChild(methodDelivery.cloneNode(true))

@@ -464,8 +464,7 @@ header {
     max-width: 280px;
     border-radius: 8px;
     background-color: #fff;
-    box-shadow: 0px 0px 1px 0px #0000004D;
-    box-shadow: 0px 2px 10px 0px #00000026;
+    box-shadow: 0px 0px 1px 0px #0000004D, 0px 2px 10px 0px #00000026;
 
 }
 
@@ -824,14 +823,14 @@ header {
     display: flex;
 }
 
-.recipient__dataClue {
+.recipient__data-clue {
     display: none;
     position: absolute;
     font-size: 13px;
     color: var(--var-GrayColor);
 }
 
-.recipient__dataInn {
+.recipient__data-inn {
     position: absolute;
     bottom: -23px;
     font-size: 12px;
@@ -842,8 +841,8 @@ header {
     color: var(--var-GrayColor);
 }
 
-.recipient__firstName,
-.recipient__lastName {
+.recipient__firstname,
+.recipient__lastname {
     width: clamp(180px, 22.5vw, 340px);
 }
 
@@ -853,22 +852,22 @@ header {
     width: clamp(100px, 22.5vw, 220px);
 }
 
-.recipient__dataError {
+.recipient__data-error {
     border-bottom: 1px solid var(--var-Orange);
 }
 
-.recipient__dataError::placeholder {
+.recipient__data-error::placeholder {
     color: var(--var-Orange);
 }
 
-.recipient__firstNameHelp,
-.recipient__lastNameHelp,
-.recipient__emailHelp,
-.recipient__emailError,
-.recipient__phoneHelp,
-.recipient__phoneError,
-.recipient__innHelp,
-.recipient__innError {
+.recipient__firstname-help,
+.recipient__lastname-help,
+.recipient__email-help,
+.recipient__email-error,
+.recipient__phone-help,
+.recipient__phone-error,
+.recipient__inn-help,
+.recipient__inn-error {
     display: none;
     position: absolute;
     bottom: -25px;

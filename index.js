@@ -200,7 +200,7 @@ amountCard3.addEventListener("change", () => {
 
 // обновление общего количество товаров в корзине
 function getFullAmount() {
-    const fullAmount = document.getElementById("basket__fullAmount")
+    const fullAmount = document.getElementById("basket__full-amount")
     fullAmount.textContent = Number(amountCard1.value) + Number(amountCard2.value) + Number(amountCard3.value)
 }
 getFullAmount()
@@ -220,7 +220,7 @@ checkboxBasketPaynow.addEventListener("change", () => checkPaynow())
 // функция-обработчик ошибок на не заполенные поля в разделе "Получатель"
 function checkInput(input) {
     const element = document.getElementById(input)
-    const elementHelp = document.getElementById(`${input}Help`)
+    const elementHelp = document.getElementById(`${input}-help`)
     const innDescription = document.getElementById("data__inn-description")
     if (element.value === "") {
         element.classList.add("recipient__data-error")
