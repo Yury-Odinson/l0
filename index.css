@@ -329,7 +329,7 @@ header {
 }
 
 .container-checkbox-label,
-.container-checkboxCard-label,
+.container-checkbox-card-label,
 .container-checkbox-small-label {
     cursor: pointer;
     display: flex;
@@ -979,7 +979,7 @@ header {
     letter-spacing: -0.7px;
 }
 
-.basket-payNow__descripton {
+.basket-payNow__description {
     padding: 2px 0;
     font-size: 13px;
     letter-spacing: -0.1px;
