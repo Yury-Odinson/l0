@@ -557,7 +557,7 @@ header {
     fill: var(--var-ButtonsColor);
 }
 
-.card-nav__itemTrash:hover svg path {
+.card-nav__item-trash:hover svg path {
     fill: var(--var-Orange);
 }
 
