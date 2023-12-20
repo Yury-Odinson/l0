@@ -1,4 +1,43 @@
-import { basketCount, mobileBasketCount, checkboxConfirmOffer, priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, reminderCard3, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription, hideAllCards, hideAllMissings, buttonRemoveCard } from "./declarations.js"
+import {
+    basketCount,
+    mobileBasketCount,
+    checkboxConfirmOffer,
+    priceCard1,
+    fpriceCard1,
+    amountCard1,
+    decrSumCard1,
+    incrSumCard1,
+    reminderCard1,
+    reminderCard3,
+    priceCard2,
+    fpriceCard2,
+    amountCard2,
+    decrSumCard2,
+    incrSumCard2,
+    priceCard3,
+    fpriceCard3,
+    amountCard3,
+    decrSumCard3,
+    incrSumCard3,
+    userFirstName,
+    userLastName,
+    userEmail,
+    userPhone,
+    userINN,
+    basketCheckAll,
+    totalPrice,
+    totalFprice,
+    totalDiscount,
+    checkboxBasketPaynow,
+    buttonBasketBuy,
+    userEmailError,
+    userPhoneError,
+    userINNError,
+    userINNDescription,
+    hideAllCards,
+    hideAllMissings,
+    buttonRemoveCard
+} from "./declarations.js"
 
 // подсчёт и отображение количества товаров в корзине
 function setBasketGoodsValue() {
@@ -10,6 +49,7 @@ function setBasketGoodsValue() {
         document.querySelectorAll(".header-navbar__BasketCount").forEach((element) => element.style.display = "none")
     }
 }
+
 setBasketGoodsValue()
 
 // выделение/снятие галочек на всех позициях товара
@@ -82,32 +122,25 @@ totalDiscount.textContent = `- ${Number(totalFprice.textContent) - Number(totalP
 
 // функция декрементации. передача в функцию количество штук
 function decrementGoodValue(amount) {
-    if (amount.value > 1) {
-        amount.value = Number(amount.value) - 1
-        getTotalPrice()
-    } else return
+    if (amount.value <= 1) return
+    amount.value = Number(amount.value) - 1
+    getTotalPrice()
 }
 
 // функция инкрементации. передача в функцию количество штук и количество остатка. если остаток товара не указан - следует передавать Infinity
 function incrementGoodValue(amount, remind) {
     if (amount.value < remind) {
         amount.value = Number(amount.value) + 1
+        console.log(amount.value)
         getTotalPrice()
     } else {
         alert(`Ошибка. Осталось ${remind} шт.`)
     }
 }
 
-// decrSumCard2.setAttribute("disabled", "disabled")
-
-function checkDisableButton(id) {
-
-}
-
 // декрементация/инкрементация количества каждой позиции товара
 decrSumCard1.addEventListener("click", () => {
     decrementGoodValue(amountCard1)
-    // decrSumCard1.style.color = "#9797AF"
     priceCard1.textContent = amountCard1.value * onePrice.card1
     fpriceCard1.textContent = amountCard1.value * fullOnePrice.card1
     getTotalPrice()
@@ -203,6 +236,7 @@ function getFullAmount() {
     const fullAmount = document.getElementById("basket__full-amount")
     fullAmount.textContent = Number(amountCard1.value) + Number(amountCard2.value) + Number(amountCard3.value)
 }
+
 getFullAmount()
 
 // проверка, нажат ли чекбокс для оплаты сразу
@@ -277,8 +311,6 @@ userPhone.addEventListener("change", () => {
 userINN.addEventListener("change", () => {
     document.getElementById("data__inn-clue").style.display = "block"
 })
-
-
 
 // функция добавления пробелом между числами
 function addSpaces(price) {
