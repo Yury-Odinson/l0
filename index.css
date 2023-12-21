@@ -881,8 +881,8 @@ header {
 
 
 .container-basket {
-    margin: -px;
-    padding: 0 24px;
+    margin: -20px 0;
+    padding: 0 24px 5px;
     width: 430px;
     height: fit-content;
     background-color: var(--white-color);
@@ -891,6 +891,7 @@ header {
 }
 
 .basket-header {
+    padding-top: 23px;
     display: flex;
     justify-content: space-between;
     letter-spacing: -1px;
