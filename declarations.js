@@ -47,7 +47,7 @@ export const basketDeliveryOption = document.getElementById("basket-delivery-opt
 export const checkboxConfirmOffer = document.getElementById("confirm__offer")
 // модалки
 export const modalBackground = document.getElementById("modal-background")
-export const modalPayOpen = document.querySelectorAll(".openModal-pay")
+export const modalPayOpen = document.querySelectorAll(".open-modal-pay")
 export const modalPayClose = document.getElementById("modal-pay__close")
 export const modalSetPay = document.getElementById("set-pay-data")
 export const modalSetDelivery = document.getElementById("set-delivery-data")
