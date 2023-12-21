@@ -138,6 +138,10 @@ header {
     color: var(--white-color);
 }
 
+.header-navbar__BasketCount {
+    display: none;
+}
+
 .mobile-menu {
     display: none;
 }
@@ -750,7 +754,7 @@ header {
 }
 
 .delivery-footer {
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 0 24px 20px;
     display: flex;
 }
@@ -1548,7 +1552,8 @@ footer {
         position: relative;
     }
 
-    .header-navbar__basket-count {
+    .header-navbar__BasketCount {
+        display: flex;
         top: -5px;
         right: -5px;
     }
@@ -1557,6 +1562,7 @@ footer {
     .modal-delivery-method {
         width: 100vw;
         height: 100vh;
+        padding-bottom: 70px;
         border-radius: 0%;
     }
 
