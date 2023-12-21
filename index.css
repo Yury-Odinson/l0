@@ -416,14 +416,17 @@ header {
 
 .card__color,
 .card__size,
-.card__sizeNumber,
-.missing-card__sizeNumber {
-    padding-right: 13px;
+.card__size-number,
+.missing-card__size-number {
     font-size: 13px;
     line-height: 16px;
 }
 
-.missing-card__sizeNumber {
+.card__size {
+    padding-left: 13px;
+}
+
+.missing-card__size-number {
     display: none;
 }
 
@@ -833,7 +836,7 @@ header {
 
 .recipient__data-inn {
     position: absolute;
-    bottom: -23px;
+    bottom: 0;
     font-size: 12px;
 }
 
@@ -878,8 +881,8 @@ header {
 
 
 .container-basket {
-    margin: -15px 0 0;
-    padding: 16px 24px;
+    margin: -px;
+    padding: 0 24px;
     width: 430px;
     height: fit-content;
     background-color: var(--white-color);
@@ -1023,12 +1026,12 @@ header {
 }
 
 .basket-footer-label-text__item,
-.basket-footer-label-text__item-under-line {
+.basket-footer-label-text__item-underline {
     font-size: 13px;
-    line-height: 16px;
+    line-height: 0px;
 }
 
-.basket-footer-label-text__item-under-line {
+.basket-footer-label-text__item-underline {
     text-decoration: underline #0000001A;
 }
 
@@ -1215,8 +1218,8 @@ footer {
         left: 5px;
     }
 
-    .card__sizeNumber,
-    .missing-card__sizeNumber {
+    .card__size-number,
+    .missing-card__size-number {
         padding: 0;
         position: absolute;
         top: 90px;
@@ -1232,7 +1235,7 @@ footer {
         font-weight: 400;
     }
 
-    .missing-card__sizeNumber {
+    .missing-card__size-number {
         top: 80px;
     }
 
@@ -1372,13 +1375,14 @@ footer {
     }
 
     .delivery-header {
-        padding: 22px 15px 10px;
+        padding: 5px 15px;
         letter-spacing: 0.4px;
     }
 
     .delivery-settings {
         margin: 0;
         padding: 0 15px;
+        gap: 11px;
     }
 
     .delivery-string {
@@ -1409,7 +1413,7 @@ footer {
     }
 
     .delivery-footer__text {
-        line-height: 16px;
+        line-height: 4px;
     }
 
     .container-main-pay {
@@ -1426,7 +1430,8 @@ footer {
     }
 
     .container-main-recipient {
-        padding: 0 15px;
+        margin: 10px 0 5px;
+        padding: 10px 15px;
     }
 
     .recipient-info {
@@ -1434,7 +1439,7 @@ footer {
     }
 
     .recipient-header {
-        padding: 12px 0 5px;
+        padding: 7px 0;
         letter-spacing: 0.4px;
     }
 
@@ -1458,7 +1463,7 @@ footer {
     }
 
     .container-basket {
-        margin: -5px 0;
+        margin: -33px 0 0;
         padding: 0 15px;
         background-color: var(--background);
         box-shadow: none;
@@ -1511,7 +1516,7 @@ footer {
     }
 
     .footer-container {
-        padding-top: 20px;
+        padding-top: 0;
         display: flex;
         height: 142px;
     }
