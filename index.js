@@ -1,4 +1,43 @@
-import { basketCount, mobileBasketCount, checkboxConfirmOffer, priceCard1, fpriceCard1, amountCard1, decrSumCard1, incrSumCard1, reminderCard1, reminderCard3, priceCard2, fpriceCard2, amountCard2, decrSumCard2, incrSumCard2, priceCard3, fpriceCard3, amountCard3, decrSumCard3, incrSumCard3, userFirstName, userLastName, userEmail, userPhone, userINN, basketCheckAll, totalPrice, totalFprice, totalDiscount, checkboxBasketPaynow, buttonBasketBuy, userEmailError, userPhoneError, userINNError, userINNDescription, hideAllCards, hideAllMissings, buttonRemoveCard } from "./declarations.js"
+import {
+    basketCount,
+    mobileBasketCount,
+    checkboxConfirmOffer,
+    priceCard1,
+    fpriceCard1,
+    amountCard1,
+    decrSumCard1,
+    incrSumCard1,
+    reminderCard1,
+    reminderCard3,
+    priceCard2,
+    fpriceCard2,
+    amountCard2,
+    decrSumCard2,
+    incrSumCard2,
+    priceCard3,
+    fpriceCard3,
+    amountCard3,
+    decrSumCard3,
+    incrSumCard3,
+    userFirstName,
+    userLastName,
+    userEmail,
+    userPhone,
+    userINN,
+    basketCheckAll,
+    totalPrice,
+    totalFprice,
+    totalDiscount,
+    checkboxBasketPaynow,
+    buttonBasketBuy,
+    userEmailError,
+    userPhoneError,
+    userINNError,
+    userINNDescription,
+    hideAllCards,
+    hideAllMissings,
+    buttonRemoveCard
+} from "./declarations.js"
 
 // подсчёт и отображение количества товаров в корзине
 function setBasketGoodsValue() {
@@ -10,6 +49,7 @@ function setBasketGoodsValue() {
         document.querySelectorAll(".header-navbar__BasketCount").forEach((element) => element.style.display = "none")
     }
 }
+
 setBasketGoodsValue()
 
 // выделение/снятие галочек на всех позициях товара
@@ -82,16 +122,16 @@ totalDiscount.textContent = `- ${Number(totalFprice.textContent) - Number(totalP
 
 // функция декрементации. передача в функцию количество штук
 function decrementGoodValue(amount) {
-    if (amount.value > 1) {
-        amount.value = Number(amount.value) - 1;
-        getTotalPrice()
-    } else return
+    if (amount.value <= 1) return
+    amount.value = Number(amount.value) - 1
+    getTotalPrice()
 }
 
 // функция инкрементации. передача в функцию количество штук и количество остатка. если остаток товара не указан - следует передавать Infinity
 function incrementGoodValue(amount, remind) {
     if (amount.value < remind) {
-        amount.value = Number(amount.value) + 1;
+        amount.value = Number(amount.value) + 1
+        console.log(amount.value)
         getTotalPrice()
     } else {
         alert(`Ошибка. Осталось ${remind} шт.`)
@@ -100,8 +140,7 @@ function incrementGoodValue(amount, remind) {
 
 // декрементация/инкрементация количества каждой позиции товара
 decrSumCard1.addEventListener("click", () => {
-    decrementGoodValue(amountCard1);
-    // decrSumCard1.style.color = "#9797AF"
+    decrementGoodValue(amountCard1)
     priceCard1.textContent = amountCard1.value * onePrice.card1
     fpriceCard1.textContent = amountCard1.value * fullOnePrice.card1
     getTotalPrice()
@@ -109,7 +148,7 @@ decrSumCard1.addEventListener("click", () => {
 })
 
 incrSumCard1.addEventListener("click", () => {
-    incrementGoodValue(amountCard1, reminderCard1);
+    incrementGoodValue(amountCard1, reminderCard1)
     priceCard1.textContent = amountCard1.value * onePrice.card1
     fpriceCard1.textContent = amountCard1.value * fullOnePrice.card1
     getTotalPrice()
@@ -117,7 +156,7 @@ incrSumCard1.addEventListener("click", () => {
 })
 
 decrSumCard2.addEventListener("click", () => {
-    decrementGoodValue(amountCard2);
+    decrementGoodValue(amountCard2)
     priceCard2.textContent = amountCard2.value * onePrice.card2
     fpriceCard2.textContent = amountCard2.value * fullOnePrice.card2
     getTotalPrice()
@@ -125,7 +164,7 @@ decrSumCard2.addEventListener("click", () => {
 })
 
 incrSumCard2.addEventListener("click", () => {
-    incrementGoodValue(amountCard2, Infinity);
+    incrementGoodValue(amountCard2, Infinity)
     priceCard2.textContent = amountCard2.value * onePrice.card2
     fpriceCard2.textContent = amountCard2.value * fullOnePrice.card2
     getTotalPrice()
@@ -133,7 +172,7 @@ incrSumCard2.addEventListener("click", () => {
 })
 
 decrSumCard3.addEventListener("click", () => {
-    decrementGoodValue(amountCard3);
+    decrementGoodValue(amountCard3)
     priceCard3.textContent = amountCard3.value * onePrice.card3
     fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
     getTotalPrice()
@@ -141,7 +180,7 @@ decrSumCard3.addEventListener("click", () => {
 })
 
 incrSumCard3.addEventListener("click", () => {
-    incrementGoodValue(amountCard3, reminderCard3);
+    incrementGoodValue(amountCard3, reminderCard3)
     priceCard3.textContent = amountCard3.value * onePrice.card3
     fpriceCard3.textContent = amountCard3.value * fullOnePrice.card3
     getTotalPrice()
@@ -194,9 +233,10 @@ amountCard3.addEventListener("change", () => {
 
 // обновление общего количество товаров в корзине
 function getFullAmount() {
-    const fullAmount = document.getElementById("basket__fullAmount")
+    const fullAmount = document.getElementById("basket__full-amount")
     fullAmount.textContent = Number(amountCard1.value) + Number(amountCard2.value) + Number(amountCard3.value)
 }
+
 getFullAmount()
 
 // проверка, нажат ли чекбокс для оплаты сразу
@@ -214,15 +254,15 @@ checkboxBasketPaynow.addEventListener("change", () => checkPaynow())
 // функция-обработчик ошибок на не заполенные поля в разделе "Получатель"
 function checkInput(input) {
     const element = document.getElementById(input)
-    const elementHelp = document.getElementById(`${input}Help`)
-    const innDescription = document.getElementById("data__innDescription")
+    const elementHelp = document.getElementById(`${input}-help`)
+    const innDescription = document.getElementById("data__inn-description")
     if (element.value === "") {
-        element.classList.add("recipient__dataError")
+        element.classList.add("recipient__data-error")
         elementHelp.style.display = "block"
         input === "data__inn" ? innDescription.style.display = "none" : innDescription.style.display = "block" // если ошибочное поле является ИНН, то скрываем строку "Для таможенного оформления"
         document.querySelector(".container-main-recipient").scrollIntoView() // в случае, если есть пустое поле, то страница прокручивается до блока с данными, где есть пустые поля
     } else {
-        element.classList.remove("recipient__dataError")
+        element.classList.remove("recipient__data-error")
         elementHelp.style.display = "none"
     }
 }
@@ -243,37 +283,34 @@ buttonBasketBuy.addEventListener("click", () => checkUserData())
 
 // проверка наличия заполнений полей в разделе "Получатель"
 function checkUserData() {
-    if (statusButtonBuy) {
-        checkInput("data__firstName")
-        checkInput("data__lastName")
-        checkInput("data__email")
-        checkInput("data__phone")
-        checkInput("data__inn")
-    } else return
+    if (!statusButtonBuy) return
+    checkInput("data__firstname")
+    checkInput("data__lastname")
+    checkInput("data__email")
+    checkInput("data__phone")
+    checkInput("data__inn")
 }
 
 // события на изменение полей данных
 userFirstName.addEventListener("change", () => {
-    document.getElementById("data__firstNameClue").style.display = "block"
+    document.getElementById("data__firstname-clue").style.display = "block"
 })
 
 userLastName.addEventListener("change", () => {
-    document.getElementById("data__lastNameClue").style.display = "block"
+    document.getElementById("data__lastname-clue").style.display = "block"
 })
 
 userEmail.addEventListener("change", () => {
-    document.getElementById("data__EmailClue").style.display = "block"
+    document.getElementById("data__email-clue").style.display = "block"
 })
 
 userPhone.addEventListener("change", () => {
-    document.getElementById("data__phoneClue").style.display = "block"
+    document.getElementById("data__phone-clue").style.display = "block"
 })
 
 userINN.addEventListener("change", () => {
-    document.getElementById("data__innClue").style.display = "block"
+    document.getElementById("data__inn-clue").style.display = "block"
 })
-
-
 
 // функция добавления пробелом между числами
 function addSpaces(price) {
@@ -305,31 +342,31 @@ function getTotalPrice() {
 getTotalPrice()
 
 // регулярные выражения для проверки валидности данных
-const patternEmail = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-const patternPhone = /(\+7|8)[\s(]?(\d{3})[\s)]?(\d{3})[\s]?(\d{2})[\s]?(\d{2})/g;
+const patternEmail = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
+const patternPhone = /(\+7|8)[\s(]?(\d{3})[\s)]?(\d{3})[\s]?(\d{2})[\s]?(\d{2})/g
 
 // функция проверки на валидность данных. dataREGEXP - метод проверки, value - значение для проверки
 function isValidData(dataREGEXP, value) {
-    return dataREGEXP.test(value);
+    return dataREGEXP.test(value)
 }
 
 // проверка на валидность электронной почты
 function checkEmail() {
     if (isValidData(patternEmail, userEmail.value)) {
-        userEmailError.style.display = "none";
+        userEmailError.style.display = "none"
     } else {
-        userEmailError.style.display = "block";
+        userEmailError.style.display = "block"
     }
 }
 
-userEmail.addEventListener("change", checkEmail);
+userEmail.addEventListener("change", checkEmail)
 
 // проверка на валидность номера телефона
 function checkPhone() {
     if (isValidData(patternPhone, userPhone.value)) {
-        userPhoneError.style.display = "none";
+        userPhoneError.style.display = "none"
     } else {
-        userPhoneError.style.display = "block";
+        userPhoneError.style.display = "block"
     }
 }
 
@@ -342,13 +379,12 @@ userPhone.addEventListener("focus", () => {
 
 // автоматическое выставление пробелов при корректном вводе номера телефона (начиная с 8 или +7)
 userPhone.addEventListener("input", () => {
-    userPhone.value.replace(patternPhone, '<a href="tel:+7$2$3$4$5">+7 $2 $3 $4 $5</a>');
-    let phoneNumbers = userPhone.value.match(patternPhone);
-    let correctNumber = phoneNumbers[0].replace(patternPhone, '+7 $2 $3 $4 $5');    // пробуем замену
-    userPhone.value = correctNumber
+    userPhone.value.replace(patternPhone, '<a href="tel:+7$2$3$4$5">+7 $2 $3 $4 $5</a>')
+    let phoneNumbers = userPhone.value.match(patternPhone)
+    userPhone.value = phoneNumbers[0].replace(patternPhone, '+7 $2 $3 $4 $5')    // пробуем замену
 })
 
-userPhone.addEventListener("change", checkPhone);
+userPhone.addEventListener("change", checkPhone)
 
 // проверка на длину введённых данных. нельзя ввести больше 14 символов
 userINN.addEventListener("input", () => {
