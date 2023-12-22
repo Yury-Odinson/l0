@@ -131,7 +131,6 @@ function decrementGoodValue(amount) {
 function incrementGoodValue(amount, remind) {
     if (amount.value < remind) {
         amount.value = Number(amount.value) + 1
-        console.log(amount.value)
         getTotalPrice()
     } else {
         alert(`Ошибка. Осталось ${remind} шт.`)
@@ -410,7 +409,6 @@ buttonRemoveCard.forEach((element) => {
         if (element.closest(".card-item")) {
             const card = element.closest(".card-item") // декларация родительского блока с картой товара
             const counter = card.querySelector(".counter__value") // декларация счётчика количества товаров
-            console.log(counter.value = "0")
             counter.value = "0" // обнуление количества товаров
             card.remove() // удаление из DOM карточки с товаром
         } else {
