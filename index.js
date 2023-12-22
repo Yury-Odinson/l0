@@ -337,6 +337,7 @@ function getTotalPrice() {
     totalPrice.textContent = addSpaces(resultTotalPrice)
     totalFprice.textContent = addSpaces(resultTotalFprice)
     totalDiscount.textContent = `- ${addSpaces(resultTotalFprice - resultTotalPrice)}`
+    checkPaynow()
 }
 
 getTotalPrice()
