@@ -6,7 +6,6 @@ function openModal(modalName) {
     const window = document.getElementById(modalName)
     modalBackground.style.display = "block"
     window.style.display = "block"
-    mobileMenu.style.display = "none"
 }
 
 // открытие модального окна по клику на каждую из кнопок открытия
@@ -22,7 +21,6 @@ function closeModal(modalName) {
     const window = document.getElementById(modalName)
     modalBackground.style.display = "none"
     window.style.display = "none"
-    mobileMenu.style.display = "flex"
 }
 
 // закрытие модальные окна 
