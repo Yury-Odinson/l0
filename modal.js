@@ -132,7 +132,6 @@ modalSetPay.addEventListener("click", () => {
 modalRemoveAddress.forEach((button) => {
     button.addEventListener("click", () => {
         const addresses = document.querySelectorAll(".modal-delivery-body__label")
-        console.log(addresses.length)
         if (addresses.length >= 2) {
             button.closest(".modal-delivery-body__label").remove()
         } else alert("Нужно оставить хотя бы 1 адрес!")
